@@ -2,7 +2,7 @@ services:
   - type: web
     name: shopping-comparison
     runtime: node
-    buildCommand: cd shopping-comparison && npm run build
+    buildCommand: cd shopping-comparison && npm install && npm run build
     startCommand: cd shopping-comparison && npm start
     envVars:
       - key: NODE_ENV
