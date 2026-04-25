@@ -33,8 +33,7 @@ export default function OfferMap({ offers }: Props) {
         }
       ).addTo(map);
 
-      const bounds = L.latLngBounds();
-      bounds.extend([HOME_LAT, HOME_LNG]);
+      const bounds = L.latLngBounds([[HOME_LAT, HOME_LNG]]);
 
       // Home marker
       L.marker([HOME_LAT, HOME_LNG], {
