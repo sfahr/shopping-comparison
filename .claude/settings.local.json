@@ -22,7 +22,11 @@
       "mcp__chrome-devtools__fill",
       "mcp__chrome-devtools__click",
       "Bash(git add *)",
-      "Bash(git commit -m 'Initial shopping comparison web app with 6-site scraper and Leaflet map *)"
+      "Bash(git commit -m 'Initial shopping comparison web app with 6-site scraper and Leaflet map *)",
+      "Bash(git remote *)",
+      "Bash(git push *)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(git commit -m 'Replace geizhals.de and guenstiger.de with check24.de and billiger.de *)"
     ]
   }
 }

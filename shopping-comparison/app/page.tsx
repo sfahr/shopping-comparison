@@ -9,7 +9,7 @@ import type { Offer, ScrapeResult, RawOffer, ScrapeRequest } from "@/lib/types";
 
 const OfferMap = dynamic(() => import("@/components/OfferMap"), { ssr: false, loading: () => <div className="w-full h-96 bg-gray-100 rounded-xl animate-pulse" /> });
 
-const SITES = ["amazon.de", "geizhals.de", "guenstiger.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
+const SITES = ["amazon.de", "check24.de", "billiger.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
 
 export default function Home() {
   const [offers, setOffers] = useState<Offer[]>([]);
