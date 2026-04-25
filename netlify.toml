@@ -1,7 +1,7 @@
 [build]
   base = "shopping-comparison"
   command = "npm run build"
-  publish = "shopping-comparison/.next"
+  publish = ".next"
 
 [[redirects]]
   from = "/*"
