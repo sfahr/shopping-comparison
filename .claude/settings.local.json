@@ -26,7 +26,9 @@
       "Bash(git remote *)",
       "Bash(git push *)",
       "Bash(pkill -f \"next dev\")",
-      "Bash(git commit -m 'Replace geizhals.de and guenstiger.de with check24.de and billiger.de *)"
+      "Bash(git commit -m 'Replace geizhals.de and guenstiger.de with check24.de and billiger.de *)",
+      "Bash(curl -s -X POST http://localhost:3000/api/check24 -H \"Content-Type: application/json\" -d '{\"query\":\"Laptop\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/billiger -H \"Content-Type: application/json\" -d '{\"query\":\"Laptop\"}')"
     ]
   }
 }
