@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preisvergleich — Google Pixel 9a 128 GB · 25.04.2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f4f5f7;
+    color: #1f2330;
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    color: #fff;
+    padding: 28px 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  header h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; }
+  header .meta { opacity: 0.9; font-size: 14px; }
+
+  main { max-width: 1200px; margin: 0 auto; padding: 32px; }
+
+  .summary {
+    background: #fff;
+    border-left: 4px solid #16a34a;
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .summary h2 { margin: 0 0 8px; font-size: 17px; color: #16a34a; }
+  .summary p { margin: 0; font-size: 14px; }
+
+  .map-section { margin-bottom: 28px; }
+  .map-section h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: #1f2330;
+    font-weight: 600;
+  }
+  #map {
+    width: 100%;
+    height: 420px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    z-index: 1;
+  }
+  .leaflet-rank-icon {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .leaflet-rank-icon.site-amazon       { background: #b25400; }
+  .leaflet-rank-icon.site-ebay         { background: #0064d2; }
+  .leaflet-rank-icon.site-kleinanzeigen{ background: #1b7a1b; }
+  .leaflet-rank-icon.site-idealo       { background: #c2185b; }
+  .leaflet-home-icon {
+    background: #1f2330;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .map-popup { font-size: 13px; min-width: 200px; max-width: 240px; line-height: 1.4; }
+  .map-popup img { width: 100%; max-height: 110px; object-fit: contain; border-radius: 4px; background: #f4f5f7; margin-bottom: 6px; }
+  .map-popup a { color: #2563eb; text-decoration: none; font-weight: 600; }
+  .map-popup a:hover { text-decoration: underline; }
+  .map-popup .pop-price { font-size: 16px; font-weight: 700; color: #16a34a; margin: 4px 0; }
+  .map-popup .pop-meta { font-size: 11px; color: #666; }
+
+  .online-legend {
+    margin-top: 12px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .online-legend strong { color: #1f2330; }
+  .online-legend ul { margin: 6px 0 0; padding-left: 20px; }
+  .online-legend li { margin-bottom: 3px; }
+  .online-legend .mini-rank {
+    display: inline-block; width: 20px; height: 20px; line-height: 20px;
+    border-radius: 50%; color: #fff; text-align: center;
+    font-size: 11px; font-weight: 700; margin-right: 6px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 22px;
+  }
+
+  .card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.10); }
+  .card.best { outline: 3px solid #16a34a; outline-offset: -3px; }
+
+  .rank-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: #1f2330;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  }
+  .card.best .rank-badge { background: #16a34a; }
+  .best-flag {
+    position: absolute; top: 12px; right: 12px;
+    background: #16a34a; color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 5px 9px; border-radius: 6px; z-index: 2;
+  }
+
+  .card-image {
+    display: block;
+    width: 100%; aspect-ratio: 1 / 1;
+    background: #f4f5f7;
+    overflow: hidden;
+  }
+  .card-image img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  .card-image:hover img { transform: scale(1.04); }
+
+  .card-body { padding: 16px 18px 18px; flex: 1; display: flex; flex-direction: column; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .badge {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
+    padding: 3px 8px; border-radius: 4px; text-transform: uppercase;
+  }
+  .site-amazon       { background: #ffead2; color: #b25400; }
+  .site-ebay         { background: #e7f1ff; color: #0064d2; }
+  .site-kleinanzeigen{ background: #e8f5e9; color: #1b7a1b; }
+  .site-idealo       { background: #fce4ec; color: #c2185b; }
+  .cond-neu          { background: #d4edda; color: #155724; }
+  .cond-gebraucht    { background: #fff3cd; color: #856404; }
+  .cond-refurb       { background: #d1ecf1; color: #0c5460; }
+  .risk-niedrig      { background: #d4edda; color: #155724; }
+  .risk-mittel       { background: #fff3cd; color: #856404; }
+  .risk-hoch         { background: #f8d7da; color: #721c24; }
+
+  .card-title {
+    font-size: 15px; font-weight: 600;
+    color: #1f2330; text-decoration: none;
+    line-height: 1.35;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    margin-bottom: 12px;
+    min-height: 60px;
+  }
+  .card-title:hover { color: #2563eb; }
+
+  .price-block { margin: 6px 0 12px; }
+  .price-main { font-size: 26px; font-weight: 700; color: #16a34a; line-height: 1; }
+  .price-shipping { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .meta-row {
+    font-size: 13px; color: #555;
+    border-top: 1px solid #ececec;
+    padding-top: 10px; margin-top: auto;
+  }
+  .meta-row .label { color: #999; }
+  .meta-row div { margin-bottom: 4px; }
+
+  .why {
+    margin-top: 10px;
+    background: #f9fafb;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #555;
+    border-left: 3px solid #cbd5e1;
+  }
+  .why strong { color: #1f2330; }
+
+  .skipped {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 28px;
+    color: #666;
+    font-size: 13px;
+    border: 1px dashed #d1d5db;
+  }
+
+  footer {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    padding: 24px;
+    line-height: 1.7;
+  }
+  footer code { background: #eef0f3; padding: 2px 5px; border-radius: 3px; font-size: 11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Preisvergleich · Google Pixel 9a 128 GB</h1>
+  <div class="meta">Stand 25. April 2026 · Standort 60439 Frankfurt-Niederursel · Quellen: amazon.de, idealo.de, ebay.de, kleinanzeigen.de</div>
+</header>
+
+<main>
+  <div class="summary">
+    <h2>🏆 Bestes Gesamtpaket: Kleinanzeigen Darmstadt — 270 €</h2>
+    <p>Wie-Neu, lokal abholbar (31 km), günstigster bewerteter Score (285). Direkt dahinter eBay Sofort-Kaufen aus Deutschland für 286,19 € (Score 296) als beste „Neu+Versand"-Option mit eBay-Käuferschutz. Amazon ist der teuerste Neu-Kanal, dafür ohne jedes Risiko.</p>
+  </div>
+
+  <section class="map-section">
+    <h2>📍 Wo stehen die Angebote?</h2>
+    <div id="map"></div>
+    <div class="online-legend">
+      <strong>Online-Händler ohne festen Standort</strong> (kein Map-Pin):
+      <ul>
+        <li><span class="mini-rank" style="background:#0064d2;">2</span> eBay.de — Sofort-Kaufen Privat (Versand DE) — 286,19 €</li>
+        <li><span class="mini-rank" style="background:#b25400;">5</span> Amazon.de — Prime, Versand aus DE-Lager — 358,99 €</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="grid">
+
+    <!-- Rank 1 -->
+    <div class="card best">
+      <div class="rank-badge">1</div>
+      <div class="best-flag">🏆 BESTES PAKET</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-128-gb-/3379304788-173-4891" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/72/727ee397-bfb6-42a3-91d1-80fc8ee556fc?rule=$_2.AUTO" alt="Pixel 9a Darmstadt" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-gebraucht">Wie neu</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-128-gb-/3379304788-173-4891" target="_blank" rel="noopener">Google Pixel 9a, 128 GB — sehr guter Zustand, immer mit Schutzfolie</a>
+        <div class="price-block">
+          <div class="price-main">270,00 €</div>
+          <div class="price-shipping">Abholung in Darmstadt (31 km) · keine Versandkosten</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Standort:</span> 64293 Darmstadt</div>
+          <div><span class="label">Inseriert:</span> 12.04.2026</div>
+        </div>
+        <div class="why"><strong>Score 285</strong> = 270 € Preis + 15 € Trust-Aufschlag (Privatverkauf, dafür lokale Abholung möglich) + 0 € Distanz. Vor Bezahlung Gerät einschalten, IMEI prüfen, ggf. Reset durchführen.</div>
+      </div>
+    </div>
+
+    <!-- Rank 2 -->
+    <div class="card">
+      <div class="rank-badge">2</div>
+      <a class="card-image" href="https://www.ebay.de/itm/397832766073" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/4tAAAeSwhS1p3ASv/s-l500.webp" alt="Pixel 9a eBay DE" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-neu">Neu</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/397832766073" target="_blank" rel="noopener">Google Pixel 9a 128 GB Obsidian — Sofort-Kaufen, Neu</a>
+        <div class="price-block">
+          <div class="price-main">286,19 €</div>
+          <div class="price-shipping">280,00 € + 6,19 € DHL · Lieferung an Abholstation möglich</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat (Deutschland)</div>
+          <div><span class="label">Format:</span> Sofort-Kaufen</div>
+          <div><span class="label">Käuferschutz:</span> ja (eBay)</div>
+        </div>
+        <div class="why"><strong>Score 296,19</strong> = 286,19 € + 10 € Trust-Aufschlag (Privatverkauf, dafür eBay-Käuferschutz). Bestes Verhältnis Preis vs. Sicherheit für Neuware mit Versand.</div>
+      </div>
+    </div>
+
+    <!-- Rank 3 -->
+    <div class="card">
+      <div class="rank-badge">3</div>
+      <a class="card-image" href="https://www.ebay.de/itm/357913571264" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/ZX4AAeSwuvJpZ9WH/s-l500.webp" alt="Pixel 9a UK refurbished" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-refurb">Refurbished „Sehr gut"</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/357913571264" target="_blank" rel="noopener">Google Pixel 9a 5G 128 GB Obsidian — Refurbished, gewerblicher Verkäufer aus UK</a>
+        <div class="price-block">
+          <div class="price-main">290,43 €</div>
+          <div class="price-shipping">270,32 € + ca. 20,11 € Versand aus Großbritannien</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Gewerblich (UK)</div>
+          <div><span class="label">UVP:</span> 335,74 €</div>
+          <div><span class="label">Achtung:</span> als „Neu" gelistet, faktisch refurbished</div>
+        </div>
+        <div class="why"><strong>Score 320,43</strong> = 290,43 € + 30 € Trust-Aufschlag (Drittland, Zoll/Rückversand-Risiko). Spar-Vorteil schmilzt durch potenziellen Rückversand schnell.</div>
+      </div>
+    </div>
+
+    <!-- Rank 4 -->
+    <div class="card">
+      <div class="rank-badge">4</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-neu-128gb-unbenutzt-ungeoeffnet-nur-fuer-foto/3379928492-173-4548" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/14/14b426bb-c18a-4d80-901d-5b811d428868?rule=$_2.AUTO" alt="Pixel 9a Bad Vilbel NEU" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-neu">Neu, ungeöffnet</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-neu-128gb-unbenutzt-ungeoeffnet-nur-fuer-foto/3379928492-173-4548" target="_blank" rel="noopener">Google Pixel 9a 128 GB — NEU, unbenutzt, ungeöffnet (nur für Foto geöffnet)</a>
+        <div class="price-block">
+          <div class="price-main">330,00 € VB</div>
+          <div class="price-shipping">Abholung 61118 Bad Vilbel — nur 10 km · keine Versandkosten</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Standort:</span> 61118 Bad Vilbel (10 km)</div>
+          <div><span class="label">Inseriert:</span> 12.04.2026</div>
+        </div>
+        <div class="why"><strong>Score 345</strong> = 330 € + 15 € Trust-Aufschlag. Bestes lokales Neuware-Angebot, aber ohne Garantie/Rechnung. Vor Übergabe Karton-Versiegelung prüfen.</div>
+      </div>
+    </div>
+
+    <!-- Rank 5 -->
+    <div class="card">
+      <div class="rank-badge">5</div>
+      <a class="card-image" href="https://www.amazon.de/dp/B0DSWFHTL2" target="_blank" rel="noopener">
+        <img src="https://m.media-amazon.com/images/I/71OA-qXBpSL._AC_UY218_.jpg" alt="Pixel 9a Amazon" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-amazon">Amazon.de</span>
+          <span class="badge cond-neu">Neu (Original)</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.amazon.de/dp/B0DSWFHTL2" target="_blank" rel="noopener">Google Pixel 9a Smartphone — Obsidian, 128 GB, ohne SIM-Lock, KI-Kamera</a>
+        <div class="price-block">
+          <div class="price-main">358,99 €</div>
+          <div class="price-shipping">Prime · kostenlose Lieferung Mo. 27.04.</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Amazon</div>
+          <div><span class="label">Garantie:</span> volle Herstellergarantie + Amazon-Rückgabe</div>
+          <div><span class="label">Reviews:</span> 2.300+ Bewertungen</div>
+        </div>
+        <div class="why"><strong>Score 358,99</strong> = 358,99 € + 0 € Trust-Aufschlag. Teurer Kanal, aber Null Risiko und sofortige Lieferung — gute Wahl, wenn dir Sicherheit wichtiger ist als 70 € Ersparnis.</div>
+      </div>
+    </div>
+
+    <!-- Rank 6 -->
+    <div class="card">
+      <div class="rank-badge">6</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-128gb-obsidion-neu-in-ovp-mit-rechnung-u-garantie/3391334566-173-1253" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/b7/b7aa91cb-4b5d-431e-812d-5fafc1eb5632?rule=$_2.AUTO" alt="Pixel 9a Hörstel NEU OVP" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-neu">Neu, OVP, Rechnung</span>
+          <span class="badge risk-hoch">Risiko hoch</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-128gb-obsidion-neu-in-ovp-mit-rechnung-u-garantie/3391334566-173-1253" target="_blank" rel="noopener">Google Pixel 9a 128 GB Obsidian — NEU in OVP mit Rechnung & Garantie</a>
+        <div class="price-block">
+          <div class="price-main">300,00 €</div>
+          <div class="price-shipping">Standort 48477 Hörstel (249 km) · realistisch nur Versand</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Standort:</span> 48477 Hörstel (249 km)</div>
+          <div><span class="label">Inseriert:</span> Heute, 11:34</div>
+        </div>
+        <div class="why"><strong>Score 410</strong> = 300 € + 60 € Trust-Aufschlag (Privatversand) + 50 € Distanz-Aufschlag. Auf dem Papier günstig, in der Praxis hohes Risiko (kein Käuferschutz bei Privatversand). <em>Nicht empfohlen, außer du kennst den Verkäufer.</em></div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="skipped">
+    <strong>idealo.de:</strong> Suche heute durch Bot-Schutz blockiert (Sorry-Page, Redirect auf .co.uk). Keine Vergleichspreise verfügbar — bitte später erneut versuchen.
+  </div>
+</main>
+
+<script>
+  window.addEventListener('load', function () {
+    if (typeof L === 'undefined') { document.getElementById('map').innerHTML = '<div style="padding:40px;text-align:center;color:#888;">Karte konnte nicht geladen werden (Leaflet offline?)</div>'; return; }
+    const home = [50.1816, 8.6322];
+    const map = L.map('map', { scrollWheelZoom: false }).setView(home, 7);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19,
+      subdomains: 'abcd',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    const homeIcon = L.divIcon({ className: 'leaflet-home-icon', html: '🏠', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -16] });
+    L.marker(home, { icon: homeIcon, zIndexOffset: 1000 }).addTo(map)
+      .bindPopup('<div class="map-popup"><strong>Dein Standort</strong><br>60439 Frankfurt-Niederursel</div>');
+
+    function rankIcon(rank, site) {
+      return L.divIcon({
+        className: 'leaflet-rank-icon site-' + site,
+        html: String(rank),
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
+        popupAnchor: [0, -16]
+      });
+    }
+
+    const offers = [
+      {
+        rank: 1, site: 'kleinanzeigen', coords: [49.8721, 8.6512],
+        title: 'Pixel 9a 128 GB — wie neu', price: '270,00 €',
+        meta: '64293 Darmstadt · 31 km · Abholung',
+        img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/72/727ee397-bfb6-42a3-91d1-80fc8ee556fc?rule=$_2.AUTO',
+        url: 'https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-128-gb-/3379304788-173-4891'
+      },
+      {
+        rank: 3, site: 'ebay', coords: [51.5074, -0.1278],
+        title: 'Pixel 9a 128 GB Refurbished — UK', price: '290,43 €',
+        meta: 'London (UK) · ca. 700 km · Versand inkl. Zoll-Risiko',
+        img: 'https://i.ebayimg.com/images/g/ZX4AAeSwuvJpZ9WH/s-l500.webp',
+        url: 'https://www.ebay.de/itm/357913571264'
+      },
+      {
+        rank: 4, site: 'kleinanzeigen', coords: [50.1810, 8.7378],
+        title: 'Pixel 9a 128 GB NEU, ungeöffnet', price: '330,00 € VB',
+        meta: '61118 Bad Vilbel · 10 km · Abholung',
+        img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/14/14b426bb-c18a-4d80-901d-5b811d428868?rule=$_2.AUTO',
+        url: 'https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-neu-128gb-unbenutzt-ungeoeffnet-nur-fuer-foto/3379928492-173-4548'
+      },
+      {
+        rank: 6, site: 'kleinanzeigen', coords: [52.2912, 7.5828],
+        title: 'Pixel 9a 128 GB NEU OVP + Garantie', price: '300,00 €',
+        meta: '48477 Hörstel · 249 km · Versand nötig',
+        img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/b7/b7aa91cb-4b5d-431e-812d-5fafc1eb5632?rule=$_2.AUTO',
+        url: 'https://www.kleinanzeigen.de/s-anzeige/google-pixel-9a-128gb-obsidion-neu-in-ovp-mit-rechnung-u-garantie/3391334566-173-1253'
+      }
+    ];
+
+    const all = [home];
+    offers.forEach(o => {
+      all.push(o.coords);
+      const popup =
+        '<div class="map-popup">' +
+        '<a href="' + o.url + '" target="_blank" rel="noopener">' +
+        '<img src="' + o.img + '" alt=""></a>' +
+        '<a href="' + o.url + '" target="_blank" rel="noopener">#' + o.rank + ' — ' + o.title + '</a>' +
+        '<div class="pop-price">' + o.price + '</div>' +
+        '<div class="pop-meta">' + o.meta + '</div>' +
+        '</div>';
+      L.marker(o.coords, { icon: rankIcon(o.rank, o.site) }).addTo(map).bindPopup(popup);
+    });
+
+    map.fitBounds(all, { padding: [40, 40] });
+  });
+</script>
+
+<footer>
+  Erzeugt durch Claude-Skill <code>shopping-comparison</code> · Score = Preis + Trust-Aufschlag + Distanz-Aufschlag · niedriger Score = besseres Gesamtpaket<br>
+  Kein Kauf, kein Versand und keine Kontaktnachricht ohne ausdrückliche Freigabe.
+</footer>
+</body>
+</html>

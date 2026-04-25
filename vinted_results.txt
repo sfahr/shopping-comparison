@@ -1,0 +1,141 @@
+uid=12_0 RootWebArea "Artikel | Vinted" url="https://www.vinted.de/catalog?search_text=Lenovo+Legion+Pro+RTX+5070+Ti+32GB+1TB"
+  uid=12_1 banner
+    uid=12_2 link "Weiter zum Inhalt" url="https://www.vinted.de/catalog?search_text=Lenovo+Legion+Pro+RTX+5070+Ti+32GB+1TB#content"
+      uid=12_3 StaticText "Weiter zum Inhalt"
+    uid=12_4 link "Vinted-Logo" description="Vinted-Logo" url="https://www.vinted.de/"
+      uid=12_5 image "Vinted-Logo" url="https://marketplace-web-assets.vinted.com/_next/static/media/logo.5398230b.svg"
+    uid=12_6 button "Katalog" expandable
+    uid=12_7 textbox "Katalog" value="Lenovo Legion Pro RTX 5070 Ti 32GB 1TB"
+    uid=12_8 button "Suche löschen"
+    uid=12_9 link "Registrieren | Einloggen" url="https://www.vinted.de/member/signup/select_type?ref_url=%2Fcatalog%3Fsearch_text%3DLenovo%2BLegion%2BPro%2BRTX%2B5070%2BTi%2B32GB%2B1TB"
+      uid=12_10 StaticText "Registrieren | Einloggen"
+    uid=12_11 link "Artikel verkaufen" url="https://www.vinted.de/member/signup/select_type"
+      uid=12_12 StaticText "Artikel verkaufen"
+    uid=12_13 link "Hilfe" url="https://www.vinted.de/help?access_channel=vinted_guide"
+    uid=12_14 button "DE" expandable
+  uid=12_15 navigation
+    uid=12_16 tab "Damen" selectable
+    uid=12_17 tab "Herren" selectable
+    uid=12_18 tab "Designerartikel" selectable
+    uid=12_19 tab "Kinder" selectable
+    uid=12_20 tab "Home" selectable
+    uid=12_21 tab "Elektronik" selectable
+    uid=12_22 tab "Unterhaltung" selectable
+    uid=12_23 tab "Hobby- & Sammlerartikel" selectable
+    uid=12_24 tab "Sport" selectable
+  uid=12_25 main
+    uid=12_26 heading "Werbung" level="4"
+    uid=12_27 button expandable
+    uid=12_28 Iframe "Anzeige" description="Werbung"
+      uid=12_29 RootWebArea "SafeFrame Container" url="https://7d3f35bf5b0bdb85d17c7aae64341217.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html"
+    uid=12_57 generic
+    uid=12_58 navigation
+    uid=12_59 heading "Artikel" level="1"
+    uid=12_60 button "Kategorie" expandable
+    uid=12_61 button "Größe" expandable
+    uid=12_62 button "Marke" expandable
+    uid=12_63 button "Zustand" expandable
+    uid=12_64 button "Farbe" expandable
+    uid=12_65 button "Preis" expandable
+    uid=12_66 button "Material" expandable
+    uid=12_67 button "Sortieren nach" expandable
+    uid=12_68 button "Lenovo Legion Pro RTX 5070 Ti 32GB 1TB"
+    uid=12_69 link "Elektronik" url="https://www.vinted.de/catalog/2994-electronics?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_70 StaticText "Elektronik"
+    uid=12_71 link "Damen" url="https://www.vinted.de/catalog/1904-women?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_72 StaticText "Damen"
+    uid=12_73 link "Herren" url="https://www.vinted.de/catalog/5-men?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_74 StaticText "Herren"
+    uid=12_75 link "Kinder" url="https://www.vinted.de/catalog/1193-kids?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_76 StaticText "Kinder"
+    uid=12_77 link "Home" url="https://www.vinted.de/catalog/1918-home?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_78 StaticText "Home"
+    uid=12_79 link "Unterhaltung" url="https://www.vinted.de/catalog/2309-entertainment?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_80 StaticText "Unterhaltung"
+    uid=12_81 link "Hobby- & Sammlerartikel" url="https://www.vinted.de/catalog/4824-hobbies-and-collectables?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_82 StaticText "Hobby- & Sammlerartikel"
+    uid=12_83 link "Sport" url="https://www.vinted.de/catalog/4332-sports?search_text=Lenovo%20Legion%20Pro%20RTX%205070%20Ti%2032GB%201TB"
+      uid=12_84 StaticText "Sport"
+    uid=12_85 StaticText "1 Ergebnis."
+    uid=12_86 button "Suchergebnisse"
+    uid=12_87 StaticText "Versandkosten fügen wir beim Checkout hinzu"
+    uid=12_88 button "Schließen"
+    uid=12_89 image "Lenovo Legion Pro 5 16IAX10H Notebook Gaming, marke: Lenovo, modell: Legion 5 Pro, zustand: Neu, 2 450,00 €, 2 573,20 € inklusive Vinted-Käuferschutz" url="https://images1.vinted.net/t/01_01904_1zYm34iABMqRDYqVAJ4TYWT4/310x430/1775682838.webp?s=34b8d09ebca1a4f7f27424ec3f677e49721b5b9f"
+    uid=12_90 link "Lenovo Legion Pro 5 16IAX10H Notebook Gaming, marke: Lenovo, modell: Legion 5 Pro, zustand: Neu, 2 450,00 €, 2 573,20 € inklusive Vinted-Käuferschutz" url="https://www.vinted.de/items/8601326608-lenovo-legion-pro-5-16iax10h-notebook-gaming?referrer=catalog"
+    uid=12_91 button "Zu Favoriten hinzufügen, favorisiert von 5 Usern"
+    uid=12_92 generic live="polite" relevant="additions text"
+    uid=12_93 StaticText "Lenovo Legion 5 Pro"
+    uid=12_94 StaticText "Neu"
+    uid=12_95 StaticText "2450,00 €"
+    uid=12_96 button "2573,20 € beinhaltet Vinted-Käuferschutz"
+      uid=12_97 generic
+    uid=12_98 complementary
+      uid=17_0 heading "Werbung" level="4"
+      uid=17_1 button expandable
+      uid=12_99 Iframe "Anzeige" description="Werbung"
+      uid=17_2 heading "Werbung" level="4"
+      uid=17_3 button expandable
+      uid=12_102 Iframe "Anzeige" description="Werbung"
+        uid=12_103 RootWebArea "SafeFrame Container" url="https://7d3f35bf5b0bdb85d17c7aae64341217.safeframe.googlesyndication.com/safeframe/1-0-45/html/container.html"
+          uid=12_104 Iframe
+            uid=12_105 RootWebArea url="https://s0.2mdn.net/sadbundle/12301383593810741819/index.html?ev=01_262"
+              uid=17_4 StaticText "Startbonus für Neukunden mit mind. 100 € Kartenumsatz in 4 Wochen und erteilter Werbeeinwilligung. Gemäß Preisverzeichnis: Keine Jahresgebühr; bei 100 % Lastschrift-Rückzahlung 2 €/Monat. Geldautomatenbetreiber können eigene Gebühren erheben (nicht erstattungsfähig). Karteneinsatz in Casinos, Lotterien, Wettbüros und Wertpapierhandel: 4 % Gebühr."
+              uid=17_5 LineBreak "
+"
+              uid=17_6 LineBreak "
+"
+              uid=17_7 StaticText "*Barclays – lizenziert für BAWAG."
+              uid=17_8 StaticText "weitere Informationen"
+          uid=12_106 button
+          uid=17_9 Iframe
+            uid=17_10 RootWebArea url="about:blank"
+  uid=12_107 contentinfo
+    uid=12_108 StaticText "Vinted"
+    uid=12_109 link "Über uns" url="https://www.vinted.de/about"
+      uid=12_110 StaticText "Über uns"
+    uid=12_111 link "Nachhaltigkeit" url="https://company.vinted.com/sustainability?lang=de"
+      uid=12_112 StaticText "Nachhaltigkeit"
+    uid=12_113 link "Presse" url="https://company.vinted.com/newsroom"
+      uid=12_114 StaticText "Presse"
+    uid=12_115 link "Werbung" url="https://www.vinted.de/advertising"
+      uid=12_116 StaticText "Werbung"
+    uid=12_117 link "Barrierefreiheit" url="https://www.vinted.de/accessibility"
+      uid=12_118 StaticText "Barrierefreiheit"
+    uid=12_119 StaticText "Entdecken"
+    uid=12_120 link "Wie funktioniert's?" url="https://www.vinted.de/how_it_works"
+      uid=12_121 StaticText "Wie funktioniert's?"
+    uid=12_122 link "Artikelverifizierung" url="https://www.vinted.de/item_verification"
+      uid=12_123 StaticText "Artikelverifizierung"
+    uid=12_124 link "Smartphone-Apps" url="https://www.vinted.de/app"
+      uid=12_125 StaticText "Smartphone-Apps"
+    uid=12_126 link "Infoboard" url="https://www.vinted.de/infoboard"
+      uid=12_127 StaticText "Infoboard"
+    uid=12_128 StaticText "Hilfe"
+    uid=12_129 link "Hilfe-Center" url="https://www.vinted.de/help"
+      uid=12_130 StaticText "Hilfe-Center"
+    uid=12_131 link "Verkaufen" url="https://www.vinted.de/help/4-selling?access_channel=hc_topics"
+      uid=12_132 StaticText "Verkaufen"
+    uid=12_133 link "Kaufen" url="https://www.vinted.de/help/5-buying?access_channel=hc_topics"
+      uid=12_134 StaticText "Kaufen"
+    uid=12_135 link "Vertrauen und Sicherheit" url="https://www.vinted.de/safety"
+      uid=12_136 StaticText "Vertrauen und Sicherheit"
+    uid=12_137 link "Facebook" url="https://www.facebook.com/vinted"
+      uid=12_138 image "Facebook" url="https://marketplace-web-assets.vinted.com/_next/static/media/facebook.7f7ba6d1.svg"
+    uid=12_139 link "LinkedIn" url="https://www.linkedin.com/company/vinted"
+      uid=12_140 image "LinkedIn" url="https://marketplace-web-assets.vinted.com/_next/static/media/linkedin.2a9db314.svg"
+    uid=12_141 link "Instagram" url="https://www.instagram.com/vinted"
+      uid=12_142 image "Instagram" url="https://marketplace-web-assets.vinted.com/_next/static/media/instagram.4c935494.svg"
+    uid=12_143 link "Laden im App Store" url="https://vinted.fr/l/app-ios-landing"
+      uid=12_144 image "Laden im App Store" url="https://marketplace-web-assets.vinted.com/_next/static/media/de.358e9517.svg"
+    uid=12_145 link "Jetzt bei Google Play" url="https://vinted.fr/l/app-android-landing"
+      uid=12_146 image "Jetzt bei Google Play" url="https://marketplace-web-assets.vinted.com/_next/static/media/de.5455a057.svg"
+    uid=12_147 link "Datenschutz-Center" url="https://www.vinted.de/privacy"
+      uid=12_148 StaticText "Datenschutz-Center"
+    uid=12_149 link "Cookie-Hinweise" url="https://www.vinted.de/cookie-policy"
+      uid=12_150 StaticText "Cookie-Hinweise"
+    uid=12_151 button "Cookie-Einstellungen"
+    uid=12_152 link "AGB" url="https://www.vinted.de/terms_and_conditions"
+      uid=12_153 StaticText "AGB"
+    uid=12_154 link "Unsere Plattform" url="https://www.vinted.de/our-platform"
+      uid=12_155 StaticText "Unsere Plattform"
+  uid=12_156 alert atomic live="assertive" relevant="additions text"

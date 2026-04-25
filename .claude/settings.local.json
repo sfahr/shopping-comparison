@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Skill(shopping)",
+      "Bash(claude mcp *)",
+      "Bash(npx --version)",
+      "mcp__chrome-devtools__new_page",
+      "mcp__chrome-devtools__take_screenshot",
+      "mcp__chrome-devtools__take_snapshot",
+      "mcp__chrome-devtools__evaluate_script",
+      "mcp__chrome-devtools__navigate_page",
+      "mcp__chrome-devtools__wait_for",
+      "Read(//c/Users/sfahr/.claude/skills/**)",
+      "mcp__chrome-devtools__list_pages",
+      "mcp__chrome-devtools__select_page",
+      "mcp__chrome-devtools__press_key",
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@latest shopping-comparison --typescript --tailwind --app --no-git --yes)",
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s http://localhost:3000)",
+      "mcp__chrome-devtools__fill",
+      "mcp__chrome-devtools__click",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Initial shopping comparison web app with 6-site scraper and Leaflet map *)"
+    ]
+  }
+}

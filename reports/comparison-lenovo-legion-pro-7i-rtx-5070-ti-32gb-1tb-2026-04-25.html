@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preisvergleich — Lenovo Legion Pro 7i (RTX 5070 Ti, 32 GB, 1 TB) · 25.04.2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background: #f4f5f7;
+    color: #1f2330;
+    line-height: 1.5;
+  }
+  header {
+    background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+    color: #fff;
+    padding: 28px 32px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  header h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; }
+  header .meta { opacity: 0.9; font-size: 14px; }
+
+  main { max-width: 1200px; margin: 0 auto; padding: 32px; }
+
+  .summary {
+    background: #fff;
+    border-left: 4px solid #16a34a;
+    padding: 18px 22px;
+    border-radius: 8px;
+    margin-bottom: 28px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .summary h2 { margin: 0 0 8px; font-size: 17px; color: #16a34a; }
+  .summary p { margin: 0; font-size: 14px; }
+
+  .map-section { margin-bottom: 28px; }
+  .map-section h2 {
+    margin: 0 0 12px;
+    font-size: 18px;
+    color: #1f2330;
+    font-weight: 600;
+  }
+  #map {
+    width: 100%;
+    height: 420px;
+    border-radius: 12px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+    z-index: 1;
+  }
+  .leaflet-rank-icon {
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-weight: 700;
+    font-size: 14px;
+    text-align: center;
+    line-height: 28px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .leaflet-rank-icon.site-amazon       { background: #b25400; }
+  .leaflet-rank-icon.site-ebay         { background: #0064d2; }
+  .leaflet-rank-icon.site-kleinanzeigen{ background: #1b7a1b; }
+  .leaflet-home-icon {
+    background: #1f2330;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 28px;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  .map-popup { font-size: 13px; min-width: 200px; max-width: 240px; line-height: 1.4; }
+  .map-popup img { width: 100%; max-height: 110px; object-fit: contain; border-radius: 4px; background: #f4f5f7; margin-bottom: 6px; }
+  .map-popup a { color: #2563eb; text-decoration: none; font-weight: 600; }
+  .map-popup a:hover { text-decoration: underline; }
+  .map-popup .pop-price { font-size: 16px; font-weight: 700; color: #16a34a; margin: 4px 0; }
+  .map-popup .pop-meta { font-size: 11px; color: #666; }
+
+  .online-legend {
+    margin-top: 12px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 16px;
+    font-size: 13px;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  }
+  .online-legend strong { color: #1f2330; }
+  .online-legend ul { margin: 6px 0 0; padding-left: 20px; }
+  .online-legend li { margin-bottom: 3px; }
+  .online-legend .mini-rank {
+    display: inline-block; width: 20px; height: 20px; line-height: 20px;
+    border-radius: 50%; color: #fff; text-align: center;
+    font-size: 11px; font-weight: 700; margin-right: 6px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 22px;
+  }
+
+  .card {
+    position: relative;
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.10); }
+  .card.best { outline: 3px solid #16a34a; outline-offset: -3px; }
+
+  .rank-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    width: 38px; height: 38px;
+    border-radius: 50%;
+    background: #1f2330;
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700;
+    font-size: 16px;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+  }
+  .card.best .rank-badge { background: #16a34a; }
+  .best-flag {
+    position: absolute; top: 12px; right: 12px;
+    background: #16a34a; color: #fff;
+    font-size: 11px; font-weight: 700; letter-spacing: 0.04em;
+    padding: 5px 9px; border-radius: 6px; z-index: 2;
+  }
+
+  .card-image {
+    display: block;
+    width: 100%; aspect-ratio: 1 / 1;
+    background: #f4f5f7;
+    overflow: hidden;
+  }
+  .card-image img {
+    width: 100%; height: 100%;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.2s ease;
+  }
+  .card-image:hover img { transform: scale(1.04); }
+
+  .card-body { padding: 16px 18px 18px; flex: 1; display: flex; flex-direction: column; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 10px; }
+  .badge {
+    font-size: 11px; font-weight: 600; letter-spacing: 0.02em;
+    padding: 3px 8px; border-radius: 4px; text-transform: uppercase;
+  }
+  .site-amazon       { background: #ffead2; color: #b25400; }
+  .site-ebay         { background: #e7f1ff; color: #0064d2; }
+  .site-kleinanzeigen{ background: #e8f5e9; color: #1b7a1b; }
+  .cond-neu          { background: #d4edda; color: #155724; }
+  .cond-gebraucht    { background: #fff3cd; color: #856404; }
+  .cond-refurb       { background: #d1ecf1; color: #0c5460; }
+  .risk-niedrig      { background: #d4edda; color: #155724; }
+  .risk-mittel       { background: #fff3cd; color: #856404; }
+  .risk-hoch         { background: #f8d7da; color: #721c24; }
+  .spec-mismatch     { background: #fde2e2; color: #9a1c1c; }
+  .spec-upgrade      { background: #e0e7ff; color: #4338ca; }
+
+  .card-title {
+    font-size: 15px; font-weight: 600;
+    color: #1f2330; text-decoration: none;
+    line-height: 1.35;
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+    margin-bottom: 12px;
+    min-height: 60px;
+  }
+  .card-title:hover { color: #2563eb; }
+
+  .price-block { margin: 6px 0 12px; }
+  .price-main { font-size: 26px; font-weight: 700; color: #16a34a; line-height: 1; }
+  .price-shipping { font-size: 12px; color: #666; margin-top: 4px; }
+
+  .meta-row {
+    font-size: 13px; color: #555;
+    border-top: 1px solid #ececec;
+    padding-top: 10px; margin-top: auto;
+  }
+  .meta-row .label { color: #999; }
+  .meta-row div { margin-bottom: 4px; }
+
+  .why {
+    margin-top: 10px;
+    background: #f9fafb;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: #555;
+    border-left: 3px solid #cbd5e1;
+  }
+  .why strong { color: #1f2330; }
+
+  .alt-section { margin-top: 36px; }
+  .alt-section h2 { font-size: 18px; margin: 0 0 14px; color: #1f2330; }
+  .alt-section p { margin: 0 0 12px; font-size: 13px; color: #555; }
+
+  .skipped {
+    background: #fff;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-top: 28px;
+    color: #666;
+    font-size: 13px;
+    border: 1px dashed #d1d5db;
+  }
+
+  footer {
+    text-align: center;
+    color: #888;
+    font-size: 12px;
+    padding: 24px;
+    line-height: 1.7;
+  }
+  footer code { background: #eef0f3; padding: 2px 5px; border-radius: 3px; font-size: 11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Preisvergleich · Lenovo Legion Pro 7i (RTX 5070 Ti, 32 GB, 1 TB)</h1>
+  <div class="meta">Stand 25. April 2026 · Standort 60439 Frankfurt-Niederursel · Quellen: amazon.de, idealo.de, ebay.de, kleinanzeigen.de</div>
+</header>
+
+<main>
+  <div class="summary">
+    <h2>🏆 Bestes Gesamtpaket: Kleinanzeigen Oestrich-Winkel — 2.100 €</h2>
+    <p>Exakt deine Wunschkonfig (Pro 7i Gen 10, RTX 5070 Ti, 32 GB, Win 11 Pro), nur 48 km Abholweg, im Dezember 2025 gekauft, Top-Zustand. Score 2.115 — über <strong>1.000 € unter</strong> dem nächsten Neukauf-Angebot. Risiko mittel: Privatverkauf ohne Garantie, aber lokale Begutachtung möglich. eBay UK Gewerblich (€ 2.711,95) ist die beste „neu mit Käuferschutz"-Option, hat aber Brexit-/Zoll-Risiko. Amazon listet die Pro 7i mit 5070 Ti aktuell <strong>nicht</strong> — nur die AMD-Schwester Pro 7 (Spec-Hinweis im Report).</p>
+  </div>
+
+  <section class="map-section">
+    <h2>📍 Wo stehen die Angebote?</h2>
+    <div id="map"></div>
+    <div class="online-legend">
+      <strong>Online-Händler ohne festen Standort</strong> (kein Map-Pin):
+      <ul>
+        <li><span class="mini-rank" style="background:#0064d2;">4</span> eBay.de — Lenovo Gewerblich, Sofort-Kaufen aus DE — 3.199,00 €</li>
+        <li><span class="mini-rank" style="background:#b25400;">5</span> Amazon.de — Pro 7 <em>AMD</em>-Variante (Spec-Mismatch zu „7i") — 3.099,00 €</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="grid">
+
+    <!-- Rank 1 -->
+    <div class="card best">
+      <div class="rank-badge">1</div>
+      <div class="best-flag">🏆 BESTES PAKET</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7i-rtx-5070-ti-ram-32gb-win-11-pro-/3361982309-278-5122" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/75/7508bf07-41cd-47c9-971b-d5606e97cf07?rule=$_2.AUTO" alt="Legion Pro 7i Oestrich-Winkel" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-gebraucht">Gebraucht (12/2025)</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7i-rtx-5070-ti-ram-32gb-win-11-pro-/3361982309-278-5122" target="_blank" rel="noopener">Lenovo Legion Pro 7i Gen 10 — RTX 5070 Ti, 32 GB RAM, Win 11 Pro</a>
+        <div class="price-block">
+          <div class="price-main">2.100,00 €</div>
+          <div class="price-shipping">Abholung 65375 Oestrich-Winkel (48 km) · keine Versandkosten</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Standort:</span> 65375 Oestrich-Winkel (48 km)</div>
+          <div><span class="label">Inseriert:</span> 24.03.2026</div>
+        </div>
+        <div class="why"><strong>Score 2.115</strong> = 2.100 € + 15 € Trust-Aufschlag (Privatverkauf, lokale Abholung möglich). Vor Bezahlung Gerät anschalten, Hardware-IDs prüfen, Stresstest fahren, Kaufbeleg vom Dezember 2025 zeigen lassen.</div>
+      </div>
+    </div>
+
+    <!-- Rank 2 -->
+    <div class="card">
+      <div class="rank-badge">2</div>
+      <a class="card-image" href="https://www.ebay.de/itm/287289854994" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/OJYAAeSwd59psBYB/s-l500.webp" alt="Legion Pro 7i UK eBay" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-neu">Neu (Sonstige)</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/287289854994" target="_blank" rel="noopener">Lenovo Legion Pro 7i — Intel Ultra 9 275HX, 32 GB, 1 TB SSD, RTX 5070 Ti (UK)</a>
+        <div class="price-block">
+          <div class="price-main">2.711,95 €</div>
+          <div class="price-shipping">2.595,11 € + ca. 116,84 € Versand aus Großbritannien</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Lenovo (Gewerblich, UK)</div>
+          <div><span class="label">Format:</span> Sofort-Kaufen</div>
+          <div><span class="label">Achtung:</span> Brexit-Zoll, Rückversand teuer</div>
+        </div>
+        <div class="why"><strong>Score 2.741,95</strong> = 2.711,95 € + 30 € Trust-Aufschlag (Drittland UK, Zoll-/Rückversand-Risiko). eBay-Käuferschutz greift, aber bei Reklamation ist der Rückversand nach UK teuer.</div>
+      </div>
+    </div>
+
+    <!-- Rank 3 -->
+    <div class="card">
+      <div class="rank-badge">3</div>
+      <a class="card-image" href="https://www.ebay.de/itm/397833442882" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/TO8AAeSwEaNp3EPV/s-l500.webp" alt="Legion Pro 7i Australien eBay" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-neu">Neu</span>
+          <span class="badge risk-hoch">Risiko hoch</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/397833442882" target="_blank" rel="noopener">Lenovo Legion Pro 7i Gen 10 — RTX 5070 Ti 12 GB, U9 275HX, 32 GB, 1 TB OLED (AU)</a>
+        <div class="price-block">
+          <div class="price-main">2.679,92 €</div>
+          <div class="price-shipping">2.562,32 € VB + 117,60 € Versand aus Australien · nur „Preisvorschlag", kein Sofort-Kaufen</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat (Australien)</div>
+          <div><span class="label">Format:</span> Preisvorschlag</div>
+          <div><span class="label">Achtung:</span> Drittland privat, hohe Importabwicklung, AU-Tastatur möglich</div>
+        </div>
+        <div class="why"><strong>Score 2.857,52</strong> = 2.679,92 € + 60 € Trust-Aufschlag (Privat aus Drittland) + 0 € Distanz (Versand inkl.). Spar-Vorteil schmilzt durch Zoll & Risiko zusammen — <em>nicht empfohlen</em>.</div>
+      </div>
+    </div>
+
+    <!-- Rank 4 -->
+    <div class="card">
+      <div class="rank-badge">4</div>
+      <a class="card-image" href="https://www.ebay.de/itm/267641392671" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/jHoAAeSwo41p4TUU/s-l500.webp" alt="Legion Pro 7i DE eBay" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-neu">Neu (Sonstige)</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/267641392671" target="_blank" rel="noopener">Lenovo Legion Pro 7i 16" 240 Hz OLED — Core Ultra 9, 32 GB, 1 TB, RTX 5070 Ti, Win 11 Home</a>
+        <div class="price-block">
+          <div class="price-main">3.199,00 €</div>
+          <div class="price-shipping">Gratis 2-3 Tage Lieferung aus DE · Lieferung an Abholstation möglich</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Lenovo (Gewerblich, DE)</div>
+          <div><span class="label">Format:</span> Sofort-Kaufen</div>
+          <div><span class="label">Käuferschutz:</span> ja (eBay) + Gewährleistung</div>
+        </div>
+        <div class="why"><strong>Score 3.199</strong> = 3.199 € + 0 € Trust + 0 € Distanz. Sicherste Neuwarenoption — voller Käuferschutz und Lenovo-Garantie. Aufpreis gegenüber Rank 1 (Gebrauchtware): <strong>+1.099 €</strong> für Garantie und Versiegelung.</div>
+      </div>
+    </div>
+
+    <!-- Rank 5 -->
+    <div class="card">
+      <div class="rank-badge">5</div>
+      <a class="card-image" href="https://www.amazon.de/dp/B0GMQJBJYZ" target="_blank" rel="noopener">
+        <img src="https://m.media-amazon.com/images/I/611TWfL8BpL._AC_UY218_.jpg" alt="Legion Pro 7 AMD Amazon" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-amazon">Amazon.de</span>
+          <span class="badge cond-neu">Neu (Original)</span>
+          <span class="badge spec-mismatch">⚠ Spec-Mismatch: AMD statt Intel</span>
+        </div>
+        <a class="card-title" href="https://www.amazon.de/dp/B0GMQJBJYZ" target="_blank" rel="noopener">Lenovo Legion Pro 7 (<strong>AMD Ryzen 9 9955HX</strong>) — 32 GB, 1 TB, RTX 5070 Ti, OLED 240 Hz, Prime</a>
+        <div class="price-block">
+          <div class="price-main">3.099,00 €</div>
+          <div class="price-shipping">Prime · kostenlose Lieferung Di. 28.04.</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Amazon</div>
+          <div><span class="label">Achtung:</span> Pro 7 ≠ Pro 7i — AMD-CPU statt Intel Ultra 9</div>
+          <div><span class="label">Garantie:</span> volle Lenovo + Amazon-Rückgabe</div>
+        </div>
+        <div class="why"><strong>Score nicht direkt vergleichbar</strong> — anderes Modell. Amazon DE listet die Pro 7i mit RTX 5070 Ti aktuell nicht. Diese AMD-Variante kostet im Schnitt das Gleiche, hat ähnliche Performance-Klasse, aber unterscheidet sich in CPU/Treiberverhalten/Akkulaufzeit. Nur nehmen, wenn AMD für dich okay ist.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <section class="alt-section">
+    <h2>🔄 Alternative — Spec-Upgrade auf RTX 5080</h2>
+    <p>Falls du bereit bist, etwa 1.000 € mehr auszugeben für mehr GPU + RAM + Storage, gibt es lokal in 103 km Entfernung eine deutlich stärkere Konfig:</p>
+    <div class="grid">
+      <div class="card">
+        <div class="rank-badge" style="background:#4338ca;">+</div>
+        <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-7i-pro-5080-2tb-64gb-ultra-9-275hx-gaming-laptop/3385568970-278-8139" target="_blank" rel="noopener">
+          <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/ec/ec4599c9-ea7c-4760-a3bf-ffdf9bc14312?rule=$_2.AUTO" alt="Legion 7i Pro 5080 Sinsheim" loading="lazy">
+        </a>
+        <div class="card-body">
+          <div class="badges">
+            <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+            <span class="badge cond-gebraucht">Gebraucht (12/2025)</span>
+            <span class="badge spec-upgrade">⬆ Spec-Upgrade: 5080 + 64 GB + 2 TB</span>
+          </div>
+          <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-7i-pro-5080-2tb-64gb-ultra-9-275hx-gaming-laptop/3385568970-278-8139" target="_blank" rel="noopener">Lenovo Legion 7i Pro Gen 10 — RTX <strong>5080</strong>, <strong>64 GB</strong> RAM, <strong>2 TB</strong> SSD, Ultra 9 275HX</a>
+          <div class="price-block">
+            <div class="price-main">3.175,00 €</div>
+            <div class="price-shipping">74889 Sinsheim (103 km) · realistisch nur Versand oder weite Anfahrt</div>
+          </div>
+          <div class="meta-row">
+            <div><span class="label">Verkäufer:</span> Privat</div>
+            <div><span class="label">Inseriert:</span> 18.04.2026</div>
+            <div><span class="label">Vorteil:</span> stärkere GPU + 2× RAM + 2× SSD vs. Wunschkonfig</div>
+          </div>
+          <div class="why">Im Vergleich zu Rank 1 (5070 Ti, 32 GB, 1 TB): +1.075 € für deutlich stärkere Hardware. Sinnvoll, wenn du in 1440p auf Anschlag spielst oder VRAM-hungrige KI-Workloads laufen lässt.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="skipped">
+    <strong>idealo.de:</strong> Suche heute durch Bot-Schutz blockiert (Sorry-Page). Keine Vergleichspreise verfügbar — bitte später erneut versuchen.
+  </div>
+</main>
+
+<script>
+  window.addEventListener('load', function () {
+    if (typeof L === 'undefined') { document.getElementById('map').innerHTML = '<div style="padding:40px;text-align:center;color:#888;">Karte konnte nicht geladen werden.</div>'; return; }
+    const home = [50.1816, 8.6322];
+    const map = L.map('map', { scrollWheelZoom: false }).setView(home, 6);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19,
+      subdomains: 'abcd',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    const homeIcon = L.divIcon({ className: 'leaflet-home-icon', html: '🏠', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -16] });
+    L.marker(home, { icon: homeIcon, zIndexOffset: 1000 }).addTo(map)
+      .bindPopup('<div class="map-popup"><strong>Dein Standort</strong><br>60439 Frankfurt-Niederursel</div>');
+
+    function rankIcon(rank, site) {
+      return L.divIcon({
+        className: 'leaflet-rank-icon site-' + site,
+        html: String(rank),
+        iconSize: [32, 32],
+        iconAnchor: [16, 16],
+        popupAnchor: [0, -16]
+      });
+    }
+
+    const offers = [
+      {
+        rank: 1, site: 'kleinanzeigen', coords: [50.0205, 8.0537],
+        title: 'Legion Pro 7i 5070 Ti, 32 GB', price: '2.100,00 €',
+        meta: '65375 Oestrich-Winkel · 48 km · Abholung',
+        img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/75/7508bf07-41cd-47c9-971b-d5606e97cf07?rule=$_2.AUTO',
+        url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7i-rtx-5070-ti-ram-32gb-win-11-pro-/3361982309-278-5122'
+      },
+      {
+        rank: 2, site: 'ebay', coords: [51.5074, -0.1278],
+        title: 'Legion Pro 7i 5070 Ti — Lenovo UK', price: '2.711,95 €',
+        meta: 'London (UK) · ca. 700 km · Versand inkl. Brexit-Zoll',
+        img: 'https://i.ebayimg.com/images/g/OJYAAeSwd59psBYB/s-l500.webp',
+        url: 'https://www.ebay.de/itm/287289854994'
+      },
+      {
+        rank: 3, site: 'ebay', coords: [-33.8688, 151.2093],
+        title: 'Legion Pro 7i 5070 Ti — Privat AU', price: '2.679,92 €',
+        meta: 'Sydney (AU) · Versand inkl. · hohes Importrisiko',
+        img: 'https://i.ebayimg.com/images/g/TO8AAeSwEaNp3EPV/s-l500.webp',
+        url: 'https://www.ebay.de/itm/397833442882'
+      },
+      {
+        rank: '+', site: 'kleinanzeigen', coords: [49.2522, 8.8784],
+        title: 'Legion 7i Pro 5080 / 64 GB / 2 TB', price: '3.175,00 €',
+        meta: '74889 Sinsheim · 103 km · Spec-Upgrade',
+        img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/ec/ec4599c9-ea7c-4760-a3bf-ffdf9bc14312?rule=$_2.AUTO',
+        url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-7i-pro-5080-2tb-64gb-ultra-9-275hx-gaming-laptop/3385568970-278-8139'
+      }
+    ];
+
+    const closePins = [home];
+    function haversineKm(a, b) {
+      const R = 6371, toRad = x => x * Math.PI / 180;
+      const dLat = toRad(b[0]-a[0]), dLon = toRad(b[1]-a[1]);
+      const s = Math.sin(dLat/2)**2 + Math.cos(toRad(a[0]))*Math.cos(toRad(b[0]))*Math.sin(dLon/2)**2;
+      return 2*R*Math.asin(Math.sqrt(s));
+    }
+    offers.forEach(o => {
+      const popup =
+        '<div class="map-popup">' +
+        '<a href="' + o.url + '" target="_blank" rel="noopener">' +
+        '<img src="' + o.img + '" alt=""></a>' +
+        '<a href="' + o.url + '" target="_blank" rel="noopener">#' + o.rank + ' — ' + o.title + '</a>' +
+        '<div class="pop-price">' + o.price + '</div>' +
+        '<div class="pop-meta">' + o.meta + '</div>' +
+        '</div>';
+      L.marker(o.coords, { icon: rankIcon(o.rank, o.site) }).addTo(map).bindPopup(popup);
+      // Only include in auto-fit bounds if within 1500 km of home
+      if (haversineKm(home, o.coords) <= 1500) closePins.push(o.coords);
+    });
+
+    map.fitBounds(closePins, { padding: [40, 40], maxZoom: 9 });
+  });
+</script>
+
+<footer>
+  Erzeugt durch Claude-Skill <code>shopping-comparison</code> · Score = Preis + Trust-Aufschlag + Distanz-Aufschlag · niedriger Score = besseres Gesamtpaket<br>
+  Kein Kauf, kein Versand und keine Kontaktnachricht ohne ausdrückliche Freigabe.
+</footer>
+</body>
+</html>

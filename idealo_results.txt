@@ -1,0 +1,11 @@
+uid=14_0 RootWebArea "idealo" url="https://www.idealo.de/preisvergleich/MainSearchProductCategory.html?q=Lenovo+Legion+Pro+RTX+5070+Ti+32GB+1TB"
+  uid=14_1 banner
+    uid=14_2 link "idealo" url="https://www.idealo.co.uk/"
+      uid=14_3 image "idealo"
+  uid=14_4 StaticText "Sorry! Something has gone wrong. If the issue persists, please make sure your browser is updated to the latest version."
+  uid=14_5 StaticText "Still having the issue, please "
+  uid=14_6 link "reach out" url="https://kundenservice.idealo.com/de/contact?topic=access-idealo"
+    uid=14_7 StaticText "reach out"
+  uid=14_8 StaticText " to our customer care with reference ID "
+  uid=14_9 StaticText "0.733d1602.1777117790.1ae9dc2"
+  uid=14_10 StaticText " for further assistance."

@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Preisvergleich — Lenovo Legion Pro (RTX 5070 Ti, 32 GB, 1 TB) · Deutschland · 25.04.2026</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="">
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; background: #f4f5f7; color: #1f2330; line-height: 1.5; }
+  header { background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%); color: #fff; padding: 28px 32px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+  header h1 { margin: 0 0 6px; font-size: 26px; font-weight: 700; }
+  header .meta { opacity: 0.9; font-size: 14px; }
+  main { max-width: 1280px; margin: 0 auto; padding: 32px; }
+  .summary { background: #fff; border-left: 4px solid #16a34a; padding: 18px 22px; border-radius: 8px; margin-bottom: 28px; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .summary h2 { margin: 0 0 8px; font-size: 17px; color: #16a34a; }
+  .summary p { margin: 0 0 8px; font-size: 14px; }
+  .summary p:last-child { margin: 0; }
+  .map-section { margin-bottom: 28px; }
+  .map-section h2 { margin: 0 0 12px; font-size: 18px; color: #1f2330; font-weight: 600; }
+  #map { width: 100%; height: 460px; border-radius: 12px; box-shadow: 0 1px 3px rgba(0,0,0,0.08); z-index: 1; }
+  .leaflet-rank-icon { border: 2px solid #fff; border-radius: 50%; color: #fff; font-weight: 700; font-size: 13px; text-align: center; line-height: 28px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+  .leaflet-rank-icon.site-amazon { background: #b25400; }
+  .leaflet-rank-icon.site-ebay { background: #0064d2; }
+  .leaflet-rank-icon.site-kleinanzeigen { background: #1b7a1b; }
+  .leaflet-rank-icon.site-vinted { background: #09b1ba; }
+  .leaflet-home-icon { background: #1f2330; color: #fff; border: 2px solid #fff; border-radius: 50%; text-align: center; line-height: 28px; font-size: 16px; box-shadow: 0 2px 5px rgba(0,0,0,0.3); }
+  .map-popup { font-size: 13px; min-width: 200px; max-width: 240px; line-height: 1.4; }
+  .map-popup img { width: 100%; max-height: 110px; object-fit: contain; border-radius: 4px; background: #f4f5f7; margin-bottom: 6px; }
+  .map-popup a { color: #2563eb; text-decoration: none; font-weight: 600; }
+  .map-popup a:hover { text-decoration: underline; }
+  .map-popup .pop-price { font-size: 16px; font-weight: 700; color: #16a34a; margin: 4px 0; }
+  .map-popup .pop-meta { font-size: 11px; color: #666; }
+  .online-legend { margin-top: 12px; background: #fff; border-radius: 8px; padding: 12px 16px; font-size: 13px; color: #555; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+  .online-legend strong { color: #1f2330; }
+  .online-legend ul { margin: 6px 0 0; padding-left: 20px; }
+  .online-legend li { margin-bottom: 3px; }
+  .online-legend .mini-rank { display: inline-block; width: 20px; height: 20px; line-height: 20px; border-radius: 50%; color: #fff; text-align: center; font-size: 11px; font-weight: 700; margin-right: 6px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 22px; }
+  .card { position: relative; background: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 1px 3px rgba(0,0,0,0.06); display: flex; flex-direction: column; transition: transform 0.15s ease, box-shadow 0.15s ease; }
+  .card:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.10); }
+  .card.best { outline: 3px solid #16a34a; outline-offset: -3px; }
+  .rank-badge { position: absolute; top: 12px; left: 12px; width: 38px; height: 38px; border-radius: 50%; background: #1f2330; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 16px; z-index: 2; box-shadow: 0 2px 6px rgba(0,0,0,0.25); }
+  .card.best .rank-badge { background: #16a34a; }
+  .best-flag { position: absolute; top: 12px; right: 12px; background: #16a34a; color: #fff; font-size: 11px; font-weight: 700; letter-spacing: 0.04em; padding: 5px 9px; border-radius: 6px; z-index: 2; }
+  .card-image { display: block; width: 100%; aspect-ratio: 1 / 1; background: #f4f5f7; overflow: hidden; }
+  .card-image img { width: 100%; height: 100%; object-fit: contain; display: block; transition: transform 0.2s ease; }
+  .card-image:hover img { transform: scale(1.04); }
+  .card-body { padding: 14px 16px 16px; flex: 1; display: flex; flex-direction: column; }
+  .badges { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 8px; }
+  .badge { font-size: 10px; font-weight: 600; letter-spacing: 0.02em; padding: 3px 7px; border-radius: 4px; text-transform: uppercase; }
+  .site-amazon { background: #ffead2; color: #b25400; }
+  .site-ebay { background: #e7f1ff; color: #0064d2; }
+  .site-kleinanzeigen { background: #e8f5e9; color: #1b7a1b; }
+  .site-vinted { background: #d8f6f7; color: #057f88; }
+  .cond-neu { background: #d4edda; color: #155724; }
+  .cond-gebraucht { background: #fff3cd; color: #856404; }
+  .cond-refurb { background: #d1ecf1; color: #0c5460; }
+  .risk-niedrig { background: #d4edda; color: #155724; }
+  .risk-mittel { background: #fff3cd; color: #856404; }
+  .risk-hoch { background: #f8d7da; color: #721c24; }
+  .spec-upgrade { background: #e0e7ff; color: #4338ca; }
+  .card-title { font-size: 14px; font-weight: 600; color: #1f2330; text-decoration: none; line-height: 1.35; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; margin-bottom: 10px; min-height: 56px; }
+  .card-title:hover { color: #2563eb; }
+  .price-block { margin: 4px 0 10px; }
+  .price-main { font-size: 24px; font-weight: 700; color: #16a34a; line-height: 1; }
+  .price-shipping { font-size: 11px; color: #666; margin-top: 4px; }
+  .meta-row { font-size: 12px; color: #555; border-top: 1px solid #ececec; padding-top: 8px; margin-top: auto; }
+  .meta-row .label { color: #999; }
+  .meta-row div { margin-bottom: 3px; }
+  .why { margin-top: 8px; background: #f9fafb; border-radius: 6px; padding: 7px 9px; font-size: 11px; color: #555; border-left: 3px solid #cbd5e1; }
+  .why strong { color: #1f2330; }
+  .skipped { background: #fff; border-radius: 8px; padding: 16px 20px; margin-top: 28px; color: #666; font-size: 13px; border: 1px dashed #d1d5db; }
+  footer { text-align: center; color: #888; font-size: 12px; padding: 24px; line-height: 1.7; }
+  footer code { background: #eef0f3; padding: 2px 5px; border-radius: 3px; font-size: 11px; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Preisvergleich · Lenovo Legion Pro (RTX 5070 Ti, 32 GB, 1 TB) · Deutschland</h1>
+  <div class="meta">Stand 25. April 2026 · Standort 60439 Frankfurt-Niederursel · Suchradius 100 km · Quellen: amazon.de, idealo.de, ebay.de, kleinanzeigen.de, vinted.de</div>
+</header>
+
+<main>
+  <div class="summary">
+    <h2>🏆 Bestes Gesamtpaket: Kleinanzeigen Celle — 1.850 €</h2>
+    <p>Die Pro 5 mit Intel U9 275HX, RTX 5070 Ti und 32 GB / 1 TB ist auf Kleinanzeigen <strong>ab 1.850 €</strong> zu finden — über <strong>650 € unter</strong> der günstigsten Neuware. Die rein billigsten Treffer (Celle, Seesen, Klipphausen) liegen 220–356 km entfernt, also nur sinnvoll bei Versandbereitschaft des Verkäufers oder weiter Anfahrt.</p>
+    <p>Das beste lokal-abholbare Angebot bleibt die <strong>Pro 7i in Oestrich-Winkel (48 km, 2.100 €, gebraucht 12/2025)</strong>. Mit dem erweiterten 100-km-Radius rückt zusätzlich <strong>GAMEBOX (Köln, 150 km) für 2.500 € NEU mit 64 GB</strong> als gewerblicher Verkäufer mit Widerrufsrecht ins Bild.</p>
+    <p>Bei strikter Neuware mit Käuferschutz ist <strong>eBay aitek24 (2.519 €, Pro 5, gewerblich DE)</strong> der klare Sieger — ca. 180 € günstiger als Amazon. Vinted-DE listet eine Pro 5 für 2.573 € inkl., aber der Verkäufer ist <strong>italienisch</strong> (IT-Tastatur und IT-Garantie sind zu erwarten).</p>
+  </div>
+
+  <section class="map-section">
+    <h2>📍 Wo stehen die Angebote?</h2>
+    <div id="map"></div>
+    <div class="online-legend">
+      <strong>Online-Händler ohne festen Standort</strong> (kein Map-Pin):
+      <ul>
+        <li><span class="mini-rank" style="background:#0064d2;">6</span> eBay.de — aitek24, Pro 5 NEU (Sonstige), Sofort-Kaufen DE — 2.519,00 €</li>
+        <li><span class="mini-rank" style="background:#b25400;">9</span> Amazon.de — Pro 5 Intel NEU, kostenloser Versand — 2.702,95 €</li>
+        <li><span class="mini-rank" style="background:#0064d2;">10</span> eBay.de — Lenovo Pro 7i NEU (Sonstige), Sofort-Kaufen DE — 3.199,00 €</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="grid">
+
+    <!-- Rank 1 -->
+    <div class="card best">
+      <div class="rank-badge">1</div>
+      <div class="best-flag">🏆 BESTES PAKET</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-5-gaming-notebook-ultra-9-rtx-5070ti-32gb/3390919326-278-3199" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/fd/fd3b5c27-c8cc-44ce-acbb-0bedacad7e96?rule=$_2.AUTO" alt="Pro 5 Celle" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-gebraucht">Gebraucht</span>
+          <span class="badge risk-hoch">Risiko hoch</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-5-gaming-notebook-ultra-9-rtx-5070ti-32gb/3390919326-278-3199" target="_blank" rel="noopener">Lenovo Legion Pro 5 — Ultra 9, RTX 5070 Ti, 32 GB</a>
+        <div class="price-block">
+          <div class="price-main">1.850,00 €</div>
+          <div class="price-shipping">29225 Celle (289 km) · Privatversand oder weite Anfahrt</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Inseriert:</span> Gestern, 19:08</div>
+        </div>
+        <div class="why"><strong>Score 1.960</strong> = 1.850 € + 60 (Privat-Versand/&gt;100 km) + 50 (&gt;200 km Pickup). Cheapest Hit, aber Privat-Versand birgt Betrugsrisiko — nur per PayPal-Käuferschutz oder Treuhand abwickeln.</div>
+      </div>
+    </div>
+
+    <!-- Rank 2 -->
+    <div class="card">
+      <div class="rank-badge">2</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-5-16iax10h-ultra-9-rtx-5070ti-32gb-/3356559738-278-2795" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/44/441df4f0-be18-44aa-8f7a-fc73e23bd3dc?rule=$_2.AUTO" alt="Pro 5 Seesen" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-gebraucht">Gebraucht</span>
+          <span class="badge risk-hoch">Risiko hoch</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-5-16iax10h-ultra-9-rtx-5070ti-32gb-/3356559738-278-2795" target="_blank" rel="noopener">Lenovo Legion Pro 5 16IAX10H — Ultra 9, RTX 5070 Ti, 32 GB</a>
+        <div class="price-block">
+          <div class="price-main">1.900,00 € VB</div>
+          <div class="price-shipping">38723 Seesen (220 km) · Privatversand oder weite Anfahrt</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Inseriert:</span> 18.03.2026</div>
+        </div>
+        <div class="why"><strong>Score 2.010</strong> = 1.900 € + 60 + 50. Sehr günstig, aber gleiche Versand-Risiken wie Rank 1.</div>
+      </div>
+    </div>
+
+    <!-- Rank 3 -->
+    <div class="card">
+      <div class="rank-badge">3</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7-ryzen-9-9955hx-rtx-5070-ti-oled-2k-240hz/3360680773-278-19811" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/f1/f1fd2bc1-006b-41a3-a21f-4219be794170?rule=$_2.AUTO" alt="Pro 7 Klipphausen" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-gebraucht">Gebraucht</span>
+          <span class="badge risk-hoch">Risiko hoch</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7-ryzen-9-9955hx-rtx-5070-ti-oled-2k-240hz/3360680773-278-19811" target="_blank" rel="noopener">Lenovo Legion Pro 7 — Ryzen 9 9955HX, RTX 5070 Ti, OLED 2K 240 Hz</a>
+        <div class="price-block">
+          <div class="price-main">2.000,00 € VB</div>
+          <div class="price-shipping">01665 Klipphausen (356 km) · Versand/Anfahrt</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat (AMD-Variante)</div>
+          <div><span class="label">Inseriert:</span> 22.03.2026</div>
+        </div>
+        <div class="why"><strong>Score 2.110</strong> = 2.000 € + 60 + 50. Pro 7 ist die AMD-Schwester der 7i, sehr ähnliche Performance-Klasse.</div>
+      </div>
+    </div>
+
+    <!-- Rank 4 -->
+    <div class="card">
+      <div class="rank-badge">4</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7i-rtx-5070-ti-ram-32gb-win-11-pro-/3361982309-278-5122" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/75/7508bf07-41cd-47c9-971b-d5606e97cf07?rule=$_2.AUTO" alt="Pro 7i Oestrich-Winkel" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-gebraucht">Gebraucht (12/2025)</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7i-rtx-5070-ti-ram-32gb-win-11-pro-/3361982309-278-5122" target="_blank" rel="noopener">Lenovo Legion Pro 7i Gen 10 — RTX 5070 Ti, 32 GB, Win 11 Pro · Top-Zustand</a>
+        <div class="price-block">
+          <div class="price-main">2.100,00 €</div>
+          <div class="price-shipping">65375 Oestrich-Winkel (48 km) · <strong>lokale Abholung</strong> · keine Versandkosten</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Inseriert:</span> 24.03.2026</div>
+          <div><span class="label">Vorteil:</span> einziges echtes Lokalangebot (≤ 100 km)</div>
+        </div>
+        <div class="why"><strong>Score 2.115</strong> = 2.100 € + 15 (Privat-Lokal-Aufschlag) + 0 (Abholung). <strong>Bester Kompromiss aus Preis und Sicherheit</strong> — vor Ort prüfen, IMEI/Service-Tag bei Lenovo verifizieren.</div>
+      </div>
+    </div>
+
+    <!-- Rank 5 — GAMEBOX (NEW) -->
+    <div class="card">
+      <div class="rank-badge">5</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7-ultra-9-64-gb-1tb-5070-ti-oled-neu-of/3319977128-278-26206" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/36/3621e71d-dd8e-4f55-85bd-c7013e0b6ad9?rule=$_2.AUTO" alt="Pro 7 GAMEBOX Köln" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-neu">Neu (Gewerblich)</span>
+          <span class="badge spec-upgrade">⬆ 64 GB statt 32 GB</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7-ultra-9-64-gb-1tb-5070-ti-oled-neu-of/3319977128-278-26206" target="_blank" rel="noopener">Lenovo Legion Pro 7 — Ultra 9, <strong>64 GB</strong>, 1 TB, RTX 5070 Ti, OLED · GAMEBOX</a>
+        <div class="price-block">
+          <div class="price-main">2.500,00 €</div>
+          <div class="price-shipping">50737 Köln-Weidenpesch (150 km) · Gewerblich, Versand verfügbar</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> GAMEBOX (gewerblich, Widerrufsrecht)</div>
+          <div><span class="label">Vorteil:</span> 2× RAM (64 GB) für nur 400 € Aufpreis vs. Rank 4</div>
+        </div>
+        <div class="why"><strong>Score 2.500</strong> = 2.500 € + 0 (Gewerblich = wie eBay-Händler) + 0 (Versand verfügbar). Mit erweitertem 100-km-Radius wird Köln-Köln zur Pickup-Option, gewerblich = Widerrufsrecht. <strong>Bester Hybrid: NEU + 64 GB Spec-Bonus + Käuferschutz</strong>.</div>
+      </div>
+    </div>
+
+    <!-- Rank 6 — eBay aitek24 -->
+    <div class="card">
+      <div class="rank-badge">6</div>
+      <a class="card-image" href="https://www.ebay.de/itm/257470601294" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/Q0YAAeSwxChp6sQk/s-l500.webp" alt="Pro 5 eBay aitek24" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-neu">Neu (Sonstige)</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/257470601294" target="_blank" rel="noopener">Lenovo Legion Pro 5 16IAX10H — Core Ultra 9 275HX, 32 GB, 1 TB, RTX 5070 Ti</a>
+        <div class="price-block">
+          <div class="price-main">2.519,00 €</div>
+          <div class="price-shipping">Gratis 2-3 Tage Lieferung · DE</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> aitek24 (4.596 Bewertungen, 100 % positiv)</div>
+          <div><span class="label">Format:</span> Sofort-Kaufen</div>
+          <div><span class="label">Käuferschutz:</span> ja (eBay) + Gewährleistung</div>
+        </div>
+        <div class="why"><strong>Score 2.519</strong> = 2.519 € + 0 + 0. <strong>Beste „Neu mit Käuferschutz" Option für 32 GB Spec-Match</strong> — 184 € günstiger als Amazon.</div>
+      </div>
+    </div>
+
+    <!-- Rank 7 — KA Wehr -->
+    <div class="card">
+      <div class="rank-badge">7</div>
+      <a class="card-image" href="https://www.kleinanzeigen.de/s-anzeige/gaming-laptop-neu-lenovo-legion-pro-rtx-5070ti-ultra-9-275hx/3389589475-278-8175" target="_blank" rel="noopener">
+        <img src="https://img.kleinanzeigen.de/api/v1/prod-ads/images/5b/5b5593f6-f37c-4152-b057-9469f153b3c8?rule=$_2.AUTO" alt="Pro Wehr neu" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-kleinanzeigen">Kleinanzeigen</span>
+          <span class="badge cond-neu">Neu, mit Garantie</span>
+          <span class="badge risk-hoch">Risiko hoch</span>
+        </div>
+        <a class="card-title" href="https://www.kleinanzeigen.de/s-anzeige/gaming-laptop-neu-lenovo-legion-pro-rtx-5070ti-ultra-9-275hx/3389589475-278-8175" target="_blank" rel="noopener">Gaming Laptop NEU — Lenovo Legion Pro RTX 5070 Ti, Ultra 9 275HX, OLED, volle Garantie</a>
+        <div class="price-block">
+          <div class="price-main">2.450,00 € VB</div>
+          <div class="price-shipping">79664 Wehr (287 km) · Versand/Anfahrt</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Privat</div>
+          <div><span class="label">Inseriert:</span> 23.04.2026</div>
+        </div>
+        <div class="why"><strong>Score 2.560</strong> = 2.450 € + 60 + 50. Nagelneu mit Garantie laut Inserat — wenn echt, sehr attraktiv. Vor Privatversand <strong>Lenovo-Garantieübertragbarkeit</strong> klären.</div>
+      </div>
+    </div>
+
+    <!-- Rank 8 — Vinted IT -->
+    <div class="card">
+      <div class="rank-badge">8</div>
+      <a class="card-image" href="https://www.vinted.de/items/8601326608-lenovo-legion-pro-5-16iax10h-notebook-gaming" target="_blank" rel="noopener">
+        <img src="https://images1.vinted.net/t/01_01904_1zYm34iABMqRDYqVAJ4TYWT4/f800/1775682838.webp" alt="Pro 5 Vinted" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-vinted">Vinted.de</span>
+          <span class="badge cond-gebraucht">1 Monat genutzt</span>
+          <span class="badge risk-mittel">Risiko mittel</span>
+        </div>
+        <a class="card-title" href="https://www.vinted.de/items/8601326608-lenovo-legion-pro-5-16iax10h-notebook-gaming" target="_blank" rel="noopener">Lenovo Legion Pro 5 16IAX10H — Core Ultra 9 275HX, 32 GB, 1 TB, RTX 5070 Ti, 2 J Garantie</a>
+        <div class="price-block">
+          <div class="price-main">2.573,20 €</div>
+          <div class="price-shipping">2.450 € + 123,20 € (Versand + Käuferschutz) · aus Italien</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> madlylovewithcloset (IT)</div>
+          <div><span class="label">Achtung:</span> IT-Tastatur, IT-Garantie-Abwicklung</div>
+          <div><span class="label">Käuferschutz:</span> ja (Vinted)</div>
+        </div>
+        <div class="why"><strong>Score 2.593,20</strong> = 2.573,20 € + 20 (Privat EU non-DE) + 0. Beschreibung auf Italienisch — andere Inserate des Verkäufers sind italienische Mode. Vor Kauf Tastaturlayout schriftlich klären.</div>
+      </div>
+    </div>
+
+    <!-- Rank 9 — Amazon Pro 5 Schwarz -->
+    <div class="card">
+      <div class="rank-badge">9</div>
+      <a class="card-image" href="https://www.amazon.de/dp/B0GMQQFQD4" target="_blank" rel="noopener">
+        <img src="https://m.media-amazon.com/images/I/61cULJbW97L._AC_UY218_.jpg" alt="Pro 5 Amazon Schwarz" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-amazon">Amazon.de</span>
+          <span class="badge cond-neu">Neu (Original)</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.amazon.de/dp/B0GMQQFQD4" target="_blank" rel="noopener">Lenovo Legion Pro 5 — 16" OLED 240 Hz, Ultra 9 275HX, 32 GB, 1 TB, RTX 5070 Ti, QWERTZ Schwarz</a>
+        <div class="price-block">
+          <div class="price-main">2.702,95 €</div>
+          <div class="price-shipping">Kostenloser Versand 29-30 Apr · Nur noch 8 auf Lager</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Amazon</div>
+          <div><span class="label">Garantie:</span> volle Lenovo + Amazon-Rückgabe</div>
+          <div><span class="label">Tastatur:</span> QWERTZ Deutsch</div>
+        </div>
+        <div class="why"><strong>Score 2.702,95</strong> = 2.702,95 € + 0 + 0. Sicherste Neuwarenoption mit dt. Tastatur. 184 € teurer als eBay aitek24 (Rank 6).</div>
+      </div>
+    </div>
+
+    <!-- Rank 10 — eBay DE Pro 7i Lenovo -->
+    <div class="card">
+      <div class="rank-badge">10</div>
+      <a class="card-image" href="https://www.ebay.de/itm/267641392671" target="_blank" rel="noopener">
+        <img src="https://i.ebayimg.com/images/g/jHoAAeSwo41p4TUU/s-l500.webp" alt="Pro 7i Lenovo eBay DE" loading="lazy">
+      </a>
+      <div class="card-body">
+        <div class="badges">
+          <span class="badge site-ebay">eBay.de</span>
+          <span class="badge cond-neu">Neu (Sonstige)</span>
+          <span class="badge risk-niedrig">Risiko niedrig</span>
+        </div>
+        <a class="card-title" href="https://www.ebay.de/itm/267641392671" target="_blank" rel="noopener">Lenovo Legion Pro 7i 16" 240 Hz OLED — Core Ultra 9, 32 GB, 1 TB, RTX 5070 Ti, Win 11 Home</a>
+        <div class="price-block">
+          <div class="price-main">3.199,00 €</div>
+          <div class="price-shipping">Gratis 2-3 Tage Lieferung aus DE</div>
+        </div>
+        <div class="meta-row">
+          <div><span class="label">Verkäufer:</span> Lenovo (Gewerblich, DE)</div>
+          <div><span class="label">Garantie:</span> ja, voll</div>
+          <div><span class="label">Modell:</span> Pro 7i (höchste Tier)</div>
+        </div>
+        <div class="why"><strong>Score 3.199</strong> = 3.199 € + 0 + 0. Einzige NEU-Option für Pro 7i (Top-Tier) mit DE-Versand & DE-Garantie. Aufpreis vs. Pro 5 NEU (Rank 6): +680 €.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="skipped">
+    <strong>idealo.de:</strong> Suche heute durch Bot-Schutz blockiert (Sorry-Page). Keine Vergleichspreise verfügbar.
+  </div>
+</main>
+
+<script>
+  window.addEventListener('load', function () {
+    if (typeof L === 'undefined') { document.getElementById('map').innerHTML = '<div style="padding:40px;text-align:center;color:#888;">Karte konnte nicht geladen werden.</div>'; return; }
+    const home = [50.1816, 8.6322];
+    const map = L.map('map', { scrollWheelZoom: false }).setView(home, 6);
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png', {
+      maxZoom: 19, subdomains: 'abcd',
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>'
+    }).addTo(map);
+
+    const homeIcon = L.divIcon({ className: 'leaflet-home-icon', html: '🏠', iconSize: [32, 32], iconAnchor: [16, 16], popupAnchor: [0, -16] });
+    L.marker(home, { icon: homeIcon, zIndexOffset: 1000 }).addTo(map)
+      .bindPopup('<div class="map-popup"><strong>Dein Standort</strong><br>60439 Frankfurt-Niederursel</div>');
+
+    function rankIcon(rank, site) {
+      return L.divIcon({ className: 'leaflet-rank-icon site-' + site, html: String(rank), iconSize: [32,32], iconAnchor: [16,16], popupAnchor: [0,-16] });
+    }
+
+    const offers = [
+      { rank: 1, site: 'kleinanzeigen', coords: [52.6226, 10.0833], title: 'Pro 5 — Celle (gebraucht)', price: '1.850,00 €', meta: '29225 Celle · 289 km', img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/fd/fd3b5c27-c8cc-44ce-acbb-0bedacad7e96?rule=$_2.AUTO', url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-5-gaming-notebook-ultra-9-rtx-5070ti-32gb/3390919326-278-3199' },
+      { rank: 2, site: 'kleinanzeigen', coords: [51.8917, 10.1833], title: 'Pro 5 16IAX10H — Seesen (gebraucht)', price: '1.900,00 € VB', meta: '38723 Seesen · 220 km', img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/44/441df4f0-be18-44aa-8f7a-fc73e23bd3dc?rule=$_2.AUTO', url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-5-16iax10h-ultra-9-rtx-5070ti-32gb-/3356559738-278-2795' },
+      { rank: 3, site: 'kleinanzeigen', coords: [51.0867, 13.5350], title: 'Pro 7 (AMD) — Klipphausen', price: '2.000,00 € VB', meta: '01665 Klipphausen · 356 km', img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/f1/f1fd2bc1-006b-41a3-a21f-4219be794170?rule=$_2.AUTO', url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7-ryzen-9-9955hx-rtx-5070-ti-oled-2k-240hz/3360680773-278-19811' },
+      { rank: 4, site: 'kleinanzeigen', coords: [50.0205, 8.0537], title: 'Pro 7i — Oestrich-Winkel (LOKAL)', price: '2.100,00 €', meta: '65375 Oestrich-Winkel · 48 km Abholung', img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/75/7508bf07-41cd-47c9-971b-d5606e97cf07?rule=$_2.AUTO', url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7i-rtx-5070-ti-ram-32gb-win-11-pro-/3361982309-278-5122' },
+      { rank: 5, site: 'kleinanzeigen', coords: [50.9686, 6.9636], title: 'Pro 7 64 GB NEU — GAMEBOX Köln', price: '2.500,00 €', meta: '50737 Köln-Weidenpesch · 150 km · Gewerblich', img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/36/3621e71d-dd8e-4f55-85bd-c7013e0b6ad9?rule=$_2.AUTO', url: 'https://www.kleinanzeigen.de/s-anzeige/lenovo-legion-pro-7-ultra-9-64-gb-1tb-5070-ti-oled-neu-of/3319977128-278-26206' },
+      { rank: 7, site: 'kleinanzeigen', coords: [47.6253, 7.9183], title: 'Pro Ultra 9 NEU — Wehr', price: '2.450,00 € VB', meta: '79664 Wehr · 287 km', img: 'https://img.kleinanzeigen.de/api/v1/prod-ads/images/5b/5b5593f6-f37c-4152-b057-9469f153b3c8?rule=$_2.AUTO', url: 'https://www.kleinanzeigen.de/s-anzeige/gaming-laptop-neu-lenovo-legion-pro-rtx-5070ti-ultra-9-275hx/3389589475-278-8175' },
+      { rank: 8, site: 'vinted', coords: [41.9028, 12.4964], title: 'Pro 5 16IAX10H — Vinted (Italien)', price: '2.573,20 €', meta: 'Italien · ca. 1.200 km', img: 'https://images1.vinted.net/t/01_01904_1zYm34iABMqRDYqVAJ4TYWT4/f800/1775682838.webp', url: 'https://www.vinted.de/items/8601326608-lenovo-legion-pro-5-16iax10h-notebook-gaming' }
+    ];
+
+    function haversineKm(a, b) {
+      const R = 6371, toRad = x => x * Math.PI / 180;
+      const dLat = toRad(b[0]-a[0]), dLon = toRad(b[1]-a[1]);
+      const s = Math.sin(dLat/2)**2 + Math.cos(toRad(a[0]))*Math.cos(toRad(b[0]))*Math.sin(dLon/2)**2;
+      return 2*R*Math.asin(Math.sqrt(s));
+    }
+
+    const closePins = [home];
+    offers.forEach(o => {
+      const popup = '<div class="map-popup"><a href="' + o.url + '" target="_blank" rel="noopener"><img src="' + o.img + '" alt=""></a><a href="' + o.url + '" target="_blank" rel="noopener">#' + o.rank + ' — ' + o.title + '</a><div class="pop-price">' + o.price + '</div><div class="pop-meta">' + o.meta + '</div></div>';
+      L.marker(o.coords, { icon: rankIcon(o.rank, o.site) }).addTo(map).bindPopup(popup);
+      if (haversineKm(home, o.coords) <= 1500) closePins.push(o.coords);
+    });
+    map.fitBounds(closePins, { padding: [40, 40], maxZoom: 9 });
+  });
+</script>
+
+<footer>
+  Erzeugt durch Claude-Skill <code>shopping-comparison</code> · Score = Preis + Trust-Aufschlag + Distanz-Aufschlag · niedriger Score = besseres Gesamtpaket · Kleinanzeigen-Radius 100 km<br>
+  Kein Kauf, kein Versand und keine Kontaktnachricht ohne ausdrückliche Freigabe.
+</footer>
+</body>
+</html>
