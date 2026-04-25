@@ -28,7 +28,15 @@
       "Bash(pkill -f \"next dev\")",
       "Bash(git commit -m 'Replace geizhals.de and guenstiger.de with check24.de and billiger.de *)",
       "Bash(curl -s -X POST http://localhost:3000/api/check24 -H \"Content-Type: application/json\" -d '{\"query\":\"Laptop\"}')",
-      "Bash(curl -s -X POST http://localhost:3000/api/billiger -H \"Content-Type: application/json\" -d '{\"query\":\"Laptop\"}')"
+      "Bash(curl -s -X POST http://localhost:3000/api/billiger -H \"Content-Type: application/json\" -d '{\"query\":\"Laptop\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/amazon -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/check24 -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/billiger -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/ebay -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/kleinanzeigen -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\",\"plz\":\"60439\"}')",
+      "Bash(curl -s -X POST http://localhost:3000/api/vinted -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\"}')",
+      "Bash(curl -s 'https://www.check24.de/p/?q=Canon%20EOS%20R5&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept-Language: de-DE,de;q=0.9' --connect-timeout 5 --max-time 8)",
+      "Bash(curl -s 'https://www.billiger.de/search?q=Canon%20EOS%20R5&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept-Language: de-DE,de;q=0.9' --connect-timeout 5 --max-time 8)"
     ]
   }
 }

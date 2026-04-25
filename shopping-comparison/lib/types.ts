@@ -1,7 +1,5 @@
 export type SiteName =
   | "amazon.de"
-  | "check24.de"
-  | "billiger.de"
   | "ebay.de"
   | "kleinanzeigen.de"
   | "vinted.de";

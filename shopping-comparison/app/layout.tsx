@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "🛍️ Preisvergleich — 6 deutsche Shops",
-  description: "Durchsuche Amazon, Geizhals, Günstiger, eBay, Kleinanzeigen und Vinted gleichzeitig. Finde die besten Angebote mit Preisvergleich und Lieferkarten.",
+  title: "🛍️ Preisvergleich — 4 deutsche Shops",
+  description: "Durchsuche Amazon, eBay, Kleinanzeigen und Vinted gleichzeitig. Finde die besten Angebote mit Preisvergleich und Lieferkarten.",
 };
 
 export default function RootLayout({

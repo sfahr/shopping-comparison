@@ -4,11 +4,9 @@ interface Props {
   status: Record<string, "loading" | "done" | "error" | "idle">;
 }
 
-const SITES = ["amazon.de", "check24.de", "billiger.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
+const SITES = ["amazon.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
 const NAMES: Record<string, string> = {
   "amazon.de": "Amazon",
-  "check24.de": "Check24",
-  "billiger.de": "Billiger",
   "ebay.de": "eBay",
   "kleinanzeigen.de": "K.-Anzeigen",
   "vinted.de": "Vinted",

@@ -2,8 +2,6 @@ import type { Offer, RawOffer, Risk, SiteName } from "./types";
 
 export const SITE_COLORS: Record<SiteName, string> = {
   "amazon.de": "#b25400",
-  "check24.de": "#ffc300",
-  "billiger.de": "#d4143c",
   "ebay.de": "#0064d2",
   "kleinanzeigen.de": "#1b7a1b",
   "vinted.de": "#09b1ba",
@@ -14,10 +12,6 @@ function trustPenalty(raw: RawOffer): number {
 
   if (site === "amazon.de") {
     return sellerType === "amazon" ? 0 : 5;
-  }
-
-  if (site === "check24.de" || site === "billiger.de") {
-    return 5; // assume not Trusted-Shops certified unless scraped
   }
 
   if (site === "ebay.de") {
