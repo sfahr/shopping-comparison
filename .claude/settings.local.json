@@ -36,7 +36,12 @@
       "Bash(curl -s -X POST http://localhost:3000/api/kleinanzeigen -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\",\"plz\":\"60439\"}')",
       "Bash(curl -s -X POST http://localhost:3000/api/vinted -H 'Content-Type: application/json' -d '{\"query\":\"Canon EOS R5\",\"condition\":\"either\"}')",
       "Bash(curl -s 'https://www.check24.de/p/?q=Canon%20EOS%20R5&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept-Language: de-DE,de;q=0.9' --connect-timeout 5 --max-time 8)",
-      "Bash(curl -s 'https://www.billiger.de/search?q=Canon%20EOS%20R5&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept-Language: de-DE,de;q=0.9' --connect-timeout 5 --max-time 8)"
+      "Bash(curl -s 'https://www.billiger.de/search?q=Canon%20EOS%20R5&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36 \\(KHTML, like Gecko\\) Chrome/120.0.0.0 Safari/537.36' -H 'Accept-Language: de-DE,de;q=0.9' --connect-timeout 5 --max-time 8)",
+      "Bash(pkill -f \"npm run dev\")",
+      "Bash(git commit *)",
+      "Bash(curl -s 'https://www.guenstiger.de/?q=laptop&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' -H 'Accept-Language: de-DE,de;q=0.9')",
+      "Bash(curl -s 'https://geizhals.de/?q=laptop&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' -H 'Accept-Language: de-DE,de;q=0.9')",
+      "Bash(curl *)"
     ]
   }
 }

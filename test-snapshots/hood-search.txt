@@ -1,0 +1,60 @@
+uid=28_0 RootWebArea "Die Seite konnte nicht gefunden werden • Hood.de" url="https://www.hood.de/pageNotFound.htm"
+  uid=28_1 dialog modal
+    uid=28_2 dialog "Privatsphäre-Informationen" description="Wir und unsere 19 Drittanbieter nutzen Technologien (z. B. Cookies), um Informationen auf Nutzergeräten zu speichern und abzurufen, um persönliche Daten, wie IP-Adressen oder Browserdaten zu verarbeiten. Sie können der Verarbeitung Ihrer persönlichen Daten für die unten aufgelisteten Verarbeitungszwecke zustimmen. Alternativ können Sie Ihre bevorzugten Einstellungen vornehmen, bevor Sie zustimmen oder ablehnen. Bitte beachten Sie, dass manche Anbieter basierend auf legitimen Geschäftsinteressen Ihre persönlichen Daten verarbeiten, ohne nach Ihrer Zustimmung zu fragen. Um Ihr Recht auf Widerspruch gegen die Verarbeitung auf der Basis von legitimen Geschäftsinteressen auszuüben, sehen Sie sich bitte unsere Anbieterliste an. Sie können Ihre Privatsphäre-Einstellungen jederzeit ändern oder Ihre Zustimmung zurückziehen, indem Sie auf den Privacy Button klicken." focusable focused modal
+      uid=28_3 banner
+        uid=28_4 image "Hood Logo" url="https://www.hood.de/marketing/logos/hood_logo_150x40.jpg"
+        uid=28_5 heading "Privatsphäre-Informationen" level="2"
+        uid=28_6 StaticText "Wir und unsere 19 Drittanbieter nutzen Technologien (z. B. Cookies), um Informationen auf Nutzergeräten zu speichern und abzurufen, um persönliche Daten, wie IP-Adressen oder Browserdaten zu verarbeiten. Sie können der Verarbeitung Ihrer persönlichen Daten für die unten aufgelisteten Verarbeitungszwecke zustimmen. Alternativ können Sie Ihre bevorzugten Einstellungen vornehmen, bevor Sie zustimmen oder ablehnen. Bitte beachten Sie, dass manche Anbieter basierend auf legitimen Geschäftsinteressen Ihre persönlichen Daten verarbeiten, ohne nach Ihrer Zustimmung zu fragen. Um Ihr Recht auf Widerspruch gegen die Verarbeitung auf der Basis von legitimen Geschäftsinteressen auszuüben, sehen Sie sich bitte unsere Anbieterliste an. Sie können Ihre Privatsphäre-Einstellungen jederzeit ändern oder Ihre Zustimmung zurückziehen, indem Sie auf den Privacy Button klicken."
+        uid=28_7 link "Öffnen Datenschutzerklärung" url="https://www.hood.de/datenschutz.htm"
+          uid=28_8 StaticText "Datenschutzerklärung "
+        uid=28_9 link "Öffnen Impressum" url="https://www.hood.de/impressum.htm"
+          uid=28_10 StaticText "Impressum "
+        uid=28_11 button "Anbieterliste"
+        uid=28_12 button "Einstellungen verwalten"
+        uid=28_13 heading "Verarbeitungszwecke" level="2"
+        uid=28_14 generic
+          uid=28_15 StaticText "Speichern von oder Zugriff auf Informationen auf einem Endgerät"
+          uid=28_16 switch "Speichern von oder Zugriff auf Informationen auf einem Endgerät"
+            uid=28_17 generic
+            uid=28_18 generic
+        uid=28_19 generic
+          uid=28_20 StaticText "Verwendung reduzierter Daten zur Auswahl von Werbeanzeigen"
+          uid=28_21 switch "Verwendung reduzierter Daten zur Auswahl von Werbeanzeigen"
+            uid=28_22 generic
+            uid=28_23 generic
+        uid=28_24 generic
+          uid=28_25 StaticText "Erstellung von Profilen für personalisierte Werbung"
+          uid=28_26 switch "Erstellung von Profilen für personalisierte Werbung"
+            uid=28_27 generic
+            uid=28_28 generic
+        uid=28_29 generic
+          uid=28_30 StaticText "Verwendung von Profilen zur Auswahl personalisierter Werbung"
+          uid=28_31 switch "Verwendung von Profilen zur Auswahl personalisierter Werbung"
+            uid=28_32 generic
+            uid=28_33 generic
+        uid=28_34 generic
+          uid=28_35 StaticText "Messung der Werbeleistung"
+          uid=28_36 switch "Messung der Werbeleistung"
+            uid=28_37 generic
+            uid=28_38 generic
+        uid=28_39 generic
+          uid=28_40 StaticText "Analyse von Zielgruppen durch Statistiken oder Kombinationen von Daten aus verschiedenen Quellen"
+          uid=28_41 switch "Analyse von Zielgruppen durch Statistiken oder Kombinationen von Daten aus verschiedenen Quellen"
+            uid=28_42 generic
+            uid=28_43 generic
+        uid=28_44 generic
+          uid=28_45 StaticText "Entwicklung und Verbesserung der Angebote"
+          uid=28_46 switch "Entwicklung und Verbesserung der Angebote"
+            uid=28_47 generic
+            uid=28_48 generic
+        uid=28_49 heading "Besondere Funktionen" level="2"
+        uid=28_50 generic
+          uid=28_51 StaticText "Verwendung genauer Standortdaten"
+          uid=28_52 generic
+            uid=28_53 StaticText "Aus"
+          uid=28_54 switch "Aus"
+            uid=28_55 generic
+            uid=28_56 generic
+      uid=28_57 contentinfo
+        uid=28_58 button "Einstellungen speichern"
+        uid=28_59 button "Akzeptiere alle"

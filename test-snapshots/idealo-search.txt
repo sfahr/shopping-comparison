@@ -1,0 +1,11 @@
+uid=29_0 RootWebArea "idealo" url="https://www.idealo.de/preisvergleich/ProductCategory/3584.html?q=laptop"
+  uid=29_1 banner
+    uid=29_2 link "idealo" url="https://www.idealo.co.uk/"
+      uid=29_3 image "idealo"
+  uid=29_4 StaticText "Sorry! Something has gone wrong. If the issue persists, please make sure your browser is updated to the latest version."
+  uid=29_5 StaticText "Still having the issue, please "
+  uid=29_6 link "reach out" url="https://kundenservice.idealo.com/de/contact?topic=access-idealo"
+    uid=29_7 StaticText "reach out"
+  uid=29_8 StaticText " to our customer care with reference ID "
+  uid=29_9 StaticText "0.643d1602.1777135312.15a8b7f9"
+  uid=29_10 StaticText " for further assistance."

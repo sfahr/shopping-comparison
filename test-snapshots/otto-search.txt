@@ -1,0 +1,1397 @@
+uid=26_0 RootWebArea "404 - Seite nicht gefunden" url="https://www.otto.de/notFound"
+  uid=26_1 banner
+    uid=26_2 link "zur Homepage" url="https://www.otto.de/"
+    uid=26_3 search
+      uid=26_4 searchbox "Wonach suchst du?" description="Verwende die Pfeiltasten, um Suchvorschläge oder deine Suchhistorie auszuwählen."
+      uid=26_5 generic
+        uid=26_6 button "Suche abschicken"
+    uid=26_7 link "s Service" url="https://www.otto.de/service/"
+      uid=26_8 StaticText "s"
+      uid=26_9 StaticText "Service"
+    uid=26_10 generic
+      uid=26_11 link "Mein Konto" url="javascript:void(0)"
+        uid=26_12 StaticText "Mein Konto"
+    uid=26_13 link "Merkzettel" url="https://www.otto.de/wishlist-view/"
+      uid=26_14 StaticText "Merkzettel"
+    uid=26_15 StaticText "Warenkorb"
+    uid=26_16 navigation
+    uid=26_17 link "Inspiration" url="https://www.otto.de/inspiration/"
+      uid=26_18 StaticText "Inspiration"
+    uid=26_19 StaticText "."
+    uid=26_20 link "Damen-Mode" url="https://www.otto.de/damen/"
+      uid=26_21 StaticText "Damen-Mode"
+    uid=26_19 StaticText "."
+    uid=26_22 link "Herren-Mode" url="https://www.otto.de/herren/"
+      uid=26_23 StaticText "Herren-Mode"
+    uid=26_19 StaticText "."
+    uid=26_24 link "Baby & Kind" url="https://www.otto.de/babys/baby-kind/"
+      uid=26_25 StaticText "Baby & Kind"
+    uid=26_19 StaticText "."
+    uid=26_26 link "Sport" url="https://www.otto.de/sport/"
+      uid=26_27 StaticText "Sport"
+    uid=26_19 StaticText "."
+    uid=26_28 link "Beauty & Drogerie" url="https://www.otto.de/koerperpflege/drogerie/"
+      uid=26_29 StaticText "Beauty & Drogerie"
+    uid=26_30 link "Multimedia" url="https://www.otto.de/technik/multimedia/"
+      uid=26_31 StaticText "Multimedia"
+    uid=26_19 StaticText "."
+    uid=26_32 link "Haushalt" url="https://www.otto.de/haushalt/?ansicht=einstieg"
+      uid=26_33 StaticText "Haushalt"
+    uid=26_19 StaticText "."
+    uid=26_34 link "Küche" url="https://www.otto.de/moebel/?ansicht=einstieg&thema=kueche"
+      uid=26_35 StaticText "Küche"
+    uid=26_19 StaticText "."
+    uid=26_36 link "Heimtextilien" url="https://www.otto.de/heimtextilien/?ansicht=einstieg"
+      uid=26_37 StaticText "Heimtextilien"
+    uid=26_19 StaticText "."
+    uid=26_38 link "Möbel" url="https://www.otto.de/moebel/?ansicht=einstieg"
+      uid=26_39 StaticText "Möbel"
+    uid=26_19 StaticText "."
+    uid=26_40 link "Baumarkt" url="https://www.otto.de/baumarkt/"
+      uid=26_41 StaticText "Baumarkt"
+    uid=26_19 StaticText "."
+    uid=26_42 link "Marken" url="https://www.otto.de/marken/"
+      uid=26_43 StaticText "Marken"
+    uid=26_19 StaticText "."
+    uid=26_44 link "%Sale%" url="https://www.otto.de/sale/"
+      uid=26_45 StaticText "%Sale%"
+  uid=26_46 StaticText "Entschuldigung!"
+  uid=26_47 StaticText " Wir konnten die Seite leider nicht finden."
+  uid=26_48 button "Überspringen"
+  uid=26_49 generic
+    uid=26_50 StaticText "10 €"
+    uid=26_51 StaticText "Nur für Neukund*innen"
+    uid=26_52 StaticText "Gutschein für deine erste Bestellung"
+    uid=26_53 StaticText "Gültig bis:"
+    uid=26_54 StaticText "Do., 30.04."
+    uid=26_55 button "Zur Aktivierung"
+  uid=26_56 generic
+    uid=26_57 StaticText "Mind."
+    uid=26_58 StaticText "20 %"
+    uid=26_59 StaticText "Extra"
+    uid=26_60 StaticText "Auf Mode-Highlights"
+    uid=26_61 StaticText "Gültig bis:"
+    uid=26_62 StaticText "Mo., 27.04."
+    uid=26_63 button "Zur Aktivierung"
+  uid=26_64 generic
+    uid=26_65 StaticText "Mind."
+    uid=26_66 StaticText "15 %"
+    uid=26_67 StaticText "Extra"
+    uid=26_68 StaticText "Auf vieles für deinen Garten"
+    uid=26_69 StaticText "Gültig bis:"
+    uid=26_70 StaticText "Mi., 29.04."
+    uid=26_71 button "Zur Aktivierung"
+  uid=26_72 generic
+    uid=26_73 StaticText "Mind."
+    uid=26_74 StaticText "15 %"
+    uid=26_75 StaticText "Extra"
+    uid=26_76 StaticText "Auf viele Sporthartwaren"
+    uid=26_77 StaticText "Gültig bis:"
+    uid=26_78 StaticText "Mo., 27.04."
+    uid=26_79 button "Zur Aktivierung"
+  uid=26_80 generic
+    uid=26_81 StaticText "20 %"
+    uid=26_82 StaticText "Extra"
+    uid=26_83 StaticText "Auf viele Schlafzimmermöbel & Sofas"
+    uid=26_84 StaticText "Gültig bis:"
+    uid=26_85 StaticText "Mo., 27.04."
+    uid=26_86 button "Zur Aktivierung"
+  uid=26_87 generic
+    uid=26_88 StaticText "20 %"
+    uid=26_89 StaticText "Extra"
+    uid=26_90 StaticText "Auf Highlights der Marke Philips"
+    uid=26_91 StaticText "Gültig bis:"
+    uid=26_92 StaticText "Di., 28.04."
+    uid=26_93 button "Zur Aktivierung"
+  uid=26_94 generic
+  uid=26_95 generic
+    uid=26_96 link "Deal des Tages, AJC Chinohose in lässiger Form und hohem Tragekomfort durch Stretchanteil krempelbar, mit praktischen Taschen, zeitlos & gut zu kombinieren zum Produkt"
+    uid=26_97 heading "Deal des Tages" level="1"
+    uid=26_98 image "Chinohose in lässiger Form und hohem Tragekomfort durch Stretchanteil krempelbar, mit praktischen Taschen, zeitlos & gut zu kombinieren" url="https://i.otto.de/i/otto/bcfc72b0-0701-5a3a-a09b-188a76abed30?$teat_product_ddt_xl$&fmt=webp"
+    uid=26_99 StaticText "AJC"
+    uid=26_100 heading "Chinohose in lässiger Form und hohem Tragekomfort durch Stretchanteil krempelbar, mit praktischen Taschen, zeitlos & gut zu kombinieren" level="2"
+    uid=26_101 button "Was bedeutet dieses Zeichen?"
+    uid=26_102 StaticText "UVP "
+    uid=26_103 StaticText "49,99 €"
+    uid=26_104 StaticText "-40 %"
+    uid=26_105 heading "ab 29,98 €" level="3"
+    uid=26_106 StaticText "29,98 € / 1 Stk"
+  uid=26_107 generic
+    uid=26_108 button "Details zu gesponserten Produkten" haspopup="dialog"
+  uid=26_109 link url="https://www.otto.de/customer-identity/login?uri=%2Fup-teaserui%2Fsignup%2FregistrationFlow%3Forigin%3Dhttps%3A%2F%2Fwww.otto.de%2FnotFound%26tk%3D-1348860814&tk=422799664&ctx=up"
+    uid=26_110 button "Anmeldung zum Vorteilsprogramm"
+  uid=26_111 heading "Trending Topseller der letzten Tage" level="2"
+  uid=26_112 button "Cinema of recommendations überspringen"
+  uid=26_113 region "Cinema of recommendations"
+    uid=26_114 generic
+      uid=26_115 link "REISENTHEL® Einkaufskorb Carrybag mit Pocketcase" url="https://www.otto.de/p/reisenthel-einkaufskorb-carrybag-mit-pocketcase-set-aus-carrybag-pocketcase-stilvolle-eleganz-organisation-S0G8Z0VP/"
+        uid=26_116 generic
+          uid=26_117 image "Einkaufskorb Carrybag mit Pocketcase" url="https://i.otto.de/i/otto/bcbf7ad9-ecc5-5bbd-ab47-df21c44b5d7c?$tile_portrait$&fmt=auto"
+        uid=26_118 StaticText "REISENTHEL®"
+        uid=26_119 StaticText "Einkaufskorb Carrybag mit Pocketcase"
+        uid=26_120 StaticText "UVP"
+        uid=26_121 StaticText "78,90 €"
+        uid=26_122 StaticText "ab"
+        uid=26_123 StaticText "54,95 €"
+    uid=26_124 StaticText "-30%"
+    uid=26_125 generic
+      uid=26_126 link "LASCANA Bikini-Hose Omara" url="https://www.otto.de/p/lascana-bikini-hose-omara-mit-lochstickerei-1788737350/"
+        uid=26_127 generic
+          uid=26_128 image "Bikini-Hose Omara" url="https://i.otto.de/i/otto/711bcb1d-2a9c-5764-9b62-7741634db20a?$spa_ambiente$&fmt=auto"
+        uid=26_129 StaticText "LASCANA"
+        uid=26_130 StaticText "Bikini-Hose Omara"
+        uid=26_131 StaticText "34,99 €"
+        uid=26_132 StaticText "29,99 €"
+    uid=26_133 StaticText "-14%"
+    uid=26_134 generic
+      uid=26_135 image "OTTO-Up Logo"
+    uid=26_136 button "Recycelte Materialien"
+    uid=26_137 link "VIVANCE Rundhalsshirt"
+      uid=26_138 generic
+        uid=26_139 image "Rundhalsshirt" url="https://i.otto.de/i/otto/a5ef54e1-944f-5add-9379-eb03bd160e40?$spa_ambiente$&fmt=auto"
+        uid=26_140 StaticText "Sehr beliebt"
+      uid=26_141 StaticText "VIVANCE"
+      uid=26_142 StaticText "Rundhalsshirt"
+      uid=26_143 StaticText "22,99 €"
+    uid=26_144 generic
+      uid=26_145 image "OTTO-Up Logo"
+    uid=26_146 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_147 generic
+      uid=26_148 link "LASCANA Pliseetop" url="https://www.otto.de/p/lascana-pliseetop-aus-angenehmer-viskose-mischqualitaet-1968329979/"
+        uid=26_149 generic
+          uid=26_150 image "Pliseetop" url="https://i.otto.de/i/otto/fd08ab44-16e6-5e46-922a-332f80ef2486?$tile_portrait$&fmt=auto"
+        uid=26_151 StaticText "LASCANA"
+        uid=26_152 StaticText "Pliseetop"
+        uid=26_153 StaticText "ab"
+        uid=26_154 StaticText "26,99 €"
+        uid=26_155 StaticText "(26,99 € / 1Stk)"
+    uid=26_156 generic
+      uid=26_157 image "OTTO-Up Logo"
+    uid=26_158 button "Recycelte Materialien"
+    uid=26_159 link "SUNSEEKER Bügel-Bandeau-Bikini-Top"
+      uid=26_160 generic
+        uid=26_161 image "Bügel-Bandeau-Bikini-Top" url="https://i.otto.de/i/otto/82a67ceb-dc6b-55c6-96a5-d810347c09dc?$spa_ambiente$&fmt=auto"
+      uid=26_162 StaticText "SUNSEEKER"
+      uid=26_163 StaticText "Bügel-Bandeau-Bikini-Top"
+      uid=26_164 StaticText "ab"
+      uid=26_165 StaticText "49,99 €"
+    uid=26_166 generic
+      uid=26_167 image "OTTO-Up Logo"
+    uid=26_168 generic
+      uid=26_169 link "KONIFERA Gartenlounge-Set Amsterdam XL" url="https://www.otto.de/p/konifera-gartenlounge-set-amsterdam-xl-set-16-tlg-bestehend-aus-2-sesseln-2-hocker-1-sofa-10-kissen-1-tisch-2014486536/"
+        uid=26_170 generic
+          uid=26_171 image "Gartenlounge-Set Amsterdam XL" url="https://i.otto.de/i/otto/ae4cdca8-af96-55e9-9ecf-5705857dbf15?$spa_ambiente$&fmt=auto"
+        uid=26_172 StaticText "KONIFERA"
+        uid=26_173 StaticText "Gartenlounge-Set Amsterdam XL"
+        uid=26_174 StaticText "UVP"
+        uid=26_175 StaticText "1.149,99 €"
+        uid=26_176 StaticText "599,99 €"
+    uid=26_177 StaticText "-48%"
+    uid=26_178 generic
+      uid=26_179 link "DEHNER Gartenbrunnen Ronda, mit LED Beleuchtung, 79.5 x 31.5 x 31.5 cm, Polyresin" url="https://www.otto.de/p/dehner-gartenbrunnen-ronda-mit-led-beleuchtung-79-5-x-31-5-x-31-5-cm-polyresin-frostbestaendig-solarfaehiger-brunnen-fuer-draussen-inkl-pumpe-trafo-S0XGH0S9/"
+        uid=26_180 generic
+          uid=26_181 image "Gartenbrunnen Ronda, mit LED Beleuchtung, 79.5 x 31.5 x 31.5 cm, Polyresin" url="https://i.otto.de/i/otto/6f1b4470-ac28-54fc-a969-3d77be0b81ee?$tile_portrait$&fmt=auto"
+        uid=26_182 StaticText "DEHNER"
+        uid=26_183 StaticText "Gartenbrunnen Ronda, mit LED Beleuchtung, 79.5 x 31.5 x 31.5 cm, Polyresin"
+        uid=26_184 StaticText "189,99 €"
+    uid=26_185 generic
+      uid=26_186 link "HISENSE 65E6NT LED-Fernseher" url="https://www.otto.de/p/hisense-65e6nt-dled-fernseher-164-00-cm-65-zoll-vidaa-u7-6-game-mode-plus-sprachassistenten-uhd-ai-upscaler-C1832845834/"
+        uid=26_187 generic
+          uid=26_188 image "65E6NT LED-Fernseher" url="https://i.otto.de/i/otto/f1fe178b-01a1-5b99-97ba-aafccbd49902?$tile_portrait$&fmt=auto"
+          uid=26_189 StaticText "Sehr beliebt"
+        uid=26_190 StaticText "HISENSE"
+        uid=26_191 StaticText "65E6NT LED-Fernseher"
+        uid=26_192 StaticText "UVP"
+        uid=26_193 StaticText "799,00 €"
+        uid=26_194 StaticText "399,00 €"
+        uid=26_195 StaticText "nur diesen Monat"
+        uid=26_196 StaticText "(399,00 € / 1Stk)"
+    uid=26_197 StaticText "-50%"
+    uid=26_198 button "Energieverbrauchskennzeichnung E"
+    uid=26_199 generic
+      uid=26_200 link "Produktdatenblatt" url="https://d.otto.de/files/6505d394-1d6e-51ad-8add-affc1ac8303c.pdf"
+        uid=26_201 StaticText "Produktdatenblatt"
+    uid=26_202 generic
+      uid=26_203 link "LASCANA Maxikleid" url="https://www.otto.de/p/lascana-maxikleid-mit-animalprint-und-knopfleiste-sommerkleid-strandkleid-1998856026/"
+        uid=26_204 generic
+          uid=26_205 image "Maxikleid" url="https://i.otto.de/i/otto/4f34c7a6-ccd7-5279-a8f1-42c7f292d9bb?$spa_ambiente$&fmt=auto"
+        uid=26_206 StaticText "LASCANA"
+        uid=26_207 StaticText "Maxikleid"
+        uid=26_208 StaticText "59,99 €"
+    uid=26_209 generic
+      uid=26_210 image "OTTO-Up Logo"
+    uid=26_211 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_212 link "LASCANA Blusentop"
+      uid=26_213 generic
+        uid=26_214 image "Blusentop" url="https://i.otto.de/i/otto/79c14c03-7d00-5729-b9c3-6cab9df6791d?$spa_ambiente$&fmt=auto"
+        uid=26_215 StaticText "Sehr beliebt"
+      uid=26_216 StaticText "LASCANA"
+      uid=26_217 StaticText "Blusentop"
+      uid=26_218 StaticText "49,99 €"
+      uid=26_219 StaticText "34,99 €"
+    uid=26_220 StaticText "-30%"
+    uid=26_221 generic
+      uid=26_222 image "OTTO-Up Logo"
+    uid=26_223 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_224 generic
+      uid=26_225 link "JOHN DEVIN Sakko aus elastischer Jersey Pikee-Qualität" url="https://www.otto.de/p/john-devin-sakko-aus-elastischer-jersey-pikee-qualitaet-laessiges-stretchsakko-mit-dezentem-muster-1973486313/"
+        uid=26_226 generic
+          uid=26_227 image "Sakko aus elastischer Jersey Pikee-Qualität" url="https://i.otto.de/i/otto/13a30b0d-9725-59f1-89ff-7c9ac3084ec2?$spa_ambiente$&fmt=auto"
+        uid=26_228 StaticText "JOHN DEVIN"
+        uid=26_229 StaticText "Sakko aus elastischer Jersey Pikee-Qualität"
+        uid=26_230 StaticText "ab"
+        uid=26_231 StaticText "89,99 €"
+    uid=26_232 generic
+      uid=26_233 image "OTTO-Up Logo"
+    uid=26_234 generic
+      uid=26_235 link "VIVANCE Jeansshorts" url="https://www.otto.de/p/vivance-jeansshorts-mit-dezenter-waschung-bermudas-zum-krempeln-kurze-hose-mit-stretch-1500861604/"
+        uid=26_236 generic
+          uid=26_237 image "Jeansshorts" url="https://i.otto.de/i/otto/e492daa0-6a6e-50cb-92ca-d99f3b515ca4?$spa_ambiente$&fmt=auto"
+          uid=26_238 StaticText "Sehr beliebt"
+        uid=26_239 StaticText "VIVANCE"
+        uid=26_240 StaticText "Jeansshorts"
+        uid=26_241 StaticText "59,99 €"
+        uid=26_242 StaticText "49,99 €"
+    uid=26_243 StaticText "-17%"
+    uid=26_244 generic
+      uid=26_245 image "OTTO-Up Logo"
+    uid=26_246 button "Förderung Sozialer Initiativen"
+    uid=26_247 generic
+      uid=26_248 link "JUSKYS Gartenlounge-Set Manacor" url="https://www.otto.de/p/juskys-gartenlounge-set-manacor-gartenlounge-polyrattan-gartenmoebel-set-mit-garten-sofa-garten-tisch-und-2-hocker-S0I350G7/"
+        uid=26_249 generic
+          uid=26_250 image "Gartenlounge-Set Manacor" url="https://i.otto.de/i/otto/164e7e45-3156-56f5-9751-bdd28edca2a9?$tile_portrait$&fmt=auto"
+          uid=26_251 StaticText "Sehr beliebt"
+        uid=26_252 StaticText "JUSKYS"
+        uid=26_253 StaticText "Gartenlounge-Set Manacor"
+        uid=26_254 StaticText "449,99 €"
+        uid=26_255 StaticText "ab"
+        uid=26_256 StaticText "379,99 €"
+    uid=26_257 StaticText "-16%"
+    uid=26_258 generic
+      uid=26_259 link "JACK WOLFSKIN Fleecejacke WALDSTEIG FZ M" url="https://www.otto.de/p/jack-wolfskin-fleecejacke-waldsteig-fz-m-C1773906464/"
+        uid=26_260 generic
+          uid=26_261 image "Fleecejacke WALDSTEIG FZ M" url="https://i.otto.de/i/otto/e5988949-1542-5f21-b3ee-1c9dec8095d3?$tile_portrait$&fmt=auto"
+        uid=26_262 StaticText "JACK WOLFSKIN"
+        uid=26_263 StaticText "Fleecejacke WALDSTEIG FZ M"
+        uid=26_264 StaticText "91,99 €"
+    uid=26_265 generic
+      uid=26_266 link "VIVANCE Kurzarmbluse" url="https://www.otto.de/p/vivance-kurzarmbluse-mit-zierdetail-am-ausschnitt-druckbluse-1964720210/"
+        uid=26_267 generic
+          uid=26_268 image "Kurzarmbluse" url="https://i.otto.de/i/otto/2b35430e-f517-5af0-a665-72cf037d3d3a?$spa_ambiente$&fmt=auto"
+        uid=26_269 StaticText "VIVANCE"
+        uid=26_270 StaticText "Kurzarmbluse"
+        uid=26_271 StaticText "29,99 €"
+    uid=26_272 generic
+      uid=26_273 image "OTTO-Up Logo"
+    uid=26_274 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_275 generic
+      uid=26_276 link "ELBSAND T-Shirt Eldis" url="https://www.otto.de/p/elbsand-t-shirt-eldis-mit-logodruck-kurzarmshirt-aus-baumwoll-mix-sportlich-casual-1671520099/"
+        uid=26_277 generic
+          uid=26_278 image "T-Shirt Eldis" url="https://i.otto.de/i/otto/fae6a908-ded8-506a-a2a3-675ace8a0d49?$spa_ambiente$&fmt=auto"
+          uid=26_279 StaticText "Sehr beliebt"
+        uid=26_280 StaticText "ELBSAND"
+        uid=26_281 StaticText "T-Shirt Eldis"
+        uid=26_282 StaticText "34,99 €"
+    uid=26_283 generic
+      uid=26_284 image "OTTO-Up Logo"
+    uid=26_285 button "Materialien aus biologischem Anbau"
+    uid=26_286 link "JOHN DEVIN Sweatshirt"
+      uid=26_287 generic
+        uid=26_288 image "Sweatshirt" url="https://i.otto.de/i/otto/32a237bd-191b-5c19-98e3-296dbacfcde5?$spa_ambiente$&fmt=auto"
+        uid=26_289 StaticText "Sehr beliebt"
+      uid=26_290 StaticText "JOHN DEVIN"
+      uid=26_291 StaticText "Sweatshirt"
+      uid=26_292 StaticText "34,99 €"
+      uid=26_293 StaticText "ab"
+      uid=26_294 StaticText "29,99 €"
+    uid=26_295 StaticText "-14%"
+    uid=26_296 generic
+      uid=26_297 image "OTTO-Up Logo"
+    uid=26_298 generic
+      uid=26_299 link "S&S Sweathose Jogginghose Damen Baumwolle" url="https://www.otto.de/p/s-s-sweathose-jogginghose-damen-baumwolle-laufhose-sweatpants-trainingshose-S0WAP0AR/"
+        uid=26_300 generic
+          uid=26_301 image "Sweathose Jogginghose Damen Baumwolle" url="https://i.otto.de/i/otto/c194b9d6-3e82-4e65-a149-38091b33be57?$tile_portrait$&fmt=auto"
+        uid=26_302 StaticText "S&S"
+        uid=26_303 StaticText "Sweathose Jogginghose Damen Baumwolle"
+        uid=26_304 StaticText "UVP"
+        uid=26_305 StaticText "34,99 €"
+        uid=26_306 StaticText "ab"
+        uid=26_307 StaticText "16,89 €"
+        uid=26_308 StaticText "(16,89 € / 1Stk)"
+    uid=26_309 StaticText "-52%"
+    uid=26_310 generic
+      uid=26_311 link "PHILIPS SONICARE Elektrische Zahnbürste Series 6100 HX7400/01" url="https://www.otto.de/p/philips-sonicare-elektrische-zahnbuerste-series-6100-hx7400-01-aufsteckbuersten-1-st-mit-visueller-andruckkontrolle-5-putzeinstellungen-inkl-ladegeraet-C1888210233/"
+        uid=26_312 generic
+          uid=26_313 image "Elektrische Zahnbürste Series 6100 HX7400/01" url="https://i.otto.de/i/otto/38740aca-436b-5e7e-a3f3-857e2d5b2b16?$tile_portrait$&fmt=auto"
+          uid=26_314 StaticText "Sehr beliebt"
+        uid=26_315 StaticText "PHILIPS SONICARE"
+        uid=26_316 StaticText "Elektrische Zahnbürste Series 6100 HX7400/01"
+        uid=26_317 StaticText "UVP"
+        uid=26_318 StaticText "99,99 €"
+        uid=26_319 StaticText "89,99 €"
+    uid=26_320 StaticText "-10%"
+    uid=26_321 generic
+      uid=26_322 image "OTTO-Up Logo"
+    uid=26_323 generic
+      uid=26_324 link "COMEOR Sweatshorts Herren Sportshorts Kurz mit Reißverschluss Laufshorts Bermuda" url="https://www.otto.de/p/comeor-sweatshorts-herren-sportshorts-kurz-mit-reissverschluss-laufshorts-bermuda-mit-reissverschlusstaschen-S02EP0NG/"
+        uid=26_325 generic
+          uid=26_326 image "Sweatshorts Herren Sportshorts Kurz mit Reißverschluss Laufshorts Bermuda" url="https://i.otto.de/i/otto/2fc5b870-e122-4427-967f-ec63da134dbf?$tile_portrait$&fmt=auto"
+        uid=26_327 StaticText "COMEOR"
+        uid=26_328 StaticText "Sweatshorts Herren Sportshorts Kurz mit Reißverschluss Laufshorts Bermuda"
+        uid=26_329 StaticText "UVP"
+        uid=26_330 StaticText "20,99 €"
+        uid=26_331 StaticText "9,90 €"
+        uid=26_332 StaticText "(9,90 € / 1Stk)"
+    uid=26_333 StaticText "-53%"
+    uid=26_334 generic
+      uid=26_335 link "BAUKNECHT Waschmaschine W8 S6300 A" url="https://www.otto.de/p/bauknecht-waschmaschine-w8-s6300-a-8-kg-1400-u-min-anti-allergie-programm-flecken-40-mehrfachwasserschutzplus-S077P0AV/"
+        uid=26_336 generic
+          uid=26_337 image "Waschmaschine W8 S6300 A" url="https://i.otto.de/i/otto/05f9b633-9c21-486a-85da-f9787ff28b48?$tile_portrait$&fmt=auto"
+          uid=26_338 StaticText "Sehr beliebt"
+        uid=26_339 StaticText "BAUKNECHT"
+        uid=26_340 StaticText "Waschmaschine W8 S6300 A"
+        uid=26_341 StaticText "UVP"
+        uid=26_342 StaticText "949,00 €"
+        uid=26_343 StaticText "377,77 €"
+        uid=26_344 StaticText "nur diesen Monat"
+    uid=26_345 StaticText "-60%"
+    uid=26_346 button "Energieverbrauchskennzeichnung A"
+    uid=26_347 generic
+      uid=26_348 link "Produktdatenblatt" url="https://d.otto.de/files/b57f1d30-1d13-455b-aba0-d2b5c68c0f73.pdf"
+        uid=26_349 StaticText "Produktdatenblatt"
+    uid=26_350 button "Energieeffiziente Nutzung"
+    uid=26_351 generic
+      uid=26_352 link "ADIDAS PERFORMANCE ADIZERO EVO SL FÜR KINDER UND TEENS Laufschuh" url="https://www.otto.de/p/adidas-performance-adizero-evo-sl-fuer-kinder-und-teens-laufschuh-fuer-kinder-jugendliche-C1951018432/"
+        uid=26_353 generic
+          uid=26_354 image "ADIZERO EVO SL FÜR KINDER UND TEENS Laufschuh" url="https://i.otto.de/i/otto/8fa9e458-6a9b-56c4-9fcb-64141a527d6a?$tile_portrait$&fmt=auto"
+        uid=26_355 StaticText "ADIDAS PERFORMANCE"
+        uid=26_356 StaticText "ADIZERO EVO SL FÜR KINDER UND TEENS Laufschuh"
+        uid=26_357 StaticText "UVP"
+        uid=26_358 StaticText "120,00 €"
+        uid=26_359 StaticText "ab"
+        uid=26_360 StaticText "101,99 €"
+    uid=26_361 StaticText "-15%"
+    uid=26_362 generic
+      uid=26_363 image "OTTO-Up Logo"
+    uid=26_364 generic
+      uid=26_365 link "TECTAKE Hängesessel Korbsessel Inkl. Schutzhülle, Belastbarkeit 160 kg, 98 x 107 x 202" url="https://www.otto.de/p/tectake-haengesessel-korbsessel-inkl-schutzhuelle-belastbarkeit-160-kg-98-x-107-x-202-haengekorb-mit-gestell-ariane-fuer-indoor-und-outdoor-in-dunkelgrau-mit-dickem-sitz-und-kopfkissen-stabil-bodenschonend-und-faltbar-S049O0VB/"
+        uid=26_366 generic
+          uid=26_367 image "Hängesessel Korbsessel Inkl. Schutzhülle, Belastbarkeit 160 kg, 98 x 107 x 202" url="https://i.otto.de/i/otto/4aa325c6-3dd0-5cf3-9193-1ac4a1e048b3?$tile_portrait$&fmt=auto"
+          uid=26_368 StaticText "Sehr beliebt"
+        uid=26_369 StaticText "TECTAKE"
+        uid=26_370 StaticText "Hängesessel Korbsessel Inkl. Schutzhülle, Belastbarkeit 160 kg, 98 x 107 x 202"
+        uid=26_371 StaticText "129,99 €"
+        uid=26_372 StaticText "109,99 €"
+        uid=26_373 StaticText "nur bis Dienstag"
+    uid=26_374 StaticText "-15%"
+    uid=26_375 link "EINHELL Akkurasenmäher GE-CM 18/30 Li"
+      uid=26_376 generic
+        uid=26_377 image "Akkurasenmäher GE-CM 18/30 Li" url="https://i.otto.de/i/otto/664e9c22-2e46-5306-a57f-4187443d3209?$tile_portrait$&fmt=auto"
+        uid=26_378 StaticText "Sehr beliebt"
+      uid=26_379 StaticText "EINHELL"
+      uid=26_380 StaticText "Akkurasenmäher GE-CM 18/30 Li"
+      uid=26_381 StaticText "UVP"
+      uid=26_382 StaticText "193,95 €"
+      uid=26_383 StaticText "129,99 €"
+    uid=26_384 StaticText "-33%"
+    uid=26_385 generic
+      uid=26_386 image "OTTO-Up Logo"
+    uid=26_387 generic
+      uid=26_388 link "TLGREEN Senkrechtmarkise Vertikalmarkise,HDPE-Schattentuch" url="https://www.otto.de/p/tlgreen-senkrechtmarkise-vertikalmarkise-hdpe-schattentuch-fuer-terrassenpergola-balkonmarkise-1-st-aluminiumrohr-mit-kabelloser-kurbelbedienung-fuer-balkon-errasse-garten-veranda-S0RDW0X0/"
+        uid=26_389 generic
+          uid=26_390 image "Senkrechtmarkise Vertikalmarkise,HDPE-Schattentuch" url="https://i.otto.de/i/otto/59c706d3-2435-4bc7-9bc5-2500f11f2f6d?$tile_portrait$&fmt=auto"
+        uid=26_391 StaticText "TLGREEN"
+        uid=26_392 StaticText "Senkrechtmarkise Vertikalmarkise,HDPE-Schattentuch"
+        uid=26_393 StaticText "UVP"
+        uid=26_394 StaticText "76,99 €"
+        uid=26_395 StaticText "ab"
+        uid=26_396 StaticText "59,99 €"
+    uid=26_397 StaticText "-22%"
+    uid=26_398 generic
+      uid=26_399 link "SUNSEEKER Bikini-Hose" url="https://www.otto.de/p/sunseeker-bikini-hose-mit-schmetterling-design-1848515989/"
+        uid=26_400 generic
+          uid=26_401 image "Bikini-Hose" url="https://i.otto.de/i/otto/779aa25b-d0b4-5b1b-8219-75dd5ac63a88?$spa_ambiente$&fmt=auto"
+        uid=26_402 StaticText "SUNSEEKER"
+        uid=26_403 StaticText "Bikini-Hose"
+        uid=26_404 StaticText "34,99 €"
+    uid=26_405 generic
+      uid=26_406 image "OTTO-Up Logo"
+    uid=26_407 generic
+      uid=26_408 link "OTTO HOME Teppich Cordoba auch als Läufer erhältlich" url="https://www.otto.de/p/otto-home-teppich-cordoba-auch-als-laeufer-erhaeltlich-rechteckig-hoehe-3-mm-in-und-outdoor-geeignet-sisal-optik-wetterfest-uv-bestaendig-boho-1901175162/"
+        uid=26_409 generic
+          uid=26_410 image "Teppich Cordoba auch als Läufer erhältlich" url="https://i.otto.de/i/otto/eefa2097-e379-512f-a30c-2de4b44e5a7b?$spa_ambiente$&fmt=auto"
+          uid=26_411 StaticText "Sehr beliebt"
+        uid=26_412 StaticText "OTTO HOME"
+        uid=26_413 StaticText "Teppich Cordoba auch als Läufer erhältlich"
+        uid=26_414 StaticText "UVP"
+        uid=26_415 StaticText "23,99 €"
+        uid=26_416 StaticText "ab"
+        uid=26_417 StaticText "10,99 €"
+        uid=26_418 StaticText "nur bis Dienstag"
+    uid=26_419 StaticText "-54%"
+    uid=26_420 generic
+      uid=26_421 image "OTTO-Up Logo"
+    uid=26_422 button "Verbesserte Herstellung"
+    uid=26_423 generic
+      uid=26_424 link "H.I.S Stoffhose, Dehnbund-Hose mit seitlichem Gummizug, auch in großen Größen" url="https://www.otto.de/p/h-i-s-stoffhose-dehnbund-hose-mit-seitlichem-gummizug-auch-in-grossen-groessen-komfortbund-besonders-bequem-1973457163/"
+        uid=26_425 generic
+          uid=26_426 image "Stoffhose, Dehnbund-Hose mit seitlichem Gummizug, auch in großen Größen" url="https://i.otto.de/i/otto/566651bd-1ae0-538f-b281-fb160a473513?$spa_ambiente$&fmt=auto"
+        uid=26_427 StaticText "H.I.S"
+        uid=26_428 StaticText "Stoffhose, Dehnbund-Hose mit seitlichem Gummizug, auch in großen Größen"
+        uid=26_429 StaticText "ab"
+        uid=26_430 StaticText "46,99 €"
+        uid=26_431 StaticText "(46,99 € / 1Stk)"
+    uid=26_432 generic
+      uid=26_433 image "OTTO-Up Logo"
+    uid=26_434 button "Förderung Sozialer Initiativen"
+    uid=26_435 generic
+      uid=26_436 link "LASCANA Kurzarmshirt mit Zierperle" url="https://www.otto.de/p/lascana-kurzarmshirt-mit-zierperle-aus-weicher-pique-qualitaet-1730017986/"
+        uid=26_437 generic
+          uid=26_438 image "Kurzarmshirt mit Zierperle" url="https://i.otto.de/i/otto/5601e993-e4bf-5e3f-a0db-647895e5a49f?$spa_ambiente$&fmt=auto"
+          uid=26_439 StaticText "Sehr beliebt"
+        uid=26_440 StaticText "LASCANA"
+        uid=26_441 StaticText "Kurzarmshirt mit Zierperle"
+        uid=26_442 StaticText "ab"
+        uid=26_443 StaticText "26,99 €"
+        uid=26_444 StaticText "(26,99 € / 1Stk)"
+    uid=26_445 generic
+      uid=26_446 image "OTTO-Up Logo"
+    uid=26_447 button "Recycelte Materialien"
+    uid=26_448 generic
+      uid=26_449 link "ADIDAS PERFORMANCE GALAXY 7 Laufschuh" url="https://www.otto.de/p/adidas-performance-adidas-herren-laufschuhe-galaxy-7-m-laufschuh-C1802631410/"
+        uid=26_450 generic
+          uid=26_451 image "GALAXY 7 Laufschuh" url="https://i.otto.de/i/otto/dd79533e-36e8-5e48-b49a-3174b32e6911?$tile_portrait$&fmt=auto"
+          uid=26_452 StaticText "Sehr beliebt"
+        uid=26_453 StaticText "ADIDAS PERFORMANCE"
+        uid=26_454 StaticText "GALAXY 7 Laufschuh"
+        uid=26_455 StaticText "ab"
+        uid=26_456 StaticText "54,99 €"
+    uid=26_457 generic
+      uid=26_458 image "OTTO-Up Logo"
+    uid=26_459 generic
+      uid=26_460 link "EINHELL »Starter-Kit Power X-Change« Akku Starter-Set" url="https://www.otto.de/p/einhell-einhell-power-x-change-starter-kit-a1-18volt-4ah-werkzeug-akku-ladetechnik-akku-plus-ladegeraet-C1218090319/"
+        uid=26_461 generic
+          uid=26_462 image "»Starter-Kit Power X-Change« Akku Starter-Set" url="https://i.otto.de/i/otto/7b0f2cd7-a8ca-59e1-b256-1476d1c25e90?$tile_portrait$&fmt=auto"
+          uid=26_463 StaticText "Sehr beliebt"
+        uid=26_464 StaticText "EINHELL"
+        uid=26_465 StaticText "»Starter-Kit Power X-Change« Akku Starter-Set"
+        uid=26_466 StaticText "UVP"
+        uid=26_467 StaticText "69,95 €"
+        uid=26_468 StaticText "29,99 €"
+    uid=26_469 StaticText "-57%"
+    uid=26_470 generic
+      uid=26_471 image "OTTO-Up Logo"
+    uid=26_472 link "ANISTON CASUAL Tunikakleid"
+      uid=26_473 generic
+        uid=26_474 image "Tunikakleid" url="https://i.otto.de/i/otto/33c53767-256f-560f-9ad5-312714fd09f5?$tile_portrait$&fmt=auto"
+        uid=26_475 StaticText "Sehr beliebt"
+      uid=26_476 StaticText "ANISTON CASUAL"
+      uid=26_477 StaticText "Tunikakleid"
+      uid=26_478 StaticText "UVP"
+      uid=26_479 StaticText "59,99 €"
+      uid=26_480 StaticText "ab"
+      uid=26_481 StaticText "22,91 €"
+    uid=26_482 StaticText "-62%"
+    uid=26_483 generic
+      uid=26_484 image "OTTO-Up Logo"
+    uid=26_485 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_486 generic
+      uid=26_487 link "LASCANA Halbschuh, Turnschuh, Freizeitschuh, Sneaker" url="https://www.otto.de/p/lascana-halbschuh-turnschuh-freizeitschuh-sneaker-neu-mit-modischen-farbdetails-chunky-sohle-mesh-optik-vegan-1961570612/"
+        uid=26_488 generic
+          uid=26_489 image "Halbschuh, Turnschuh, Freizeitschuh, Sneaker" url="https://i.otto.de/i/otto/06c4cd44-648a-597d-92b3-52210c13430b?$tile_portrait$&fmt=auto"
+        uid=26_490 StaticText "LASCANA"
+        uid=26_491 StaticText "Halbschuh, Turnschuh, Freizeitschuh, Sneaker"
+        uid=26_492 StaticText "59,99 €"
+        uid=26_493 StaticText "49,99 €"
+    uid=26_494 StaticText "-17%"
+    uid=26_495 generic
+      uid=26_496 image "OTTO-Up Logo"
+    uid=26_497 generic
+      uid=26_498 link "LASCANA Taillengürtel Stretchgürtel" url="https://www.otto.de/p/lascana-taillenguertel-stretchguertel-schmuckguertel-elastischer-guertel-fuer-kleid-overall-bast-optik-1756241351/"
+        uid=26_499 generic
+          uid=26_500 image "Taillengürtel Stretchgürtel" url="https://i.otto.de/i/otto/527c0301-e4df-519b-8039-0f0cc7959538?$tile_portrait$&fmt=auto"
+          uid=26_501 StaticText "Sehr beliebt"
+        uid=26_502 StaticText "LASCANA"
+        uid=26_503 StaticText "Taillengürtel Stretchgürtel"
+        uid=26_504 StaticText "26,99 €"
+    uid=26_505 generic
+      uid=26_506 image "OTTO-Up Logo"
+    uid=26_507 generic
+      uid=26_508 link "LASCANA Hosenrock" url="https://www.otto.de/p/lascana-hosenrock-aus-glatter-ware-culotte-extraweites-bein-1253503643/"
+        uid=26_509 generic
+          uid=26_510 image "Hosenrock" url="https://i.otto.de/i/otto/4652dbc2-1d1f-5347-bae3-171d374a90b8?$spa_ambiente$&fmt=auto"
+          uid=26_511 StaticText "Sehr beliebt"
+        uid=26_512 StaticText "LASCANA"
+        uid=26_513 StaticText "Hosenrock"
+        uid=26_514 StaticText "49,99 €"
+        uid=26_515 StaticText "29,99 €"
+    uid=26_516 StaticText "-40%"
+    uid=26_517 generic
+      uid=26_518 image "OTTO-Up Logo"
+    uid=26_519 generic
+      uid=26_520 link "JOHN DEVIN Sweatjacke mit modischer Teilungsnaht" url="https://www.otto.de/p/john-devin-sweatjacke-mit-modischer-teilungsnaht-langarm-sweatjacke-mit-reissverschluss-und-rundhals-baumwollmischung-1973453100/"
+        uid=26_521 generic
+          uid=26_522 image "Sweatjacke mit modischer Teilungsnaht" url="https://i.otto.de/i/otto/769f242e-3a0e-58c5-b143-1f1abb320b4b?$spa_ambiente$&fmt=auto"
+        uid=26_523 StaticText "JOHN DEVIN"
+        uid=26_524 StaticText "Sweatjacke mit modischer Teilungsnaht"
+        uid=26_525 StaticText "ab"
+        uid=26_526 StaticText "34,99 €"
+    uid=26_527 generic
+      uid=26_528 image "OTTO-Up Logo"
+    uid=26_529 generic
+      uid=26_530 link "FRENCH CONNECTION Leinenhose" url="https://www.otto.de/p/french-connection-leinenhose-im-weit-fliessendem-lagenlook-1920619718/"
+        uid=26_531 generic
+          uid=26_532 image "Leinenhose" url="https://i.otto.de/i/otto/1197790b-19b6-539e-960d-76728302e6bd?$spa_ambiente$&fmt=auto"
+        uid=26_533 StaticText "FRENCH CONNECTION"
+        uid=26_534 StaticText "Leinenhose"
+        uid=26_535 StaticText "75,99 €"
+        uid=26_536 StaticText "59,99 €"
+    uid=26_537 StaticText "-21%"
+    uid=26_538 generic
+      uid=26_539 image "OTTO-Up Logo"
+    uid=26_540 generic
+      uid=26_541 link "DIOR Eau de Parfum Sauvage EDP Herrenduft 100ml" url="https://www.otto.de/p/dior-eau-de-parfum-sauvage-edp-herrenduft-100ml-kraftvoller-langanhaltender-herrenduft-mit-frischer-wuerziger-sgn-CS009F09F/"
+        uid=26_542 generic
+          uid=26_543 image "Eau de Parfum Sauvage EDP Herrenduft 100ml" url="https://i.otto.de/i/otto/d3f1d50f-09da-42eb-a2c4-9f18d5e5873d?$tile_portrait$&fmt=auto"
+        uid=26_544 StaticText "DIOR"
+        uid=26_545 StaticText "Eau de Parfum Sauvage EDP Herrenduft 100ml"
+        uid=26_546 StaticText "UVP"
+        uid=26_547 StaticText "144,95 €"
+        uid=26_548 StaticText "87,79 €"
+        uid=26_549 StaticText "(877,90 € / 1l)"
+    uid=26_550 StaticText "-39%"
+    uid=26_551 generic
+      uid=26_552 link "NEW BALANCE 515 Sneaker" url="https://www.otto.de/p/new-balance-515-sneaker-1810753717/"
+        uid=26_553 generic
+          uid=26_554 image "515 Sneaker" url="https://i.otto.de/i/otto/4211481e-eeed-51b5-9b79-33d29cfa5733?$tile_portrait$&fmt=auto"
+          uid=26_555 StaticText "Sehr beliebt"
+        uid=26_556 StaticText "NEW BALANCE"
+        uid=26_557 StaticText "515 Sneaker"
+        uid=26_558 StaticText "ab"
+        uid=26_559 StaticText "88,99 €"
+    uid=26_560 generic
+      uid=26_561 image "OTTO-Up Logo"
+    uid=26_562 generic
+      uid=26_563 link "LASCANA Rundhalsshirt mit breitem Ärmelumschlag" url="https://www.otto.de/p/lascana-rundhalsshirt-mit-breitem-aermelumschlag-aus-weichem-viskose-feinstrick-1729039132/"
+        uid=26_564 generic
+          uid=26_565 image "Rundhalsshirt mit breitem Ärmelumschlag" url="https://i.otto.de/i/otto/39d55cc5-378b-59d3-a69f-0210128f086f?$spa_ambiente$&fmt=auto"
+          uid=26_566 StaticText "Sehr beliebt"
+        uid=26_567 StaticText "LASCANA"
+        uid=26_568 StaticText "Rundhalsshirt mit breitem Ärmelumschlag"
+        uid=26_569 StaticText "ab"
+        uid=26_570 StaticText "26,99 €"
+        uid=26_571 StaticText "(26,99 € / 1Stk)"
+    uid=26_572 generic
+      uid=26_573 image "OTTO-Up Logo"
+    uid=26_574 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_575 generic
+      uid=26_576 link "LASCANA Triangel-Bikini-Top Omara" url="https://www.otto.de/p/lascana-triangel-bikini-top-omara-mit-lochstickerei-1788721238/"
+        uid=26_577 generic
+          uid=26_578 image "Triangel-Bikini-Top Omara" url="https://i.otto.de/i/otto/b9ee071f-90e5-5c41-aa8b-e71965e67049?$spa_ambiente$&fmt=auto"
+        uid=26_579 StaticText "LASCANA"
+        uid=26_580 StaticText "Triangel-Bikini-Top Omara"
+        uid=26_581 StaticText "ab"
+        uid=26_582 StaticText "39,99 €"
+    uid=26_583 generic
+      uid=26_584 image "OTTO-Up Logo"
+    uid=26_585 button "Recycelte Materialien"
+    uid=26_586 generic
+      uid=26_587 link "EINHELL Motorsensenmesser Ersatzmesser-Set für Rasentrimmer" url="https://www.otto.de/p/einhell-motorsensenmesser-ersatzmesser-set-fuer-rasentrimmer-set-20-st-fuer-akku-rasentrimmer-ge-ct-18-li-C1902487027/"
+        uid=26_588 generic
+          uid=26_589 image "Motorsensenmesser Ersatzmesser-Set für Rasentrimmer" url="https://i.otto.de/i/otto/e741a2cf-62b8-5e71-878e-584586a7170f?$tile_portrait$&fmt=auto"
+          uid=26_590 StaticText "Sehr beliebt"
+        uid=26_591 StaticText "EINHELL"
+        uid=26_592 StaticText "Motorsensenmesser Ersatzmesser-Set für Rasentrimmer"
+        uid=26_593 StaticText "UVP"
+        uid=26_594 StaticText "11,45 €"
+        uid=26_595 StaticText "7,99 €"
+    uid=26_596 StaticText "-30%"
+    uid=26_597 generic
+      uid=26_598 image "OTTO-Up Logo"
+    uid=26_599 generic
+      uid=26_600 link "ANISTON CASUAL Sommerkleid" url="https://www.otto.de/p/aniston-casual-sommerkleid-mit-grossflaechigem-graphischem-blumendruck-1659160050/"
+        uid=26_601 generic
+          uid=26_602 image "Sommerkleid" url="https://i.otto.de/i/otto/c7a70526-ccb5-5d60-a1e0-a1bbd2d8f8f1?$tile_portrait$&fmt=auto"
+          uid=26_603 StaticText "Sehr beliebt"
+        uid=26_604 StaticText "ANISTON CASUAL"
+        uid=26_605 StaticText "Sommerkleid"
+        uid=26_606 StaticText "UVP"
+        uid=26_607 StaticText "54,99 €"
+        uid=26_608 StaticText "ab"
+        uid=26_609 StaticText "22,49 €"
+    uid=26_610 StaticText "-59%"
+    uid=26_611 generic
+      uid=26_612 image "OTTO-Up Logo"
+    uid=26_613 generic
+      uid=26_614 link "EINHELL Akku-Rasentrimmer »GE-CT 18 Li (1x 2,5 Ah)«" url="https://www.otto.de/p/einhell-akku-rasentrimmer-ge-ct-18-li-1x-2-5-ah-24-cm-arbeitsbreite-messer-inkl-akku-ladegeraet-und-20-ersatzmesser-C1918192996/"
+        uid=26_615 generic
+          uid=26_616 image "Akku-Rasentrimmer »GE-CT 18 Li (1x 2,5 Ah)«" url="https://i.otto.de/i/otto/606b974f-cfe9-564e-8ddb-e11a816d421a?$tile_portrait$&fmt=auto"
+        uid=26_617 StaticText "EINHELL"
+        uid=26_618 StaticText "Akku-Rasentrimmer »GE-CT 18 Li (1x 2,5 Ah)«"
+        uid=26_619 StaticText "UVP"
+        uid=26_620 StaticText "112,95 €"
+        uid=26_621 StaticText "64,99 €"
+    uid=26_622 StaticText "-42%"
+    uid=26_623 generic
+      uid=26_624 image "OTTO-Up Logo"
+    uid=26_625 generic
+      uid=26_626 link "SAMSUNG Galaxy A17 5G Smartphone" url="https://www.otto.de/p/samsung-galaxy-a17-5g-smartphone-16-91-cm-6-7-zoll-256-gb-speicherplatz-50-mp-kamera-2017327341/"
+        uid=26_627 generic
+          uid=26_628 image "Galaxy A17 5G Smartphone" url="https://i.otto.de/i/otto/98fb86cd-e164-5215-889f-c4461c99fac1?$tile_portrait$&fmt=auto"
+          uid=26_629 StaticText "Sehr beliebt"
+        uid=26_630 StaticText "SAMSUNG"
+        uid=26_631 StaticText "Galaxy A17 5G Smartphone"
+        uid=26_632 StaticText "UVP"
+        uid=26_633 StaticText "229,00 €"
+        uid=26_634 StaticText "ab"
+        uid=26_635 StaticText "154,99 €"
+        uid=26_636 StaticText "nur bis Dienstag"
+    uid=26_637 StaticText "-32%"
+    uid=26_638 generic
+      uid=26_639 image "OTTO-Up Logo"
+    uid=26_640 button "Energieverbrauchskennzeichnung B"
+    uid=26_641 generic
+      uid=26_642 link "Produktdatenblatt" url="https://d.otto.de/files/6577b454-e0c0-596b-9721-6489d2046c4f.pdf"
+        uid=26_643 StaticText "Produktdatenblatt"
+    uid=26_644 generic
+      uid=26_645 link "LASCANA T-Shirt" url="https://www.otto.de/p/lascana-t-shirt-mit-biesenstruktur-buegelfreies-t-shirt-aus-moderner-strukturware-1367467230/"
+        uid=26_646 generic
+          uid=26_647 image "T-Shirt" url="https://i.otto.de/i/otto/c51ed7a6-f5b7-5866-960b-a32dd46e3741?$spa_ambiente$&fmt=auto"
+          uid=26_648 StaticText "Sehr beliebt"
+        uid=26_649 StaticText "LASCANA"
+        uid=26_650 StaticText "T-Shirt"
+        uid=26_651 StaticText "39,99 €"
+        uid=26_652 StaticText "29,99 €"
+    uid=26_653 StaticText "-25%"
+    uid=26_654 generic
+      uid=26_655 image "OTTO-Up Logo"
+    uid=26_656 link "SUNSEEKER Triangel-Bikini-Top Butterfly"
+      uid=26_657 generic
+        uid=26_658 image "Triangel-Bikini-Top Butterfly" url="https://i.otto.de/i/otto/563fdb66-a28d-53de-8515-6c04329d0ae7?$spa_ambiente$&fmt=auto"
+      uid=26_659 StaticText "SUNSEEKER"
+      uid=26_660 StaticText "Triangel-Bikini-Top Butterfly"
+      uid=26_661 StaticText "44,99 €"
+    uid=26_662 generic
+      uid=26_663 image "OTTO-Up Logo"
+    uid=26_664 generic
+      uid=26_665 link "MAGMA HEIMTEX Sitzsack SANTORIN Rock" url="https://www.otto.de/p/magma-heimtex-sitzsack-santorin-rock-1-st-C1718497653/"
+        uid=26_666 generic
+          uid=26_667 image "Sitzsack SANTORIN Rock" url="https://i.otto.de/i/otto/21e52001-0d7c-5bb3-b36b-e019bfe5add3?$tile_portrait$&fmt=auto"
+        uid=26_668 StaticText "MAGMA HEIMTEX"
+        uid=26_669 StaticText "Sitzsack SANTORIN Rock"
+        uid=26_670 StaticText "ab"
+        uid=26_671 StaticText "132,88 €"
+    uid=26_672 generic
+      uid=26_673 image "OTTO-Up Logo"
+    uid=26_674 generic
+      uid=26_675 link "LASCANA Palazzohose" url="https://www.otto.de/p/lascana-palazzohose-mit-animalprint-schlupfhose-wide-leg-modisch-1908782903/"
+        uid=26_676 generic
+          uid=26_677 image "Palazzohose" url="https://i.otto.de/i/otto/badf8137-0adb-5c6a-8db3-7b726b11e450?$spa_ambiente$&fmt=auto"
+          uid=26_678 StaticText "Sehr beliebt"
+        uid=26_679 StaticText "LASCANA"
+        uid=26_680 StaticText "Palazzohose"
+        uid=26_681 StaticText "59,99 €"
+    uid=26_682 generic
+      uid=26_683 image "OTTO-Up Logo"
+    uid=26_684 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_685 generic
+      uid=26_686 link "WOTPLAY LED Solarleuchte Solar Laterne LED Garten 2er Set warmweiß Dämmerung außen" url="https://www.otto.de/p/wotplay-led-solarleuchte-solar-laterne-led-garten-2er-set-warmweiss-daemmerung-aussen-led-warmweiss-daemmerungssensor-warmweiss-led-solar-betrieb-aussen-2er-set-S0SG00SL/"
+        uid=26_687 generic
+          uid=26_688 image "LED Solarleuchte Solar Laterne LED Garten 2er Set warmweiß Dämmerung außen" url="https://i.otto.de/i/otto/1ad2bef4-da39-4a6a-8aa1-f779d1b8d4da?$tile_portrait$&fmt=auto"
+        uid=26_689 StaticText "WOTPLAY"
+        uid=26_690 StaticText "LED Solarleuchte Solar Laterne LED Garten 2er Set warmweiß Dämmerung außen"
+        uid=26_691 StaticText "UVP"
+        uid=26_692 StaticText "29,99 €"
+        uid=26_693 StaticText "19,99 €"
+        uid=26_694 StaticText "(19,99 € / 1Stk)"
+    uid=26_695 StaticText "-33%"
+  uid=26_696 generic
+  uid=26_697 generic
+    uid=26_698 link url="https://www.otto.de/?selektion=(und.(oder.(und.(ist.sortiment.accessoires.bekleidung.schuhe.waesche).(ist.sportart.laufen).(ist.zielgruppe.damen.herren)).(und.(ist.sortiment.beleuchtung.sportausruestung).(oder.(sind.kategorien.fitness-tracker).(sind.kategorien.lampen.stirnlampen)))).(~.(v.1)))"
+    uid=26_699 StaticText "Alles fürs Laufen"
+    uid=26_700 image "Alles fürs Laufen" description="Alles fürs Laufen" url="https://i.otto.de/i/otto/mpp360_389124_802275?$promo_poi_8-3_xl_progressive$&w=1104&fmt=auto"
+  uid=26_701 StaticText "Beliebte Kategorien"
+  uid=26_702 button "Sofas"
+  uid=26_703 button "Jacken"
+  uid=26_704 button "Betten"
+  uid=26_705 button "Bettwäsche"
+  uid=26_706 button "Herren Pullover"
+  uid=26_707 button "Kleider­schränke"
+  uid=26_708 heading "Wohnen & Sparen" level="2"
+  uid=26_709 generic
+    uid=26_710 link url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(~.(v.1)))"
+    uid=26_711 StaticText "Bis 27.04. vom Verkäufer OTTO"
+    uid=26_712 StaticText "Schlafzimmermöbel & Sofas"
+    uid=26_713 image "Schlafzimmermöbel & Sofas" description="Schlafzimmermöbel & Sofas" url="https://i.otto.de/i/otto/mpp360_385424_787520?$promo_poi_8-3_xl_progressive$&w=1104&fmt=auto"
+    uid=26_714 button "-20 % Extra"
+  uid=26_715 button "Cinema of recommendations überspringen"
+  uid=26_716 region "Cinema of recommendations"
+    uid=26_717 generic
+      uid=26_718 link "JOCKENHÖFER GRUPPE Ecksofa Zoom L-Form, B: 263 cm, mit 60 cm elektr. Sitztiefenverstellung" url="https://www.otto.de/p/jockenhoefer-gruppe-ecksofa-zoom-l-form-b-263-cm-mit-60-cm-elektr-sitztiefenverstellung-140kg-belastbarkeit-usb-anschluss-kopfteilverstellung-zierkissen-1938941279/"
+        uid=26_719 generic
+          uid=26_720 image "Ecksofa Zoom L-Form, B: 263 cm, mit 60 cm elektr. Sitztiefenverstellung" url="https://i.otto.de/i/otto/f4c44579-d4cf-5281-9a4c-77474fb21930?$spa_ambiente$&fmt=auto"
+        uid=26_721 StaticText "JOCKENHÖFER GRUPPE"
+        uid=26_722 StaticText "Ecksofa Zoom L-Form, B: 263 cm, mit 60 cm elektr. Sitztiefenverstellung"
+        uid=26_723 StaticText "UVP"
+        uid=26_724 StaticText "1.999,99 €"
+        uid=26_725 StaticText "ab"
+        uid=26_726 StaticText "1.349,99 €"
+    uid=26_727 StaticText "-33%"
+    uid=26_728 generic
+      uid=26_729 link "INOSIGN 2-Sitzer BEATRICE, erhältlich in trendigen Stoffoptionen, B/T/H: 143/73/92 cm" url="https://www.otto.de/p/inosign-2-sitzer-beatrice-erhaeltlich-in-trendigen-stoffoptionen-b-t-h-143-73-92-cm-in-hochwertiger-verarbeitung-incl-2-grossen-zierkissen-in-korpusfarbe-869615866/"
+        uid=26_730 generic
+          uid=26_731 image "2-Sitzer BEATRICE, erhältlich in trendigen Stoffoptionen, B/T/H: 143/73/92 cm" url="https://i.otto.de/i/otto/af6ad7a7-1f0e-59a2-8275-668b956593d9?$spa_ambiente$&fmt=auto"
+          uid=26_732 StaticText "Sehr beliebt"
+        uid=26_733 StaticText "INOSIGN"
+        uid=26_734 StaticText "2-Sitzer BEATRICE, erhältlich in trendigen Stoffoptionen, B/T/H: 143/73/92 cm"
+        uid=26_735 StaticText "UVP"
+        uid=26_736 StaticText "929,99 €"
+        uid=26_737 StaticText "ab"
+        uid=26_738 StaticText "649,99 €"
+    uid=26_739 StaticText "-30%"
+    uid=26_740 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_741 generic
+      uid=26_742 link "HOME AFFAIRE Kopfstütze Palmera, B: 50 cm" url="https://www.otto.de/p/home-affaire-kopfstuetze-palmera-b-50-cm-2-st-set-2-stueck-passend-zur-serie-860933305/"
+        uid=26_743 generic
+          uid=26_744 image "Kopfstütze Palmera, B: 50 cm" url="https://i.otto.de/i/otto/b05ce464-81aa-5969-b7c2-899ad8d2f580?$spa_ambiente$&fmt=auto"
+        uid=26_745 StaticText "HOME AFFAIRE"
+        uid=26_746 StaticText "Kopfstütze Palmera, B: 50 cm"
+        uid=26_747 StaticText "UVP"
+        uid=26_748 StaticText "289,00 €"
+        uid=26_749 StaticText "ab"
+        uid=26_750 StaticText "199,99 €"
+    uid=26_751 StaticText "-31%"
+    uid=26_752 generic
+      uid=26_753 image "OTTO-Up Logo"
+    uid=26_754 generic
+      uid=26_755 link "OTTO HOME Kombikommode Sideboard Kombikommode Schubladenkommode AGORDO mit Glasfront" url="https://www.otto.de/p/otto-home-kombikommode-sideboard-kombikommode-schubladenkommode-agordo-mit-glasfront-in-zwei-griff-farben-breite-120-cm-vier-grosse-schubladen-mit-insgesamt-4-einlegeboeden-made-in-germany-1844850722/"
+        uid=26_756 generic
+          uid=26_757 image "Kombikommode Sideboard Kombikommode Schubladenkommode AGORDO mit Glasfront" url="https://i.otto.de/i/otto/30dd0ad3-4560-5461-a85a-37094bc6d1c9?$tile_portrait$&fmt=auto"
+        uid=26_758 StaticText "OTTO HOME"
+        uid=26_759 StaticText "Kombikommode Sideboard Kombikommode Schubladenkommode AGORDO mit Glasfront"
+        uid=26_760 StaticText "UVP"
+        uid=26_761 StaticText "1.099,00 €"
+        uid=26_762 StaticText "ab"
+        uid=26_763 StaticText "435,08 €"
+    uid=26_764 StaticText "-60%"
+    uid=26_765 button "Verbesserte Herstellung"
+    uid=26_766 generic
+      uid=26_767 link "WIMEX Schlafzimmer-Set Petra/Pamela" url="https://www.otto.de/p/wimex-schlafzimmer-set-petra-pamela-set-4-tlg-548901265/"
+        uid=26_768 generic
+          uid=26_769 image "Schlafzimmer-Set Petra/Pamela" url="https://i.otto.de/i/otto/8ddab30c-8453-5f72-be51-fcc03ea45ce4?$tile_portrait$&fmt=auto"
+        uid=26_770 StaticText "WIMEX"
+        uid=26_771 StaticText "Schlafzimmer-Set Petra/Pamela"
+        uid=26_772 StaticText "UVP"
+        uid=26_773 StaticText "1.328,00 €"
+        uid=26_774 StaticText "557,25 €"
+    uid=26_775 StaticText "-58%"
+    uid=26_776 generic
+      uid=26_777 link "HOME AFFAIRE Polsterhocker Palmera, B: 58 cm" url="https://www.otto.de/p/home-affaire-polsterhocker-palmera-b-58-cm-mit-stauraum-federkern-860933133/"
+        uid=26_778 generic
+          uid=26_779 image "Polsterhocker Palmera, B: 58 cm" url="https://i.otto.de/i/otto/1baccd83-2fa8-5576-a33d-02043631abdd?$spa_ambiente$&fmt=auto"
+        uid=26_780 StaticText "HOME AFFAIRE"
+        uid=26_781 StaticText "Polsterhocker Palmera, B: 58 cm"
+        uid=26_782 StaticText "UVP"
+        uid=26_783 StaticText "279,00 €"
+        uid=26_784 StaticText "ab"
+        uid=26_785 StaticText "199,99 €"
+    uid=26_786 StaticText "-28%"
+    uid=26_787 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_788 generic
+      uid=26_789 link "COTTA Polstergarnitur Leandra" url="https://www.otto.de/p/cotta-polstergarnitur-leandra-set-bestehend-aus-2-sitzer-2-5-sitzer-462858068/"
+        uid=26_790 generic
+          uid=26_791 image "Polstergarnitur Leandra" url="https://i.otto.de/i/otto/378a52b2-e09f-5884-ab3d-1a3a3a4c8e93?$spa_ambiente$&fmt=auto"
+        uid=26_792 StaticText "COTTA"
+        uid=26_793 StaticText "Polstergarnitur Leandra"
+        uid=26_794 StaticText "UVP"
+        uid=26_795 StaticText "1.984,00 €"
+        uid=26_796 StaticText "ab"
+        uid=26_797 StaticText "1.199,99 €"
+    uid=26_798 StaticText "-40%"
+    uid=26_799 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_800 generic
+      uid=26_801 link "TRENDMANUFAKTUR Wohnlandschaft Rondo, U-Form" url="https://www.otto.de/p/trendmanufaktur-wohnlandschaft-rondo-u-form-inkl-federkern-wahlweise-mit-bettfunktion-426133359/"
+        uid=26_802 generic
+          uid=26_803 image "Wohnlandschaft Rondo, U-Form" url="https://i.otto.de/i/otto/5f1a4eba-6beb-5446-a385-f43f9dc3c3c6?$spa_ambiente$&fmt=auto"
+        uid=26_804 StaticText "TRENDMANUFAKTUR"
+        uid=26_805 StaticText "Wohnlandschaft Rondo, U-Form"
+        uid=26_806 StaticText "UVP"
+        uid=26_807 StaticText "4.299,00 €"
+        uid=26_808 StaticText "ab"
+        uid=26_809 StaticText "3.149,99 €"
+    uid=26_810 StaticText "-27%"
+    uid=26_811 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_812 generic
+      uid=26_813 link "KARUP DESIGN Futonmatratze Comfort Futon, 15 cm hoch, mehrere Größen, handgefertigt" url="https://www.otto.de/p/futonmatratze-comfort-futon-15-cm-hoch-mehrere-groessen-handgefertigt-karup-design-15-cm-hoch-aus-baumwolle-und-einem-kern-aus-pu-schaum-made-in-europe-1034765743/"
+        uid=26_814 generic
+          uid=26_815 image "Futonmatratze Comfort Futon, 15 cm hoch, mehrere Größen, handgefertigt" url="https://i.otto.de/i/otto/10cbd91e-0846-5f8b-af85-82a50ec74e37?$tile_portrait$&fmt=auto"
+        uid=26_816 StaticText "KARUP DESIGN"
+        uid=26_817 StaticText "Futonmatratze Comfort Futon, 15 cm hoch, mehrere Größen, handgefertigt"
+        uid=26_818 StaticText "UVP"
+        uid=26_819 StaticText "379,00 €"
+        uid=26_820 StaticText "ab"
+        uid=26_821 StaticText "339,99 €"
+    uid=26_822 StaticText "-10%"
+    uid=26_823 generic
+      uid=26_824 image "OTTO-Up Logo"
+    uid=26_825 link "EGOITALIANO Ecksofa Shakira, Design & Sitzkomfort auf hohem Niveau, Breite 236cm, L-Form"
+      uid=26_826 generic
+        uid=26_827 image "Ecksofa Shakira, Design & Sitzkomfort auf hohem Niveau, Breite 236cm, L-Form" url="https://i.otto.de/i/otto/e3981e6e-b4dd-5631-b14e-1126f8d9afbb?$spa_ambiente$&fmt=auto"
+      uid=26_828 StaticText "EGOITALIANO"
+      uid=26_829 StaticText "Ecksofa Shakira, Design & Sitzkomfort auf hohem Niveau, Breite 236cm, L-Form"
+      uid=26_830 StaticText "UVP"
+      uid=26_831 StaticText "5.268,00 €"
+      uid=26_832 StaticText "3.359,99 €"
+    uid=26_833 StaticText "-36%"
+    uid=26_834 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_835 link "OTTO HOME Schlafzimmer-Set Cross, moderne, grifflose Optik, FSC-zertifiziert"
+      uid=26_836 generic
+        uid=26_837 image "Schlafzimmer-Set Cross, moderne, grifflose Optik, FSC-zertifiziert" url="https://i.otto.de/i/otto/279ce10d-b90e-5a24-91e5-2ff781748853?$tile_portrait$&fmt=auto"
+      uid=26_838 StaticText "OTTO HOME"
+      uid=26_839 StaticText "Schlafzimmer-Set Cross, moderne, grifflose Optik, FSC-zertifiziert"
+      uid=26_840 StaticText "UVP"
+      uid=26_841 StaticText "1.142,99 €"
+      uid=26_842 StaticText "ab"
+      uid=26_843 StaticText "666,93 €"
+    uid=26_844 StaticText "-42%"
+    uid=26_845 button "Verbesserte Rohstoffbeschaffung"
+    uid=26_846 generic
+      uid=26_847 link "W.SCHILLIG Ecksofa piedroo, Designsofa mit tollem Sitzkomfort, bequem und elegant, L-Form" url="https://www.otto.de/p/w-schillig-ecksofa-piedroo-designsofa-mit-tollem-sitzkomfort-bequem-und-elegant-l-form-kopfteilverstellung-wahlweise-mit-sitztiefenverstellung-breite-343cm-1538670624/"
+        uid=26_848 generic
+          uid=26_849 image "Ecksofa piedroo, Designsofa mit tollem Sitzkomfort, bequem und elegant, L-Form" url="https://i.otto.de/i/otto/336ede5d-383f-54ab-a657-e42d342fac11?$spa_ambiente$&fmt=auto"
+        uid=26_850 StaticText "W.SCHILLIG"
+        uid=26_851 StaticText "Ecksofa piedroo, Designsofa mit tollem Sitzkomfort, bequem und elegant, L-Form"
+        uid=26_852 StaticText "ab"
+        uid=26_853 StaticText "2.389,99 €"
+  uid=26_854 generic
+  uid=26_855 generic
+    uid=26_856 link "Schlafzimmermöbel" url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(ist.raum.schlafzimmer).(ist.sortiment.aufbewahrung.beleuchtung.dekoration.moebel).(~.(v.1)))"
+  uid=26_857 generic
+    uid=26_858 link "Betten" url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(ist.sortiment.moebel).(sind.kategorien.betten).(~.(v.1)))"
+  uid=26_859 generic
+    uid=26_860 link "Schränke" url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(ist.sortiment.moebel).(sind.kategorien.schraenke).(~.(v.1)))"
+  uid=26_861 generic
+    uid=26_862 link "Kommoden & Sideboards" url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(ist.sortiment.moebel).(oder.(sind.kategorien.highboards).(sind.kategorien.kommoden).(sind.kategorien.lowboards).(sind.kategorien.sideboards)).(~.(v.1)))"
+  uid=26_863 generic
+    uid=26_864 link "Nachttische" url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(ist.sortiment.moebel).(sind.kategorien.tische.nachttische).(~.(v.1)))"
+  uid=26_865 generic
+    uid=26_866 link "Sofas" url="https://www.otto.de/?selektion=(und.(ist.kundenvorteil.ac4ceb70-f79d-47e9-aa67-55c69a00d6d6).(ist.sortiment.moebel).(sind.kategorien.sofas).(~.(v.1)))"
+  uid=26_867 generic
+    uid=26_868 link url="https://www.otto.de/?selektion=(und.(ref.topics.e6512a73-cdb1-45bc-a4ae-39bbcdf4d8b8).(~.(v.1)))"
+    uid=26_869 StaticText "Trend-Styles für dein Zuhause"
+    uid=26_870 StaticText "Unsere Co-Creations"
+    uid=26_871 image "Unsere Co-Creations" description="Unsere Co-Creations" url="https://i.otto.de/i/otto/mpp360_389472_803864?$promo_poi_8-3_xl_progressive$&w=1104&fmt=auto"
+  uid=26_872 heading "Wohnideen für dich" level="2"
+  uid=26_873 button "Überspringen"
+  uid=26_874 generic
+    uid=26_875 generic
+      uid=26_876 link "Zur Wohnidee 1" url="https://www.otto.de/k/c6d84a29-5238-4450-999c-052da0d8e37f"
+        uid=26_877 image "Zur Wohnidee 1" url="https://i.otto.de/i/otto/aa0b6c68-2b6e-56ab-a19f-16f944f6137d?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_878 generic
+      uid=26_879 link "OTTO home Teppich Mataro, rund, Höhe: 4 mm, Wendeteppich, Flachgewebe, Obermaterial: 100% Jute" url="https://www.otto.de/p/otto-home-teppich-mataro-rund-hoehe-4-mm-wendeteppich-flachgewebe-obermaterial-100-jute-1197398267/"
+        uid=26_880 image "OTTO home Teppich Mataro, rund, Höhe: 4 mm, Wendeteppich, Flachgewebe, Obermaterial: 100% Jute" url="https://i.otto.de/i/otto/f70bda7c-39b3-5207-8a56-ae7039cc157a?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_881 generic
+      uid=26_882 link "Brilliant Tischleuchte Nori, ohne Leuchtmittel, Tischlampe natur/weiß" url="https://www.otto.de/p/brilliant-tischleuchte-nori-lampe-nori-tischleuchte-natur-weiss-1x-a60-e27-40w-g-f-normallamp-C1504631054/"
+        uid=26_883 image "Brilliant Tischleuchte Nori, ohne Leuchtmittel, Tischlampe natur/weiß" url="https://i.otto.de/i/otto/aa600f2a-a7f1-55d5-b2f3-69bdcecfe003?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_884 generic
+      uid=26_885 link "Atmosphera Créateur d'intérieur Pendelleuchte Hängeleuchte LIBY mit einem durchbrochenem Schirm aus Bambus, Ø 40 cm, Leuchte mit Dekofunktion, ohne Leuchtmittel, aus Bambus" url="https://www.otto.de/p/atmosphera-createur-d-interieur-pendelleuchte-haengeleuchte-liby-mit-einem-durchbrochenem-schirm-aus-bambus-o-40-cm-leuchte-mit-dekofunktion-ohne-leuchtmittel-aus-bambus-S0K1B0QC/"
+        uid=26_886 image "Atmosphera Créateur d'intérieur Pendelleuchte Hängeleuchte LIBY mit einem durchbrochenem Schirm aus Bambus, Ø 40 cm, Leuchte mit Dekofunktion, ohne Leuchtmittel, aus Bambus" url="https://i.otto.de/i/otto/4b34a870-0312-5b12-8828-f6ba45dab18c?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_887 generic
+      uid=26_888 link "INOSIGN Hakenleiste Letti, (1 St)" url="https://www.otto.de/p/inosign-hakenleiste-letti-1-st-1384161186/"
+        uid=26_889 image "INOSIGN Hakenleiste Letti, (1 St)" url="https://i.otto.de/i/otto/d685caaf-dfdc-580d-a817-2c30d93b2b8d?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_890 generic
+    uid=26_891 generic
+      uid=26_892 link "Zur Wohnidee 2" url="https://www.otto.de/k/715bb9ed-8406-4bec-9b33-0bf009d063db"
+        uid=26_893 image "Zur Wohnidee 2" url="https://i.otto.de/i/otto/001_2017_47_moeb_IndianStyle_02_image?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_894 generic
+      uid=26_895 link "OTTO home Stauraumschrank Prem Handbemalt, Breite/Tiefe/Höhe: 87/38/152 cm" url="https://www.otto.de/p/otto-home-stauraumschrank-prem-handbemalt-breite-tiefe-hoehe-87-38-152-cm-597580945/"
+        uid=26_896 image "OTTO home Stauraumschrank Prem Handbemalt, Breite/Tiefe/Höhe: 87/38/152 cm" url="https://i.otto.de/i/otto/11c68fb5-4588-5a16-9072-de73ee60764c?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_897 generic
+      uid=26_898 link "Home affaire Beistelltisch Bajo, Mangoholz, Handbemalt, Breite 40 cm" url="https://www.otto.de/p/home-affaire-beistelltisch-bajo-mangoholz-handbemalt-breite-40-cm-597667538/"
+        uid=26_899 image "Home affaire Beistelltisch Bajo, Mangoholz, Handbemalt, Breite 40 cm" url="https://i.otto.de/i/otto/9638304f-2534-517b-a3d7-a61b308046cc?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_900 generic
+      uid=26_901 link "H.O.C.K. Dekokissen Classic Uni, Kissenhülle mit Füllung, 1 Stück, 50/50 cm" url="https://www.otto.de/p/h-o-c-k-dekokissen-classic-uni-kissenhuelle-mit-fuellung-1-stueck-50-50-cm-251945097/"
+        uid=26_902 image "H.O.C.K. Dekokissen Classic Uni, Kissenhülle mit Füllung, 1 Stück, 50/50 cm" url="https://i.otto.de/i/otto/0ef0d076-3881-5876-8c65-813b642d4920?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_903 generic
+    uid=26_904 generic
+      uid=26_905 link "Zur Wohnidee 3" url="https://www.otto.de/k/d24f3282-6052-45c2-b7a5-557c145e6ca4"
+        uid=26_906 image "Zur Wohnidee 3" url="https://i.otto.de/i/otto/e17d8d7d-2739-5714-8994-9ed79d2e340b?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_907 generic
+      uid=26_908 link "the carpet Teppich Relax kuschelig & Super Soft, Anti-Rutsch Unterseite, rechteckig, Höhe: 16 mm, Waschbar bis 30 Grad, Felloptik, Wohnzimmer Teppich, Kundenliebling" url="https://www.otto.de/p/the-carpet-teppich-relax-kuschelig-super-soft-anti-rutsch-unterseite-rechteckig-hoehe-16-mm-waschbar-bis-30-grad-felloptik-wohnzimmer-teppich-kundenliebling-1907583109/"
+        uid=26_909 image "the carpet Teppich Relax kuschelig & Super Soft, Anti-Rutsch Unterseite, rechteckig, Höhe: 16 mm, Waschbar bis 30 Grad, Felloptik, Wohnzimmer Teppich, Kundenliebling" url="https://i.otto.de/i/otto/c190a4b1-2710-5975-ae0d-b2505a15a7d1?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_910 generic
+      uid=26_911 link "HELA Esszimmerstuhl Luise S Schwingstuhl, Freischwinger, TOPSELLER! 2er-Set (Set, 2 St), Sitz mit Federkern, Extra dicke Polsterung, Küchenstuhl, OTTOs Choice" url="https://www.otto.de/p/hela-esszimmerstuhl-luise-s-schwingstuhl-freischwinger-topseller-2er-set-set-2-st-sitz-mit-federkern-extra-dicke-polsterung-kuechenstuhl-ottos-choice-C1589863192/"
+        uid=26_912 image "HELA Esszimmerstuhl Luise S Schwingstuhl, Freischwinger, TOPSELLER! 2er-Set (Set, 2 St), Sitz mit Federkern, Extra dicke Polsterung, Küchenstuhl, OTTOs Choice" url="https://i.otto.de/i/otto/f1a54a5b-0d86-556a-8602-ea7d83578f33?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_913 generic
+      uid=26_914 link "OTTO home Stehlampe Eddaa - Pilzlampe, Ein-/Ausschalter, ohne Leuchtmittel, Pilzleuchte, Höhe 165cm, Stehleuchte, Fußschalter, Pilzdesign" url="https://www.otto.de/p/otto-home-stehlampe-eddaa-pilzlampe-ein-ausschalter-ohne-leuchtmittel-pilzleuchte-hoehe-165cm-stehleuchte-fussschalter-pilzdesign-1852924145/"
+        uid=26_915 image "OTTO home Stehlampe Eddaa - Pilzlampe, Ein-/Ausschalter, ohne Leuchtmittel, Pilzleuchte, Höhe 165cm, Stehleuchte, Fußschalter, Pilzdesign" url="https://i.otto.de/i/otto/41fc65ba-a470-5e27-984a-1dd3e64f2781?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_916 generic
+      uid=26_917 link "EGLO Hängeleuchte ROMAZZINA Pendelleuchte, Esstischleuchte, sandfarben, Metall, E27, ohne Leuchtmittel, Hängelampe, Wohnzimmer, modern, ballonförmiger Lampenschirm, 110x46cm" url="https://www.otto.de/p/eglo-haengeleuchte-romazzina-pendelleuchte-esstischleuchte-sandfarben-metall-e27-ohne-leuchtmittel-haengelampe-wohnzimmer-modern-ballonfoermiger-lampenschirm-110x46cm-C1849335776/"
+        uid=26_918 image "EGLO Hängeleuchte ROMAZZINA Pendelleuchte, Esstischleuchte, sandfarben, Metall, E27, ohne Leuchtmittel, Hängelampe, Wohnzimmer, modern, ballonförmiger Lampenschirm, 110x46cm" url="https://i.otto.de/i/otto/70897e29-5f11-50a7-8001-e666f00ba9b2?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_919 generic
+    uid=26_920 generic
+      uid=26_921 link "Zur Wohnidee 4" url="https://www.otto.de/k/da6235b8-533a-43d8-86b4-08a3003b3c6d"
+        uid=26_922 image "Zur Wohnidee 4" url="https://i.otto.de/i/otto/c2ef0d1d-0d99-5a7f-ba21-b2dfe4e6dde5?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_923 generic
+      uid=26_924 link "KONIFERA Garten-Essgruppe Edessa Komfort, (Set, 22-tlg., 10x Sessel, 10x Auflagen, 1x Tisch groß, 1x Tisch klein), inkl. 10 Sessel, 10 Sitzkissen, 1 Ausziehtisch, 1 Beistelltisch" url="https://www.otto.de/p/konifera-garten-essgruppe-edessa-komfort-set-22-tlg-10x-sessel-10x-auflagen-1x-tisch-gross-1x-tisch-klein-inkl-10-sessel-10-sitzkissen-1-ausziehtisch-1-beistelltisch-2013235136/"
+        uid=26_925 image "KONIFERA Garten-Essgruppe Edessa Komfort, (Set, 22-tlg., 10x Sessel, 10x Auflagen, 1x Tisch groß, 1x Tisch klein), inkl. 10 Sessel, 10 Sitzkissen, 1 Ausziehtisch, 1 Beistelltisch" url="https://i.otto.de/i/otto/59ae70be-d059-56f9-a5ef-0bae5acacd48?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_926 generic
+      uid=26_927 link "Creativ home Windlicht Laterne ALEGRE, mit Henkel (1 St), Kerzenhalter aus Naturweide, Ø 33 cm" url="https://www.otto.de/p/creativ-home-windlicht-laterne-alegre-mit-henkel-1-st-kerzenhalter-aus-naturweide-o-33-cm-1768509352/"
+        uid=26_928 image "Creativ home Windlicht Laterne ALEGRE, mit Henkel (1 St), Kerzenhalter aus Naturweide, Ø 33 cm" url="https://i.otto.de/i/otto/310664ac-fde6-563e-b8c5-eabb566add91?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_929 generic
+      uid=26_930 link "Scheurich Pflanzkübel 40/259 Linetto, dickwandiger Topf aus hochwertigem Kunststoff, ØxH: 38,6x35,3 cm" url="https://www.otto.de/p/scheurich-pflanzkuebel-40-259-linetto-dickwandiger-topf-aus-hochwertigem-kunststoff-oxh-38-6x35-3-cm-1787389318/"
+        uid=26_931 image "Scheurich Pflanzkübel 40/259 Linetto, dickwandiger Topf aus hochwertigem Kunststoff, ØxH: 38,6x35,3 cm" url="https://i.otto.de/i/otto/8cfeeb4b-a0fa-54a3-80f9-b3d45ba51b10?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_932 generic
+      uid=26_933 link "LEONARDO Gläser-Set EASY+, 6-tlg., Kristallglas, 260 ml, 6-teilig" url="https://www.otto.de/p/leonardo-glaeser-set-easyplus-6-tlg-kristallglas-260-ml-6-teilig-C1805601041/"
+        uid=26_934 image "LEONARDO Gläser-Set EASY+, 6-tlg., Kristallglas, 260 ml, 6-teilig" url="https://i.otto.de/i/otto/6b169edb-6364-5ad5-9ea6-cf080a0b7c9c?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_935 generic
+    uid=26_936 generic
+      uid=26_937 link "Zur Wohnidee 5" url="https://www.otto.de/k/d3054c38-1ce7-4142-955e-0c02c750cc5b"
+        uid=26_938 image "Zur Wohnidee 5" url="https://i.otto.de/i/otto/3f3644a5-e70a-52ff-9834-6b1d3c7ec5fa?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_939 generic
+      uid=26_940 link "sit&more Hocker Quincy" url="https://www.otto.de/p/sit-more-hocker-quincy-1074530585/"
+        uid=26_941 image "sit&more Hocker Quincy" url="https://i.otto.de/i/otto/f0bd94fe-61c2-5147-8646-e2f3016f2e40?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_942 generic
+      uid=26_943 link "Home affaire Dekovase" url="https://www.otto.de/p/home-affaire-dekovase-850523091/"
+        uid=26_944 image "Home affaire Dekovase" url="https://i.otto.de/i/otto/ea58ca55-1363-5376-984e-abc2e6365d6a?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_945 generic
+      uid=26_946 link "the carpet Teppich Relax kuschelig & Super Soft, Anti-Rutsch Unterseite, rechteckig, Höhe: 16 mm, Waschbar bis 30 Grad, Felloptik, Wohnzimmer Teppich, Kundenliebling" url="https://www.otto.de/p/the-carpet-teppich-relax-kuschelig-super-soft-anti-rutsch-unterseite-rechteckig-hoehe-16-mm-waschbar-bis-30-grad-felloptik-wohnzimmer-teppich-kundenliebling-1907583109/"
+        uid=26_947 image "the carpet Teppich Relax kuschelig & Super Soft, Anti-Rutsch Unterseite, rechteckig, Höhe: 16 mm, Waschbar bis 30 Grad, Felloptik, Wohnzimmer Teppich, Kundenliebling" url="https://i.otto.de/i/otto/15242c2f-8d11-5a84-87c8-2840b3ecbf2c?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_948 generic
+      uid=26_949 link "LeGer Home by Lena Gercke Tischleuchte Linnea Pilz Lampe, ohne Leuchtmittel, Pilzleuchte, Tischlampe, Metallsockel, Höhe 35,5 cm" url="https://www.otto.de/p/leger-home-by-lena-gercke-tischleuchte-linnea-pilz-lampe-ohne-leuchtmittel-pilzleuchte-tischlampe-metallsockel-hoehe-35-5-cm-1248273850/"
+        uid=26_950 image "LeGer Home by Lena Gercke Tischleuchte Linnea Pilz Lampe, ohne Leuchtmittel, Pilzleuchte, Tischlampe, Metallsockel, Höhe 35,5 cm" url="https://i.otto.de/i/otto/fe160ff9-61e6-55d7-9ff3-f4ddc97e4afb?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_951 generic
+    uid=26_952 generic
+      uid=26_953 link "Zur Wohnidee 6" url="https://www.otto.de/k/3a8a23ed-c467-4af1-b461-c78090874c81"
+        uid=26_954 image "Zur Wohnidee 6" url="https://i.otto.de/i/otto/001_2022_33_moeb_tolle_sessel_thementeaser_hochformat_272686?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_955 generic
+      uid=26_956 link "Destiny Hängestuhl COCOON DE LUXE, inkl. Gestell, Auflage für Sitz- und Rücken, belastbar bis 110 kg" url="https://www.otto.de/p/destiny-haengestuhl-cocoon-de-luxe-inkl-gestell-auflage-fuer-sitz-und-ruecken-belastbar-bis-110-kg-C1209428753/"
+        uid=26_957 image "Destiny Hängestuhl COCOON DE LUXE, inkl. Gestell, Auflage für Sitz- und Rücken, belastbar bis 110 kg" url="https://i.otto.de/i/otto/a39148d9-9366-5d0b-ae5d-8f133f42a8a7?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_958 generic
+      uid=26_959 link "Destiny Hängestuhl COCO DROP, inkl. Gestell, mit Auflagen für Sitz- und Rücken, belastbar bis 110 kg" url="https://www.otto.de/p/destiny-haengesessel-coco-drop-inkl-gestell-mit-auflagen-fuer-sitz-und-ruecken-belastbar-bis-110-kg-C1209405201/"
+        uid=26_960 image "Destiny Hängestuhl COCO DROP, inkl. Gestell, mit Auflagen für Sitz- und Rücken, belastbar bis 110 kg" url="https://i.otto.de/i/otto/5ed60451-6e8a-5274-b575-75444fbebe5e?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_961 generic
+      uid=26_962 link "Heitmann Felle Fellteppich Lammfell KK 1,5 - Premium Qualität, fellförmig, Höhe: 70 mm, echtes Austral. Lammfell, besonders weich, auch ideal als Bettvorleger" url="https://www.otto.de/p/heitmann-felle-fellteppich-lammfell-kk-1-5-premium-qualitaet-fellfoermig-hoehe-70-mm-echtes-austral-lammfell-besonders-weich-auch-ideal-als-bettvorleger-985661209/"
+        uid=26_963 image "Heitmann Felle Fellteppich Lammfell KK 1,5 - Premium Qualität, fellförmig, Höhe: 70 mm, echtes Austral. Lammfell, besonders weich, auch ideal als Bettvorleger" url="https://i.otto.de/i/otto/6db5177e-30c3-5fa6-b1ad-58d1d58ff2dc?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_964 generic
+      uid=26_965 link "KESSER Hängesessel, Luxe Hängesessel mit Gestell weicher Sitzkissen" url="https://www.otto.de/p/kesser-haengesessel-luxe-haengesessel-mit-gestell-weicher-sitzkissen-S0E1F0HR/"
+        uid=26_966 image "KESSER Hängesessel, Luxe Hängesessel mit Gestell weicher Sitzkissen" url="https://i.otto.de/i/otto/08c84510-e234-5947-9c45-7f2a45f8dffe?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_967 generic
+    uid=26_968 generic
+      uid=26_969 link "Zur Wohnidee 7" url="https://www.otto.de/k/72897d58-c472-4a26-90aa-9c587978820c"
+        uid=26_970 image "Zur Wohnidee 7" url="https://i.otto.de/i/otto/001_2019_33_moeb_nol_goldy_blue_thementeaser_querformat_37181?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_971 generic
+      uid=26_972 link "Home affaire Chesterfield-Sofa Kalina, mit klassischer Chesterfield-Knopfheftung" url="https://www.otto.de/p/home-affaire-chesterfield-sofa-kalina-mit-klassischer-chesterfield-knopfheftung-1229078127/"
+        uid=26_973 image "Home affaire Chesterfield-Sofa Kalina, mit klassischer Chesterfield-Knopfheftung" url="https://i.otto.de/i/otto/5754518c-775b-5a39-85b9-e9f72c82e199?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_974 generic
+      uid=26_975 link "Bruno Banani Teppich Dana Teppich, besonders weich und kuschelig, Kundenliebling, rechteckig, Höhe: 30 mm, uni, Mikrofaser Teppiche, Wohnzimmer, Schlafzimmer, Esszimmer" url="https://www.otto.de/p/bruno-banani-teppich-dana-teppich-besonders-weich-und-kuschelig-kundenliebling-rechteckig-hoehe-30-mm-uni-mikrofaser-teppiche-wohnzimmer-schlafzimmer-esszimmer-528355712/"
+        uid=26_976 image "Bruno Banani Teppich Dana Teppich, besonders weich und kuschelig, Kundenliebling, rechteckig, Höhe: 30 mm, uni, Mikrofaser Teppiche, Wohnzimmer, Schlafzimmer, Esszimmer" url="https://i.otto.de/i/otto/1a9c8f87-5f88-5095-b7a9-7c196abdac9b?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_977 generic
+      uid=26_978 link "OTTO home Verdunkelungsvorhang Solana, Gardinen mit Kräuselband, Vorhänge, Wohnzimmer, modern, (2 St), Kräuselband, verdunkelnd, 2er-Set Verdunklungsvorhang mit Thermofunktion, Bestseller, einfarbig" url="https://www.otto.de/p/otto-home-verdunkelungsvorhang-solana-gardinen-mit-kraeuselband-vorhaenge-wohnzimmer-modern-2-st-kraeuselband-verdunkelnd-2er-set-verdunklungsvorhang-mit-thermofunktion-bestseller-einfarbig-664611320/"
+        uid=26_979 image "OTTO home Verdunkelungsvorhang Solana, Gardinen mit Kräuselband, Vorhänge, Wohnzimmer, modern, (2 St), Kräuselband, verdunkelnd, 2er-Set Verdunklungsvorhang mit Thermofunktion, Bestseller, einfarbig" url="https://i.otto.de/i/otto/80aa9df3-2f65-536c-ab8f-8b4188079540?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_980 generic
+      uid=26_981 link "OTTO home Dekospiegel Malisa, Wand Dekoration horizontal und vertikal hängbar, 3 Farben, großer Wandspiegel mit 19 Elementen, 121x110cm, aus Metall" url="https://www.otto.de/p/otto-home-dekospiegel-malisa-wand-dekoration-horizontal-und-vertikal-haengbar-3-farben-grosser-wandspiegel-mit-19-elementen-121x110cm-aus-metall-658962473/"
+        uid=26_982 image "OTTO home Dekospiegel Malisa, Wand Dekoration horizontal und vertikal hängbar, 3 Farben, großer Wandspiegel mit 19 Elementen, 121x110cm, aus Metall" url="https://i.otto.de/i/otto/f54898bc-40b3-5e45-9281-70205fe80a7d?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_983 generic
+    uid=26_984 generic
+      uid=26_985 link "Zur Wohnidee 8" url="https://www.otto.de/k/8481ab3f-380c-4d66-8e54-9e117389bc57"
+        uid=26_986 image "Zur Wohnidee 8" url="https://i.otto.de/i/otto/5d48ac95-fe02-5777-a1ab-33c99f4a9805?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_987 generic
+      uid=26_988 link "OTTO home Wohnlandschaft Merid U-Form, B: 367 cm, jederzeit durch Module erweiterbar" url="https://www.otto.de/p/otto-home-wohnlandschaft-merid-u-form-b-367-cm-jederzeit-durch-module-erweiterbar-1102820238/"
+        uid=26_989 image "OTTO home Wohnlandschaft Merid U-Form, B: 367 cm, jederzeit durch Module erweiterbar" url="https://i.otto.de/i/otto/044ea290-9aa6-58b8-afcb-d18642ea3463?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_990 generic
+      uid=26_991 link "Home affaire Wandregal BROOKLYN, Breite ca. 153 cm" url="https://www.otto.de/p/home-affaire-wandregal-brooklyn-breite-ca-153-cm-919559283/"
+        uid=26_992 image "Home affaire Wandregal BROOKLYN, Breite ca. 153 cm" url="https://i.otto.de/i/otto/2efeacb4-4084-5ae5-9bbd-b2c89c9d6a1a?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_993 generic
+      uid=26_994 link "SalesFever Couchtisch rund mit Massivholz-Lamellen Ø 80 cm (1-St), Moderner Holztisch fürs Wohnzimmer mit Echtholzfurnier" url="https://www.otto.de/p/salesfever-couchtisch-rund-mit-massivholz-lamellen-o-80-cm-1-st-moderner-holztisch-fuers-wohnzimmer-mit-echtholzfurnier-1990597123/"
+        uid=26_995 image "SalesFever Couchtisch rund mit Massivholz-Lamellen Ø 80 cm (1-St), Moderner Holztisch fürs Wohnzimmer mit Echtholzfurnier" url="https://i.otto.de/i/otto/0038bfe8-c8ad-5c81-ba0a-f6ffc6042607?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_996 generic
+      uid=26_997 link "OTTO home Stehlampe Mikka, ohne Leuchtmittel, mit Leinenstoffschirm, Höhe 160 cm, Ø 40 cm" url="https://www.otto.de/p/otto-home-stehlampe-mikka-ohne-leuchtmittel-mit-leinenstoffschirm-hoehe-160-cm-o-40-cm-1950175545/"
+        uid=26_998 image "OTTO home Stehlampe Mikka, ohne Leuchtmittel, mit Leinenstoffschirm, Höhe 160 cm, Ø 40 cm" url="https://i.otto.de/i/otto/3849a70b-9f09-5dba-b701-87659994de83?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_999 generic
+    uid=26_1000 generic
+      uid=26_1001 link "Zur Wohnidee 9" url="https://www.otto.de/k/7103867e-aa29-492a-a1de-8d711c220f70"
+        uid=26_1002 image "Zur Wohnidee 9" url="https://i.otto.de/i/otto/d8eb8047-42c7-5bd5-b922-a2f39394d0d7?$combolist_rooms$&h=222&fmt=auto"
+    uid=26_1003 generic
+      uid=26_1004 link "OTTO home Tischvase Adella mit Reliefoberfläche (1 St), Blumenvase mit besonderer Strukturoberfläche, Höhe ca. 26 cm" url="https://www.otto.de/p/otto-home-tischvase-adella-mit-reliefoberflaeche-1-st-blumenvase-mit-besonderer-strukturoberflaeche-hoehe-ca-26-cm-1774971504/"
+        uid=26_1005 image "OTTO home Tischvase Adella mit Reliefoberfläche (1 St), Blumenvase mit besonderer Strukturoberfläche, Höhe ca. 26 cm" url="https://i.otto.de/i/otto/7b18a8cc-9bf2-5439-897c-8cbda5beaba8?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1006 generic
+      uid=26_1007 link "OTTO home Hochflor-Teppich Josetta, auch als Läufer erhältlich, rechteckig, Höhe: 50 mm, Langflor, Shaggy, dichter weicher Hochflor, uni farben, Wohnzimmer" url="https://www.otto.de/p/otto-home-hochflor-teppich-josetta-auch-als-laeufer-erhaeltlich-rechteckig-hoehe-50-mm-langflor-shaggy-dichter-weicher-hochflor-uni-farben-wohnzimmer-1908959723/"
+        uid=26_1008 image "OTTO home Hochflor-Teppich Josetta, auch als Läufer erhältlich, rechteckig, Höhe: 50 mm, Langflor, Shaggy, dichter weicher Hochflor, uni farben, Wohnzimmer" url="https://i.otto.de/i/otto/5cc659d8-de58-579e-9d88-16fa3492f0c1?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1009 generic
+      uid=26_1010 link "OTTO home Dekovase Maélia (Set, 2 St), aus Keramik, in außergewöhnlichem Design" url="https://www.otto.de/p/otto-home-dekovase-maelia-set-2-st-aus-keramik-in-aussergewoehnlichem-design-1767807714/"
+        uid=26_1011 image "OTTO home Dekovase Maélia (Set, 2 St), aus Keramik, in außergewöhnlichem Design" url="https://i.otto.de/i/otto/50182cf2-2e22-5e83-86ac-c0ad7fda2732?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1012 generic
+      uid=26_1013 link "OTTO home Ecksofa Kalix L-Form, 323 cm - OTTO. Verlässliche Qualität., Designsofa, auf Holzplateau, Strukturstoff, hoher Sitzkomfort" url="https://www.otto.de/p/otto-home-ecksofa-kalix-l-form-323-cm-otto-verlaessliche-qualitaet-designsofa-auf-holzplateau-strukturstoff-hoher-sitzkomfort-2022668219/"
+        uid=26_1014 image "OTTO home Ecksofa Kalix L-Form, 323 cm - OTTO. Verlässliche Qualität., Designsofa, auf Holzplateau, Strukturstoff, hoher Sitzkomfort" url="https://i.otto.de/i/otto/f3180b72-0ac8-55cc-8cc6-071c0ecad7e6?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1015 generic
+  uid=26_1016 generic
+    uid=26_1017 link url="https://www.otto.de/damen/mode/waesche/dessous/reizwaesche/"
+    uid=26_1018 StaticText "Für den Wow-Effekt"
+    uid=26_1019 StaticText "Reizwäsche für Damen"
+    uid=26_1020 image "Reizwäsche" description="Reizwäsche" url="https://i.otto.de/i/otto/mpp360_366953_722442?$promo_poi_4-3_s_progressive$&w=280&fmt=auto"
+  uid=26_1021 generic
+    uid=26_1022 link url="https://www.otto.de/technik/smartphone/"
+    uid=26_1023 StaticText "Kleine Alleskönner"
+    uid=26_1024 StaticText "Die neuesten Smartphones"
+    uid=26_1025 image "Handys" description="Handys" url="https://i.otto.de/i/otto/mpp360_389329_803140?$promo_poi_4-3_s_progressive$&w=280&fmt=auto"
+  uid=26_1026 generic
+    uid=26_1027 link url="https://www.otto.de/?selektion=(und.(ist.altersgruppe.babys).(ist.reduziert).(ist.sortiment.accessoires.bademode.bekleidung.gepaeck.schmuck.taschen-rucksaecke.waesche).(~.(v.1)))"
+    uid=26_1028 StaticText "Jetzt günstiger"
+    uid=26_1029 StaticText "Babymode reduziert"
+    uid=26_1030 image "% Babymode" description="% Babymode" url="https://i.otto.de/i/otto/mpp360_115727_141312?$promo_poi_4-3_s_progressive$&w=280&fmt=auto"
+  uid=26_1031 heading "Outfits für dich" level="2"
+  uid=26_1032 button "Überspringen"
+  uid=26_1033 generic
+    uid=26_1034 generic
+      uid=26_1035 link "Zum Outfit 1" url="https://www.otto.de/k/b2d2e596-ef5c-4e30-8da6-0c8cf5c91322"
+        uid=26_1036 image "Zum Outfit 1" url="https://i.otto.de/i/otto/1fe5bd02-451f-506f-903a-af5a68c8b7d4?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1037 generic
+      uid=26_1038 link "KangaROOS Jeansjacke modischer Stil, normaler Kragen, aufgesetzte Taschen, Comfort Fit" url="https://www.otto.de/p/kangaroos-jeansjacke-modischer-stil-normaler-kragen-aufgesetzte-taschen-comfort-fit-2028600833/"
+        uid=26_1039 image "KangaROOS Jeansjacke modischer Stil, normaler Kragen, aufgesetzte Taschen, Comfort Fit" url="https://i.otto.de/i/otto/cac49327-3ef4-5eb1-a23a-6a2c59f14d63?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1040 generic
+      uid=26_1041 link "AJC Rundhalsshirt (2er-Pack) gestreift mit Stickerei und einfarbig mit sportlicher Blende" url="https://www.otto.de/p/ajc-rundhalsshirt-2er-pack-gestreift-mit-stickerei-und-einfarbig-mit-sportlicher-blende-1348179477/"
+        uid=26_1042 image "AJC Rundhalsshirt (2er-Pack) gestreift mit Stickerei und einfarbig mit sportlicher Blende" url="https://i.otto.de/i/otto/e33b9ce2-db74-583f-aec3-827b01e63792?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1043 generic
+      uid=26_1044 link "KangaROOS Schlupfhose Jerseyhose mit geradem Bein, mit Eingrifftaschen und Leistentaschen" url="https://www.otto.de/p/kangaroos-schlupfhose-jerseyhose-mit-geradem-bein-mit-eingrifftaschen-und-leistentaschen-2020583245/"
+        uid=26_1045 image "KangaROOS Schlupfhose Jerseyhose mit geradem Bein, mit Eingrifftaschen und Leistentaschen" url="https://i.otto.de/i/otto/4ca49d5d-0d11-5f84-9053-8b45308f0d2d?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1046 generic
+    uid=26_1047 generic
+      uid=26_1048 link "Zum Outfit 2" url="https://www.otto.de/k/e499f1a6-438e-4c7f-8881-d33e322ef1d2"
+        uid=26_1049 image "Zum Outfit 2" url="https://i.otto.de/i/otto/f7b1a0c1-8d58-50a6-8b66-0dbe1d54ab94?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1050 generic
+      uid=26_1051 link "adidas Performance T-Shirt ADIDAS WORKOUT ESSENTIALS MIT V-AUSSCHNITT" url="https://www.otto.de/p/adidas-performance-t-shirt-adidas-workout-essentials-t-shirt-mit-v-ausschnitt-1-tlg-C1980552830/"
+        uid=26_1052 image "adidas Performance T-Shirt ADIDAS WORKOUT ESSENTIALS MIT V-AUSSCHNITT" url="https://i.otto.de/i/otto/1ce82351-09fb-55cb-954e-2d7e31490571?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1053 generic
+      uid=26_1054 link "adidas Performance Trainingstights OPTIME ESSENTIALS WORKOUT 3-STREIFEN 3/4 LEGGINGS" url="https://www.otto.de/p/adidas-performance-3-4-leggings-optime-essentials-workout-3-streifen-3-4-leggings-1-tlg-C1980394658/"
+        uid=26_1055 image "adidas Performance Trainingstights OPTIME ESSENTIALS WORKOUT 3-STREIFEN 3/4 LEGGINGS" url="https://i.otto.de/i/otto/44789aaa-0c33-5a8a-a439-930ced7887ab?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1056 generic
+      uid=26_1057 link "adidas Performance Sport-BH POWERREACT BIG LOGO GRAPHIC" url="https://www.otto.de/p/adidas-performance-sport-bh-adidas-performance-powerreact-sport-bh-damen-default-C1802809097/"
+        uid=26_1058 image "adidas Performance Sport-BH POWERREACT BIG LOGO GRAPHIC" url="https://i.otto.de/i/otto/6790b928-7dcc-515e-b25f-f5107b88554a?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1059 generic
+      uid=26_1060 link "adidas Sportswear RUNFALCON 5 Laufschuh für Kinder" url="https://www.otto.de/p/adidas-performance-runfalcon-5-j-kinder-modell-jp5143-laufschuh-leichtes-tragegefuehl-C1802617670/"
+        uid=26_1061 image "adidas Sportswear RUNFALCON 5 Laufschuh für Kinder" url="https://i.otto.de/i/otto/caa0ff08-79eb-5e94-b0dd-6ab439c66ef2?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1062 generic
+    uid=26_1063 generic
+      uid=26_1064 link "Zum Outfit 3" url="https://www.otto.de/k/7e3a888d-b90f-4013-aabd-d6975250f4c3"
+        uid=26_1065 image "Zum Outfit 3" url="https://i.otto.de/i/otto/mpp360_283850_459907?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1066 generic
+      uid=26_1067 link "LASCANA Blusentop mit Leinenanteil, kurz geschnittenes Top" url="https://www.otto.de/p/lascana-blusentop-mit-leinenanteil-kurz-geschnittenes-top-1908136483/"
+        uid=26_1068 image "LASCANA Blusentop mit Leinenanteil, kurz geschnittenes Top" url="https://i.otto.de/i/otto/77bfbf67-784d-56d3-8419-daa11e43630e?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1069 generic
+      uid=26_1070 link "LASCANA Bundfaltenhose mit Taschen und Knopfdetail, weites Bein, Leinenhose, Sommerhose" url="https://www.otto.de/p/lascana-bundfaltenhose-mit-taschen-und-knopfdetail-weites-bein-leinenhose-sommerhose-1788226293/"
+        uid=26_1071 image "LASCANA Bundfaltenhose mit Taschen und Knopfdetail, weites Bein, Leinenhose, Sommerhose" url="https://i.otto.de/i/otto/4ec1c9b0-7bc3-537c-8c3a-43ae6cd8810c?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1072 generic
+      uid=26_1073 link "LASCANA Sneaker aus Textil, Schnürhalbschuh, Freizeitschuh, Turnschuh" url="https://www.otto.de/p/lascana-sneaker-aus-textil-schnuerhalbschuh-freizeitschuh-turnschuh-692559502/"
+        uid=26_1074 image "LASCANA Sneaker aus Textil, Schnürhalbschuh, Freizeitschuh, Turnschuh" url="https://i.otto.de/i/otto/010b16fd-1462-5ab5-a2c2-48fef6f33bff?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1075 generic
+      uid=26_1076 link "Vivance Umhängetasche Handtasche, Schultertasche, Tragetasche, Crossbody Bag VEGAN" url="https://www.otto.de/p/vivance-umhaengetasche-handtasche-schultertasche-tragetasche-crossbody-bag-vegan-1753662573/"
+        uid=26_1077 image "Vivance Umhängetasche Handtasche, Schultertasche, Tragetasche, Crossbody Bag VEGAN" url="https://i.otto.de/i/otto/813e8fa8-b632-54a6-ade3-c8d34d6fcf7c?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1078 generic
+    uid=26_1079 generic
+      uid=26_1080 link "Zum Outfit 4" url="https://www.otto.de/k/fa9c5366-4ff1-4445-95e4-a764c58474e0"
+        uid=26_1081 image "Zum Outfit 4" url="https://i.otto.de/i/otto/9e15b88e-b9de-53a6-9a2d-3b76d0ec7852?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1082 generic
+      uid=26_1083 link "adidas Originals Sporthose OFF PLACED 3-STREIFEN WEITE asymmetrische 3-Streifen, für Lauftraining, lockere Passform" url="https://www.otto.de/p/adidas-originals-sporthose-off-placed-3-streifen-weite-asymmetrische-3-streifen-fuer-lauftraining-lockere-passform-C1921468360/"
+        uid=26_1084 image "adidas Originals Sporthose OFF PLACED 3-STREIFEN WEITE asymmetrische 3-Streifen, für Lauftraining, lockere Passform" url="https://i.otto.de/i/otto/a24a6ee3-de09-5fd1-8f97-fccdc0e41aac?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1085 generic
+      uid=26_1086 link "adidas Originals CAMPUS 00S Sneaker" url="https://www.otto.de/p/adidas-originals-adidas-originals-campus-00s-sneaker-herren-sneaker-C1767784960/"
+        uid=26_1087 image "adidas Originals CAMPUS 00S Sneaker" url="https://i.otto.de/i/otto/171130e9-3080-5686-9209-a433729706a3?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1088 generic
+      uid=26_1089 link "adidas Originals Sportsocken 3-STREIFEN CREW 3ER-PACK (3-Paar) für Laufen, knöchellang, mit 3-Streifen und Trefoil Logo" url="https://www.otto.de/p/adidas-originals-sportsocken-3-streifen-crew-3er-pack-3-paar-fuer-laufen-knoechellang-mit-3-streifen-und-trefoil-logo-C1921473818/"
+        uid=26_1090 image "adidas Originals Sportsocken 3-STREIFEN CREW 3ER-PACK (3-Paar) für Laufen, knöchellang, mit 3-Streifen und Trefoil Logo" url="https://i.otto.de/i/otto/8749328c-e79b-5c60-bd68-ef2326b36ca9?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1091 generic
+      uid=26_1092 link "adidas Originals Kapuzensweatshirt OFF PLACED 3-STREIFEN HOODIE" url="https://www.otto.de/p/adidas-originals-kapuzensweatshirt-off-placed-3-streifen-hoodie-C1921467348/"
+        uid=26_1093 image "adidas Originals Kapuzensweatshirt OFF PLACED 3-STREIFEN HOODIE" url="https://i.otto.de/i/otto/030bfbbc-0848-58f4-841b-2928932b8276?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1094 generic
+    uid=26_1095 generic
+      uid=26_1096 link "Zum Outfit 5" url="https://www.otto.de/k/6b3abd42-cf63-483f-aa7c-c58eac3bc597"
+        uid=26_1097 image "Zum Outfit 5" url="https://i.otto.de/i/otto/e1769997-893e-555b-b52d-cd07ac0ce4d8?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1098 generic
+      uid=26_1099 link "Bruno Banani Sweatjacke im lässigen Bomberjacken-Stil mit Strukturmuster" url="https://www.otto.de/p/bruno-banani-sweatjacke-im-laessigen-bomberjacken-stil-mit-strukturmuster-2024929021/"
+        uid=26_1100 image "Bruno Banani Sweatjacke im lässigen Bomberjacken-Stil mit Strukturmuster" url="https://i.otto.de/i/otto/b0985acd-7626-5e3c-acb2-21d4ca820ab0?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1101 generic
+      uid=26_1102 link "Bruno Banani Rollkragenshirt (2er-Pack) perfektes Basic mit Rollkragen" url="https://www.otto.de/p/bruno-banani-rollkragenshirt-2er-pack-perfektes-basic-mit-rollkragen-1952079807/"
+        uid=26_1103 image "Bruno Banani Rollkragenshirt (2er-Pack) perfektes Basic mit Rollkragen" url="https://i.otto.de/i/otto/3cffa833-ce40-5540-98e7-fc1dd3b8ff6d?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1104 generic
+      uid=26_1105 link "Bruno Banani Jerseyhose figurbetonte Passform, knöchellang mit Rippbündchen" url="https://www.otto.de/p/bruno-banani-jerseyhose-figurbetonte-passform-knoechellang-mit-rippbuendchen-1683025392/"
+        uid=26_1106 image "Bruno Banani Jerseyhose figurbetonte Passform, knöchellang mit Rippbündchen" url="https://i.otto.de/i/otto/fe07be9e-5828-5d1b-97ed-a43674a63e63?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1107 generic
+      uid=26_1108 link "Tamaris Plateausneaker Schnürschuh, Halbschuh mit Schmucksteinen an der Ferse, Damensneaker" url="https://www.otto.de/p/tamaris-plateausneaker-schnuerschuh-halbschuh-mit-schmucksteinen-an-der-ferse-damensneaker-C1927896361/"
+        uid=26_1109 image "Tamaris Plateausneaker Schnürschuh, Halbschuh mit Schmucksteinen an der Ferse, Damensneaker" url="https://i.otto.de/i/otto/fd7b5acf-193e-5a33-8e82-219044d9929b?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1110 generic
+    uid=26_1111 generic
+      uid=26_1112 link "Zum Outfit 6" url="https://www.otto.de/k/659647b6-b1d6-47ab-8ade-43856ccb0238"
+        uid=26_1113 image "Zum Outfit 6" url="https://i.otto.de/i/otto/f7c7d785-5e3c-57a6-9174-ef98703709b7?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1114 generic
+      uid=26_1115 link "Laura Scott Chinohose Karottenhose, aus Baumwolle und Elasthan, mit Leistentaschen" url="https://www.otto.de/p/laura-scott-chinohose-karottenhose-aus-baumwolle-und-elasthan-mit-leistentaschen-2018194628/"
+        uid=26_1116 image "Laura Scott Chinohose Karottenhose, aus Baumwolle und Elasthan, mit Leistentaschen" url="https://i.otto.de/i/otto/b42de547-6d58-5613-bdcb-f8604eaf417a?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1117 generic
+      uid=26_1118 link "Laura Scott Loop, leichtes Webmaterial, einlagige Verarbeitung" url="https://www.otto.de/p/laura-scott-loop-leichtes-webmaterial-einlagige-verarbeitung-2031189859/"
+        uid=26_1119 image "Laura Scott Loop, leichtes Webmaterial, einlagige Verarbeitung" url="https://i.otto.de/i/otto/d1a7fd38-eaf0-5131-a5d2-864e66b9ca56?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1120 generic
+      uid=26_1121 link "KangaROOS K-Watch Sneaker" url="https://www.otto.de/p/kangaroos-k-watch-sneaker-1870931806/"
+        uid=26_1122 image "KangaROOS K-Watch Sneaker" url="https://i.otto.de/i/otto/e38c08f8-9959-5841-8713-ab766b33d1ca?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1123 generic
+    uid=26_1124 generic
+      uid=26_1125 link "Zum Outfit 7" url="https://www.otto.de/k/e697825d-da16-45cf-94a8-f93f2b58b381"
+        uid=26_1126 image "Zum Outfit 7" url="https://i.otto.de/i/otto/mpp360_229007_336785?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1127 generic
+      uid=26_1128 link "LASCANA Kurzmantel im klassischen Design, Damenmantel, Blazermantel, casual-chic" url="https://www.otto.de/p/lascana-kurzmantel-im-klassischen-design-damenmantel-blazermantel-casual-chic-1078594329/"
+        uid=26_1129 image "LASCANA Kurzmantel im klassischen Design, Damenmantel, Blazermantel, casual-chic" url="https://i.otto.de/i/otto/9c4c573c-8bb7-5a33-830a-8e003e0d3080?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1130 generic
+      uid=26_1131 link "LASCANA Schlupfbluse mit 3/4-Ärmeln und Knopfleiste, Damenbluse" url="https://www.otto.de/p/lascana-schlupfbluse-mit-3-4-aermeln-und-knopfleiste-damenbluse-1224221783/"
+        uid=26_1132 image "LASCANA Schlupfbluse mit 3/4-Ärmeln und Knopfleiste, Damenbluse" url="https://i.otto.de/i/otto/5afaaeae-9960-5791-9a55-23d174be52aa?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1133 generic
+      uid=26_1134 link "Buffalo Destroyed-Jeans mit ausgefranstem Beinabschluss und Stretchanteil, schmale Passform" url="https://www.otto.de/p/buffalo-destroyed-jeans-mit-ausgefranstem-beinabschluss-und-stretchanteil-schmale-passform-1224185711/"
+        uid=26_1135 image "Buffalo Destroyed-Jeans mit ausgefranstem Beinabschluss und Stretchanteil, schmale Passform" url="https://i.otto.de/i/otto/735d8b7e-82b2-5b91-8848-1b07e07a221d?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1136 generic
+      uid=26_1137 link "LASCANA Stiefelette mit Blockabsatz, High-Heel-Stiefelette, Ankle Boots, Stiefel" url="https://www.otto.de/p/lascana-stiefelette-mit-blockabsatz-high-heel-stiefelette-ankle-boots-stiefel-1291142420/"
+        uid=26_1138 image "LASCANA Stiefelette mit Blockabsatz, High-Heel-Stiefelette, Ankle Boots, Stiefel" url="https://i.otto.de/i/otto/459a359c-90a6-5d9e-9144-05703aea8575?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1139 generic
+    uid=26_1140 generic
+      uid=26_1141 link "Zum Outfit 8" url="https://www.otto.de/k/2bd72af8-1eb2-4009-bf6b-283869473c20"
+        uid=26_1142 image "Zum Outfit 8" url="https://i.otto.de/i/otto/mpp360_366601_721080?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1143 generic
+      uid=26_1144 link "John Devin Hemdjacke, Overshirt aus weicher Piqué-Qualität, Knopfleiste mit Druckknöpfen" url="https://www.otto.de/p/john-devin-hemdjacke-overshirt-aus-weicher-pique-qualitaet-knopfleiste-mit-druckknoepfen-1849314067/"
+        uid=26_1145 image "John Devin Hemdjacke, Overshirt aus weicher Piqué-Qualität, Knopfleiste mit Druckknöpfen" url="https://i.otto.de/i/otto/c1c424ee-091a-5e06-97ce-33e7a88d58e3?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1146 generic
+      uid=26_1147 link "H.I.S T-Shirt (2er-Pack) mit Rundhalsausschnitt perfekt als Unterziehshirt" url="https://www.otto.de/p/h-i-s-t-shirt-2er-pack-mit-rundhalsausschnitt-perfekt-als-unterziehshirt-397358916/"
+        uid=26_1148 image "H.I.S T-Shirt (2er-Pack) mit Rundhalsausschnitt perfekt als Unterziehshirt" url="https://i.otto.de/i/otto/3931577c-9871-5d3a-9f10-b944af042bc5?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1149 generic
+      uid=26_1150 link "Buffalo 5-Pocket-Jeans Straight-fit mit normaler Bundhöhe, aus elastischer Denim-Qualität" url="https://www.otto.de/p/buffalo-5-pocket-jeans-straight-fit-mit-normaler-bundhoehe-aus-elastischer-denim-qualitaet-1635227827/"
+        uid=26_1151 image "Buffalo 5-Pocket-Jeans Straight-fit mit normaler Bundhöhe, aus elastischer Denim-Qualität" url="https://i.otto.de/i/otto/7ab5b7e5-b3a8-5a85-a104-a0626674ffaf?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1152 generic
+      uid=26_1153 link "AUTHENTIC LE JOGGER Schnürhalbschuh, Freizeitschuh, Schnürschuh, Turnschuh Sneaker im modischen Casual-Look VEGAN" url="https://www.otto.de/p/authentic-le-jogger-schnuerhalbschuh-freizeitschuh-schnuerschuh-turnschuh-sneaker-im-modischen-casual-look-vegan-1642154095/"
+        uid=26_1154 image "AUTHENTIC LE JOGGER Schnürhalbschuh, Freizeitschuh, Schnürschuh, Turnschuh Sneaker im modischen Casual-Look VEGAN" url="https://i.otto.de/i/otto/ceee4e6d-12df-5419-83a2-69f4a02fc212?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1155 generic
+    uid=26_1156 generic
+      uid=26_1157 link "Zum Outfit 9" url="https://www.otto.de/k/4d93ee3e-a30e-4a8e-81a4-2fc9550356dc"
+        uid=26_1158 image "Zum Outfit 9" url="https://i.otto.de/i/otto/fc7e4726-a038-5219-a6e3-c5690297444a?$combolist_outfits$&h=304&fmt=auto"
+    uid=26_1159 generic
+      uid=26_1160 link "adidas Sportswear Kapuzensweatshirt ESSENTIALS 3-STREIFEN FLEECE HOODIE" url="https://www.otto.de/p/adidas-sportswear-kapuzensweatshirt-essentials-3-streifen-fleece-hoodie-1921466753/"
+        uid=26_1161 image "adidas Sportswear Kapuzensweatshirt ESSENTIALS 3-STREIFEN FLEECE HOODIE" url="https://i.otto.de/i/otto/03fb33b1-81bd-5e59-afb8-9fed6bfda814?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1162 generic
+      uid=26_1163 link "adidas Sportswear T-Shirt ESSENTIALS 3-STREIFEN BOYFRIEND lockere Passform, Kurzarmdesign, sportlicher Stil, aus Baumwolle" url="https://www.otto.de/p/adidas-sportswear-t-shirt-essentials-3-streifen-boyfriend-lockere-passform-kurzarmdesign-sportlicher-stil-aus-baumwolle-1857266396/"
+        uid=26_1164 image "adidas Sportswear T-Shirt ESSENTIALS 3-STREIFEN BOYFRIEND lockere Passform, Kurzarmdesign, sportlicher Stil, aus Baumwolle" url="https://i.otto.de/i/otto/56cb6820-7085-59a8-b534-f2d4533ead40?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1165 generic
+      uid=26_1166 link "adidas Sportswear Sporthose ESSENTIALS 3-STREIFEN OPEN-HEM FRENCH TERRY" url="https://www.otto.de/p/adidas-sportswear-sporthose-essentials-3-streifen-open-hem-french-terry-1857257814/"
+        uid=26_1167 image "adidas Sportswear Sporthose ESSENTIALS 3-STREIFEN OPEN-HEM FRENCH TERRY" url="https://i.otto.de/i/otto/4da07f6e-c8af-5392-bf61-8039f8912b71?$responsive_product$&w=132&h=132&fmt=webp"
+    uid=26_1168 generic
+      uid=26_1169 link "adidas Sportswear VL COURT BOLD Sneaker" url="https://www.otto.de/p/adidas-performance-adidas-damen-sneaker-vl-court-bold-sneaker-C1981401725/"
+        uid=26_1170 image "adidas Sportswear VL COURT BOLD Sneaker" url="https://i.otto.de/i/otto/aef44163-59aa-5a93-be31-a583b46fdc57?$responsive_product$&w=132&h=132&fmt=webp"
+  uid=26_1171 generic
+  uid=26_1172 heading "Lass dich inspirieren" level="2"
+  uid=26_1173 button "Überspringen"
+  uid=26_1174 link "Platzsparendes Gästebett" url="https://www.otto.de/?selektion=(und.(ref.topics.ab747423-4f40-4e6c-9fa0-1994c1ef035b).(~.(v.1)))"
+    uid=26_1175 StaticText "Platzsparendes Gästebett"
+  uid=26_1176 link "Wanddekoration Ideen" url="https://www.otto.de/?selektion=(und.(ref.topics.d25ba2a6-ed3a-420f-9209-cfb89ef0e33d).(~.(v.1)))"
+    uid=26_1177 StaticText "Wanddekoration Ideen"
+  uid=26_1178 link "Schuh-Trend: Happy Colors" url="https://www.otto.de/?selektion=(und.(ref.topics.44bfcff7-b678-4a01-83d9-2841335e0d80).(~.(v.1)))"
+    uid=26_1179 StaticText "Schuh-Trend: Happy Colors"
+  uid=26_1180 link "Wäsche Basics" url="https://www.otto.de/?selektion=(und.(ref.topics.5f60fc38-4bb5-4362-bebc-9a9d60001e82).(~.(v.1)))"
+    uid=26_1181 StaticText "Wäsche Basics"
+  uid=26_1182 link "Pflegeleichte Zimmerpflanzen" url="https://www.otto.de/?selektion=(und.(ref.topics.e9e27106-bd77-4974-b65e-d235e0a47b99).(~.(v.1)))"
+    uid=26_1183 StaticText "Pflegeleichte Zimmerpflanzen"
+  uid=26_1184 link "Deko-Update" url="https://www.otto.de/?selektion=(und.(ref.topics.99dd245e-1f05-4d9e-ae17-3c2602e9798e).(~.(v.1)))"
+    uid=26_1185 StaticText "Deko-Update"
+  uid=26_1186 link "Küche mit Wohncharakter" url="https://www.otto.de/?selektion=(und.(ref.topics.cce86087-019b-4814-bbaf-a10a9692052c).(~.(v.1)))"
+    uid=26_1187 StaticText "Küche mit Wohncharakter"
+  uid=26_1188 link "Trends im Blick" url="https://www.otto.de/?selektion=(und.(ref.topics.a2673c42-68c6-4421-bf7e-d630f6b86b8a).(~.(v.1)))"
+    uid=26_1189 StaticText "Trends im Blick"
+  uid=26_1190 generic
+  uid=26_1191 generic atomic live="assertive" relevant="additions text"
+  uid=26_1192 generic
+    uid=26_1193 link url="https://www.otto.de/?selektion=(und.(ist.sortiment.accessoires.bekleidung.schuhe.waesche).(ist.zielgruppe.damen.herren).(oder.(sind.kategorien.brillen.sonnenbrillen).(sind.kategorien.caps).(sind.kategorien.hemden.freizeithemden).(sind.kategorien.hosen.jeans).(sind.kategorien.hosen.shorts).(sind.kategorien.jacken.uebergangsjacken).(sind.kategorien.muetzen.beanies).(sind.kategorien.pullover.sweatshirts).(sind.kategorien.sneaker).(sind.kategorien.socken.sportsocken)).(~.(v.1)))"
+    uid=26_1194 StaticText "Frühlings-Styles"
+    uid=26_1195 image "Frühlings-Styles" description="Frühlings-Styles" url="https://i.otto.de/i/otto/mpp360_380681_772505?$promo_poi_4-3_s_progressive$&w=280&fmt=auto"
+  uid=26_1196 generic
+    uid=26_1197 link url="https://www.otto.de/?selektion=(und.(ist.sortiment.bekleidung.fahrzeuge.schuhe).(oder.(sind.kategorien.e-bikes).(sind.kategorien.fahrraeder).(sind.kategorien.hosen.sporthosen).(sind.kategorien.jacken.sportjacken).(sind.kategorien.shirts.sportshirts).(sind.kategorien.sportschuhe).(sind.kategorien.tops.sporttops).(sind.kategorien.wanderschuhe)).(~.(v.1)))"
+    uid=26_1198 StaticText "Aktiv in den Frühling"
+    uid=26_1199 image "Aktiv in den Frühling" description="Aktiv in den Frühling" url="https://i.otto.de/i/otto/mpp360_379976_770961?$promo_poi_4-3_s_progressive$&w=280&fmt=auto"
+  uid=26_1200 generic
+    uid=26_1201 link url="https://www.otto.de/?selektion=(und.(oder.(und.(ist.raum.garten).(ist.sortiment.moebel)).(und.(ist.sortiment.gartengeraete.haushaltsgeraete.haushaltswaren).(oder.(sind.kategorien.glaeser.glaeser-sets).(sind.kategorien.grills).(sind.kategorien.karaffen).(sind.kategorien.rasenmaeher).(sind.kategorien.rasenmaehroboter).(sind.kategorien.schuesseln.servierschuesseln).(sind.kategorien.servierplatten).(sind.kategorien.stuehle).(sind.kategorien.teller).(sind.kategorien.tische)))).(~.(v.1)))"
+    uid=26_1202 StaticText "Frühling im Garten"
+    uid=26_1203 image "Frühling im Garten" description="Frühling im Garten" url="https://i.otto.de/i/otto/mpp360_380047_771052?$promo_poi_4-3_s_progressive$&w=280&fmt=auto"
+  uid=26_1204 heading "Deine Top Marken" level="2"
+  uid=26_1205 StaticText "Multimedia"
+  uid=26_1206 generic
+    uid=26_1207 link url="https://www.otto.de/technik/?marke=gopro"
+    uid=26_1208 StaticText "GoPro"
+    uid=26_1209 StaticText "Fantastisch kann so einfach sein!"
+  uid=26_1210 generic
+    uid=26_1211 link "Zur Marke GoPro" url="https://www.otto.de/technik/?marke=gopro"
+      uid=26_1212 image "Marke GoPro" url="https://i.otto.de/i/otto/72413ebf17bd07c557a1b8a5f838236c?&h=32&upscale=true&sm=clamp&fmt=webp"
+  uid=26_1213 generic
+    uid=26_1214 link "Zur Marke Hyrican" url="https://www.otto.de/technik/?marke=hyrican"
+      uid=26_1215 image "Marke Hyrican" url="https://i.otto.de/i/otto/ed46838d136d511eec56b2570648a365?&h=32&upscale=true&sm=clamp&fmt=webp"
+  uid=26_1216 generic
+    uid=26_1217 link "Zur Marke Toshiba" url="https://www.otto.de/technik/?marke=toshiba"
+      uid=26_1218 image "Marke Toshiba" url="https://i.otto.de/i/otto/6976463d664192f50a7adf91b915abcc?&h=32&upscale=true&sm=clamp&fmt=webp"
+  uid=26_1219 generic
+    uid=26_1220 link "Zur Marke DJI" url="https://www.otto.de/technik/?marke=dji"
+      uid=26_1221 image "Marke DJI" url="https://i.otto.de/i/otto/13bfc1629eea87b194e41a6797075710?&h=32&upscale=true&sm=clamp&fmt=webp"
+  uid=26_1222 generic
+    uid=26_1223 link "Alle Marken bei OTTO" url="https://www.otto.de/marken"
+      uid=26_1224 StaticText "Alle Marken bei OTTO"
+  uid=26_1225 heading "Aktuelle Themen und Informationen" level="2"
+  uid=26_1226 link url="https://www.otto.de/shoppages/service/up"
+    uid=26_1227 heading "Neue Punkte, Level & Vorteile" level="3"
+    uid=26_1228 StaticText "Alles, was du über das neue OTTO UP wissen musst!"
+  uid=26_1229 link url="https://frj4.adj.st/www.otto.de/extern/?page=%2F&otto_deep_link=https%3A%2F%2Fwww.otto.de%2Fextern%2F%3Fpage%3D%252F&adjust_t=1qkovj2s_1qwub9us&adjust_deeplink=otto%3A%2F%2Fwww.otto.de%2Fextern%2F%3Fpage%3D%252F&adjust_fallback=https%3A%2F%2Fwww.otto.de%2Fapp&adjust_redirect_macos=https%3A%2F%2Fwww.otto.de%2Fapp"
+    uid=26_1230 heading "Hol dir exklusive App-Vorteile!" level="3"
+    uid=26_1231 StaticText "Nur in der OTTO-App: Exklusive Rabatte und Benachrichtigungen bei Preisnachlässen deiner Favoriten."
+  uid=26_1232 heading "Große Wünsche? Kleine Raten!" level="3"
+  uid=26_1233 StaticText "Erfülle deine Shopping-Wünsche einfach und entspannt in 3 bis 48 Monatsraten."
+  uid=26_1234 link url="https://www.otto.de/themen/cosmosdirekt-risikolebensversicherung/"
+    uid=26_1235 heading "Risikolebensversicherung" level="3"
+    uid=26_1236 StaticText "Schütze was du liebst - z.B. für nur 1,78 € im Monat². Mit bis zu 75€ OTTO-Gutscheinen geschenkt!*"
+  uid=26_1237 StaticText "gesponsert"
+  uid=26_1238 button "Weniger anzeigen"
+  uid=26_1239 heading "Mode, Wohnen & Technik bei OTTO - für dich & euer Zuhause" level="2"
+  uid=26_1240 StaticText "Tauche ein in die Vielfalt unserer Produkte und genieße die Zeit beim entspannten Shopping rund um die Uhr, ganz ohne Parkplatzsuche oder Schlangestehen."
+  uid=26_1241 heading "Mode für die ganze Familie" level="3"
+  uid=26_1242 StaticText "Entdecke vielseitige Kleidung für jeden Anlass und jede Jahreszeit. Ob lässige Alltagskleidung für das Familienleben oder schicke Outfits für besondere Momente - unser Fashion-Bereich hält eine große Auswahl für Damen, Herren und Kinder bereit."
+  uid=26_1243 heading "Wohnen und Einrichten" level="3"
+  uid=26_1244 StaticText "Gestalte euer Zuhause nach euren Vorstellungen mit durchdachten Möbeln und passenden Heimtextilien. Von kompletten Möbelserien bis zur individuellen Küchenplanung bieten wir verschiedene Einrichtungsmöglichkeiten."
+  uid=26_1245 heading "Technik und Haushaltsgeräte" level="3"
+  uid=26_1246 StaticText "Finde die passende Technik für euren Haushalt - Von praktischen Küchengeräten über Entertainment-Technik fürs Wohnzimmer bis hin zu smarten Lösungen für den gesamten Haushalt."
+  uid=26_1247 heading "Unsere Services: Shopping mit Komfort und Vertrauen" level="2"
+  uid=26_1248 StaticText "Bei OTTO profitierst du von flexiblen Zahlungsmöglichkeiten, durchdachten Services und einer umfassenden Produktauswahl. Auf unseren Inspirationsseiten entdeckst du neue Einrichtungsideen, Mode-Styles und Neuheiten aus allen Sortimenten."
+  uid=26_1249 StaticText "Unsere Vorteilswelt bietet Services Aufbauservice für Möbel, der Installationsservice für Technik und die Langzeitgarantie für zusätzliche Sicherheit. Mit der OTTO App erhältst du aktuelle Angebote direkt aufs Smartphone. Als OTTO UP Mitglied sparst du bei Versandkosten, und die Ratenzahlung verschafft dir finanziellen Spielraum für entspanntere Einkaufsplanung."
+  uid=26_1250 heading "Nachhaltigkeit beim Shopping - Unser Beitrag und hilfreiche Infos" level="2"
+  uid=26_1251 StaticText "Bei uns findest du verschiedene Möglichkeiten, bewusste Kaufentscheidungen zu treffen. Wo möglich, nutzen wir unabhängig zertifizierte Materialien oder Produkte, die durch externe Zertifizierungsstellen kontrolliert werden. Von Mode über Möbel bis hin zu Kleinartikeln - du erhältst Orientierungshilfen für deine Produktauswahl."
+  uid=26_1252 heading "Gekennzeichnete Mode und Textilien" level="3"
+  uid=26_1253 StaticText "Die Produktkennzeichnung bei Kleidung hilft dir dabei, Artikel zu erkennen, die nach bestimmten Standards produziert wurden."
+  uid=26_1254 heading "Möbel mit Zertifizierung" level="3"
+  uid=26_1255 StaticText "Beim Möbelkauf kannst du auf verschiedene Kennzeichnungen achten. Das FSC®-Label beispielsweise zeigt dir, dass die verwendeten Hölzer aus zertifizierter Waldwirtschaft stammen. Diese Orientierungshilfen unterstützen dich bei deiner Entscheidung."
+  uid=26_1256 heading "Weitere Serviceangebote" level="3"
+  uid=26_1257 StaticText "Mit der 'Kleiderspende im Paket' kannst du nicht mehr benötigte Textilien unkompliziert für wohltätige Zwecke spenden. Zudem arbeiten wir kontinuierlich an Verpackungslösungen: Entdecke unsere innovativen Verpackungsmethoden Wildplastic und die Paludi Kartons."
+  uid=26_1258 contentinfo
+    uid=26_1259 heading "Newsletter anmelden & Vorteile sichern" level="1"
+    uid=26_1260 textbox "E-Mail-Adresse" description="Maximal 80 Zeichen"
+    uid=26_1261 button "Anmelden"
+    uid=26_1262 link "Mein Konto"
+      uid=26_1263 StaticText "Mein Konto"
+    uid=26_1264 link "Geschenkgutscheine"
+      uid=26_1265 StaticText "Geschenkgutscheine"
+    uid=26_1266 link "Lob & Kritik"
+      uid=26_1267 StaticText "Lob & Kritik"
+    uid=26_1268 link "Service"
+      uid=26_1269 StaticText "Service"
+    uid=26_1270 StaticText "Wir sind gerne für dich da."
+    uid=26_1271 StaticText "24 Stunden am Tag. 365 Tage im Jahr."
+    uid=26_1272 link "Hilfe & Kontakt"
+      uid=26_1273 StaticText "Hilfe & Kontakt"
+    uid=26_1274 link "NEU: OTTO KI-Assistent"
+      uid=26_1275 StaticText "NEU: OTTO KI-Assistent"
+    uid=26_1276 link "Barriere melden" url="mailto:BARRIEREFREI@otto.de"
+      uid=26_1277 StaticText "Barriere melden"
+    uid=26_1278 link "Unsere iOs App installieren (Apple App Store)" url="https://frj4.adj.st/www.otto.de/extern/?page=%2F&otto_deep_link=https%3A%2F%2Fwww.otto.de&adjust_t=ne03zg_ig5rmn&adjust_deeplink=otto%3A%2F%2Fwww.otto.de%2Fextern%2F%3Fpage%3D%252F&adjust_fallback=https%3A%2F%2Fwww.otto.de%2Fapp&adjust_redirect_macos=https%3A%2F%2Fwww.otto.de%2Fapp"
+      uid=26_1279 image "Unsere iOs App installieren (Apple App Store)" url="https://www.otto.de/assets-static/icons/pl_logo_app-store.svg#pl_logo_app-store"
+    uid=26_1280 link "Unsere Android App installieren (Android Play Store)" url="https://frj4.adj.st/www.otto.de/extern/?page=%2F&otto_deep_link=https%3A%2F%2Fwww.otto.de&adjust_t=ne03zg_ig5rmn&adjust_deeplink=otto%3A%2F%2Fwww.otto.de%2Fextern%2F%3Fpage%3D%252F&adjust_fallback=https%3A%2F%2Fwww.otto.de%2Fapp&adjust_redirect_macos=https%3A%2F%2Fwww.otto.de%2Fapp"
+      uid=26_1281 image "Unsere Android App installieren (Android Play Store)" url="https://www.otto.de/assets-static/icons/pl_logo_play-store.svg#pl_logo_play-store"
+    uid=26_1282 link "Informationen zu unserem EHI-Siegel"
+    uid=26_1283 StaticText "Zahlungsarten"
+    uid=26_1284 link "SEPA-Lastschrift"
+      uid=26_1285 StaticText "*"
+    uid=26_1286 link "PayPal"
+    uid=26_1287 link "Rechnung*"
+      uid=26_1288 StaticText "Rechnung*"
+    uid=26_1289 link "Ratenzahlung**"
+      uid=26_1290 StaticText "Ratenzahlung**"
+    uid=26_1291 link "Ratenschutz-Versicherung**"
+      uid=26_1292 StaticText "Ratenschutz-Versicherung**"
+    uid=26_1293 link "100 Tage Zahlpause**"
+      uid=26_1294 StaticText "100 Tage Zahlpause**"
+    uid=26_1295 link "Kreditkarte/Debitkarte"
+      uid=26_1296 StaticText "Kreditkarte/Debitkarte"
+    uid=26_1297 link "Vorkasse"
+      uid=26_1298 StaticText "Vorkasse"
+    uid=26_1299 StaticText "Über uns"
+    uid=26_1300 link "Nachhaltigkeit"
+      uid=26_1301 StaticText "Nachhaltigkeit"
+    uid=26_1302 link "Unternehmen"
+      uid=26_1303 StaticText "Unternehmen"
+    uid=26_1304 link "Compliance"
+      uid=26_1305 StaticText "Compliance"
+    uid=26_1306 link "Presse"
+      uid=26_1307 StaticText "Presse"
+    uid=26_1308 link "Jobs"
+      uid=26_1309 StaticText "Jobs"
+    uid=26_1310 StaticText "Blogs"
+    uid=26_1311 link "UPDATED-Blog" url="https://www.otto.de/updated/"
+      uid=26_1312 StaticText "UPDATED-Blog"
+    uid=26_1313 link "Tech-Blog" url="https://www.otto.de/jobs/technology/techblog/"
+      uid=26_1314 StaticText "Tech-Blog"
+    uid=26_1315 StaticText "Verkaufen bei OTTO"
+    uid=26_1316 link "OTTO Market"
+      uid=26_1317 StaticText "OTTO Market"
+    uid=26_1318 StaticText "Werben bei OTTO"
+    uid=26_1319 link "OTTO Advertising"
+      uid=26_1320 StaticText "OTTO Advertising"
+    uid=26_1321 StaticText "OTTO Partner"
+    uid=26_1322 link "OTTO Payments"
+      uid=26_1323 StaticText "OTTO Payments"
+    uid=26_1324 link "OTTO Affiliate"
+      uid=26_1325 StaticText "OTTO Affiliate"
+    uid=26_1326 link "Shopping&more"
+      uid=26_1327 StaticText "Shopping&more"
+    uid=26_1328 link "OTTO FinanzPlus"
+      uid=26_1329 StaticText "OTTO FinanzPlus"
+    uid=26_1330 link "Sicherer Kauf auf Rechnung*"
+      uid=26_1331 StaticText "Sicherer Kauf auf Rechnung*"
+    uid=26_1332 link "Kostenlose Rücksendung"
+      uid=26_1333 StaticText "Kostenlose Rücksendung"
+    uid=26_1334 link "Einfache Ratenzahlung**"
+      uid=26_1335 StaticText "Einfache Ratenzahlung**"
+    uid=26_1336 link "Ratenschutz-Versicherung**"
+      uid=26_1337 StaticText "Ratenschutz-Versicherung**"
+    uid=26_1338 link "Otto auf Pinterest"
+    uid=26_1339 link "Otto auf Facebook"
+    uid=26_1340 link "Otto auf Youtube"
+    uid=26_1341 link "Otto auf Instagram"
+    uid=26_1342 link "Cookie-Einstellungen" url="https://www.otto.de/notFound#"
+      uid=26_1343 StaticText "Cookie-Einstellungen"
+    uid=26_1344 StaticText " "
+    uid=26_1345 link "allgemeine Geschäftsbedingungen" url="https://www.otto.de/service/agb/"
+      uid=26_1346 StaticText "AGB"
+    uid=26_1347 link "Datenschutz " url="https://www.otto.de/service/datenschutz/"
+      uid=26_1348 StaticText "Datenschutz "
+    uid=26_1349 link "Impressum" url="https://www.otto.de/service/impressum/"
+      uid=26_1350 StaticText "Impressum"
+    uid=26_1351 StaticText " "
+    uid=26_1352 link "Information zur Barrierefreiheit" url="https://www.otto.de/shoppages/information_zur_barrierefreiheit"
+      uid=26_1353 StaticText "Information zur Barrierefreiheit"
+    uid=26_1354 StaticText " "
+    uid=26_1355 link "Produktsicherheitsrückrufe" url="https://www.otto.de/shoppages/produktsicherheitsrueckrufe"
+      uid=26_1356 StaticText "Produktsicherheitsrückrufe"
+    uid=26_1357 StaticText " "
+    uid=26_1358 link "Lob & Kritik"
+      uid=26_1359 StaticText "Lob & Kritik"
+    uid=26_1360 StaticText " "
+    uid=26_1361 link "OTTO Versprechen" url="https://www.otto.de/service/ottoversprechen/"
+      uid=26_1362 StaticText "OTTO Versprechen"
+    uid=26_1363 StaticText "Preisangaben inkl. Steuer und zzgl."
+    uid=26_1364 StaticText " "
+    uid=26_1365 link "Service- und Versandkosten"
+      uid=26_1366 StaticText "Service- und Versandkosten"
+    uid=26_1367 StaticText "* Bonität vorausgesetzt, ** Bonität vorausgesetzt, gegen Aufpreis"
+  uid=26_1368 region "Cookies und andere Technologien erlauben?" focusable focused
+    uid=26_1369 dialog "Cookies und andere Technologien erlauben?"
+      uid=26_1370 heading "Cookies und andere Technologien erlauben?" level="2"
+      uid=26_1371 StaticText "OTTO und "
+      uid=26_1372 link "21 Partner" url="https://www.otto.de/notFound#partner-info"
+        uid=26_1373 StaticText "21 Partner"
+      uid=26_1374 StaticText " brauchen deine Einwilligung (Klick auf „OK”) bei vereinzelten "
+      uid=26_1375 link "Datennutzungen" url="https://www.otto.de/shoppages/service/datenschutz?ot_CookieBanner=firstLayer#blockOnlineServicesTrackingOptOut"
+        uid=26_1376 StaticText "Datennutzungen"
+      uid=26_1377 StaticText ", um Informationen auf deinem Gerät zu speichern und/oder abzurufen (IP-Adresse, Nutzer-ID, Browser-Informationen, Geräte-Kennungen). Die Datennutzung erfolgt zum Zweck der Identifikation auf Drittseiten (auch unter Nutzung pseudonymisierter E-Mail-Adressen), für personalisierte Anzeigen und Inhalte, Anzeigen- und Inhaltsmessungen sowie um Erkenntnisse über Zielgruppen und Produktentwicklungen zu gewinnen. Mehr Infos zur Einwilligung (inkl. Widerrufsmöglichkeit) und zu Einstellungsmöglichkeiten gibt’s jederzeit "
+      uid=26_1378 link "Infos zur Einwilligung, Widerrufsmöglichkeiten und Einstellungsmöglichkeiten findest du hier" url="https://www.otto.de/shoppages/service/datenschutz?ot_CookieBanner=firstLayer#blockOnlineServicesTrackingOptOut"
+        uid=26_1379 StaticText "hier"
+      uid=26_1380 StaticText ". Mit Klick auf den Button "Einwilligung ablehnen" kannst du deine Einwilligung jederzeit ablehnen."
+      uid=26_19 StaticText "Datennutzungen"
+      uid=26_1381 StaticText "OTTO arbeitet mit Partnern zusammen, die von deinem Endgerät abgerufene Daten (Trackingdaten) oder die von uns übermittelten pseudonymisierten Daten zur Aussteuerung unserer Werbung sowie auch zu eigenen Zwecken (z.B. Profilbildungen) / zu Zwecken Dritter verarbeiten. Vor diesem Hintergrund erfordert nicht nur die Erhebung der Trackingdaten bzw. die Übermittlung deiner pseudonymisierten Daten, sondern auch deren Weiterverarbeitung durch diese Anbieter einer Einwilligung. Die Trackingdaten werden erst dann erhoben bzw. deine pseudonymisierten Daten erst dann übermittelt, wenn du auf den in dem Banner auf otto.de / App wiedergebenden Button „OK” anklickst. Bei den Partnern handelt es sich um die folgenden Unternehmen: Meta Platforms Ireland Limited, Google Ireland Limited (auch als TCF-Partner), Pinterest Europe Limited, Microsoft Ireland Operations Limited (auch als TCF-Partner), TikTok Information Technologies UK Limited, Snap Camera GmbH, Spotify USA Inc., Criteo SA, sowie die folgenden TCF-Partner: Adform, Audience Project, Flashtalking, Criteo SA, ID5 Technology Limited, Nielsen Media Research, Reppublika, RevJet Corporation, RTB House S.A., Teads, The Kantar Group GmbH, Virtual Minds GmbH, DoubleVerify, Integral Ad Science. Weitere Informationen zu den Datenverarbeitungen durch diese Partner findest du in der Datenschutzerklärung auf otto.de / App. Die Informationen sind außerdem über einen Link in dem Banner abrufbar. Sie können Ihre Einwilligung auch jederzeit grundlos mit Wirkung für die Zukunft widerrufen, indem Sie z. B. auf den Button "Cookie-Einstellungen" im Footer der Website und "Einwilligung ablehnen" klicken."
+      uid=26_1382 button "OK"
+      uid=26_1383 button "Einwilligung ablehnen"
+      uid=26_1384 button "Mehr Informationen, Öffnet das Einstellungscenter-Dialogfeld"
