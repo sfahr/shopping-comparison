@@ -17,13 +17,13 @@ export default function Home() {
   const [status, setStatus] = useState<Record<string, "loading" | "done" | "error" | "idle">>({});
   const [query, setQuery] = useState("");
 
-  async function handleSearch(q: string, condition: string, ceiling?: number) {
+  async function handleSearch(q: string, condition: string, floor?: number, ceiling?: number) {
     setQuery(q);
     setOffers([]);
     setLoading(true);
     setStatus(Object.fromEntries(SITES.map((s) => [s, "loading"])));
 
-    const req: ScrapeRequest = { query: q, condition: condition as any, priceCeiling: ceiling };
+    const req: ScrapeRequest = { query: q, condition: condition as any, priceFloor: floor, priceCeiling: ceiling };
     const allOffers: RawOffer[] = [];
 
     const promises = SITES.map(async (site) => {
@@ -47,7 +47,11 @@ export default function Home() {
     });
 
     await Promise.all(promises);
-    const ranked = rankOffers(allOffers);
+    let ranked = rankOffers(allOffers);
+    if (condition !== "either") {
+      const target = condition === "new" ? "Neu" : "Gebraucht";
+      ranked = ranked.filter(o => o.condition === target);
+    }
     setOffers(ranked);
     setLoading(false);
   }

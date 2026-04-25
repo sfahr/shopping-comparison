@@ -45,6 +45,7 @@ export interface Offer extends RawOffer {
 export interface ScrapeRequest {
   query: string;
   condition?: "new" | "used" | "either";
+  priceFloor?: number;
   priceCeiling?: number;
   plz?: string;
 }

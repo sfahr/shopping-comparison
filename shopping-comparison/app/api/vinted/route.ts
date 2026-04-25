@@ -7,7 +7,7 @@ export const maxDuration = 10;
 
 export async function POST(req: NextRequest) {
   const body: ScrapeRequest = await req.json();
-  const { query, priceCeiling } = body;
+  const { query, priceFloor, priceCeiling } = body;
 
   const url = `https://www.vinted.de/catalog?search_text=${encodeURIComponent(query)}&order=relevance`;
 
@@ -38,6 +38,7 @@ export async function POST(req: NextRequest) {
         if (offers.length >= 3) break;
         const price = parseFloat(item.price?.amount ?? item.price ?? 0);
         if (!price || price < 1) continue;
+        if (priceFloor && price < priceFloor) continue;
         if (priceCeiling && price > priceCeiling) continue;
         const title = truncate(item.title ?? item.name ?? "");
         if (!title) continue;
@@ -69,6 +70,7 @@ export async function POST(req: NextRequest) {
       const priceRaw = $(el).find("[class*='price']").first().text().trim();
       const price = parseMoney(priceRaw);
       if (!price || price < 1) return;
+      if (priceFloor && price < priceFloor) return;
       if (priceCeiling && price > priceCeiling) return;
       const href = $(el).find("a[href]").first().attr("href") ?? "";
       const itemUrl = href.startsWith("http") ? href : `https://www.vinted.de${href}`;

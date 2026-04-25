@@ -2,19 +2,20 @@
 import { useState, FormEvent } from "react";
 
 interface Props {
-  onSearch: (query: string, condition: string, priceCeiling?: number) => void;
+  onSearch: (query: string, condition: string, priceFloor?: number, priceCeiling?: number) => void;
   loading: boolean;
 }
 
 export default function SearchForm({ onSearch, loading }: Props) {
   const [query, setQuery] = useState("");
   const [condition, setCondition] = useState("either");
+  const [floor, setFloor] = useState("");
   const [ceiling, setCeiling] = useState("");
 
   function handleSubmit(e: FormEvent) {
     e.preventDefault();
     if (!query.trim()) return;
-    onSearch(query.trim(), condition, ceiling ? parseFloat(ceiling) : undefined);
+    onSearch(query.trim(), condition, floor ? parseFloat(floor) : undefined, ceiling ? parseFloat(ceiling) : undefined);
   }
 
   return (
@@ -50,6 +51,18 @@ export default function SearchForm({ onSearch, loading }: Props) {
             <option value="new">Neu</option>
             <option value="used">Gebraucht</option>
           </select>
+        </label>
+        <label className="flex items-center gap-1.5 cursor-pointer">
+          <span>Min. Preis (€):</span>
+          <input
+            type="number"
+            value={floor}
+            onChange={(e) => setFloor(e.target.value)}
+            placeholder="kein Limit"
+            className="border border-gray-300 rounded-lg px-2 py-1 w-28"
+            min={0}
+            disabled={loading}
+          />
         </label>
         <label className="flex items-center gap-1.5 cursor-pointer">
           <span>Max. Preis (€):</span>

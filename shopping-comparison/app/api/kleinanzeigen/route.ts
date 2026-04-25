@@ -11,7 +11,7 @@ const HOME_LNG = 8.6322;
 
 export async function POST(req: NextRequest) {
   const body: ScrapeRequest = await req.json();
-  const { query, priceCeiling, plz = "60439" } = body;
+  const { query, priceFloor, priceCeiling, plz = "60439" } = body;
 
   const slug = slugify(query);
   const url = `https://www.kleinanzeigen.de/s-${plz}/${slug}/k0l16327r100`;
@@ -35,6 +35,7 @@ export async function POST(req: NextRequest) {
     const priceRaw = $(el).find(".aditem-main--middle--price-shipping--price").text().trim();
     const price = parseMoney(priceRaw);
     if (!price || price < 1) return;
+    if (priceFloor && price < priceFloor) return;
     if (priceCeiling && price > priceCeiling) return;
 
     const href = $(el).find("a[href*='/s-anzeige/']").first().attr("href") ?? "";

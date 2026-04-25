@@ -7,7 +7,7 @@ export const maxDuration = 10;
 
 export async function POST(req: NextRequest) {
   const body: ScrapeRequest = await req.json();
-  const { query, condition, priceCeiling } = body;
+  const { query, condition, priceFloor, priceCeiling } = body;
 
   const condParam = condition === "new" ? "&s-ref-marker=aps_new"
     : condition === "used" ? "&s-ref-marker=aps_used" : "";
@@ -40,6 +40,7 @@ export async function POST(req: NextRequest) {
     const priceRaw = priceWhole ? `${priceWhole}${priceFraction}` : $(el).find(".a-price").first().text().trim();
     const price = parseMoney(priceRaw);
     if (!price || price < 1) return;
+    if (priceFloor && price < priceFloor) return;
     if (priceCeiling && price > priceCeiling) return;
 
     const sellerText = $(el).find(".a-size-small .a-color-secondary").text();

@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import "leaflet/dist/leaflet.css";
 import type { Offer } from "@/lib/types";
 
 interface Props {
@@ -11,18 +12,24 @@ const HOME_LNG = 8.6322;
 
 export default function OfferMap({ offers }: Props) {
   const containerRef = useRef<HTMLDivElement>(null);
+  const mapRef = useRef<any>(null);
 
   useEffect(() => {
     if (!containerRef.current) return;
 
     const initMap = async () => {
       const L = await import("leaflet");
-      await import("leaflet/dist/leaflet.css");
+
+      // Clean up existing map instance
+      if (mapRef.current) {
+        mapRef.current.remove();
+        mapRef.current = null;
+      }
 
       const mapContainer = containerRef.current!;
-      mapContainer.innerHTML = "";
 
       const map = L.map(mapContainer).setView([HOME_LAT, HOME_LNG], 7);
+      mapRef.current = map;
 
       L.tileLayer(
         "https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png",
@@ -78,6 +85,11 @@ export default function OfferMap({ offers }: Props) {
     };
 
     initMap();
+
+    return () => {
+      mapRef.current?.remove();
+      mapRef.current = null;
+    };
   }, [offers]);
 
   return <div ref={containerRef} className="w-full h-96 rounded-xl border border-gray-300 bg-gray-100" />;
