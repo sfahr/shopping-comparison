@@ -10,6 +10,7 @@ export async function fetchHtml(
   url: string,
   extraHeaders?: Record<string, string>,
   timeoutMs: number = 8000,
+  maxBytes?: number,
 ): Promise<string | null> {
   try {
     const res = await fetch(url, {
@@ -17,7 +18,24 @@ export async function fetchHtml(
       signal: AbortSignal.timeout(timeoutMs),
     });
     if (!res.ok) return null;
-    return await res.text();
+    if (!maxBytes || !res.body) return await res.text();
+
+    // Streaming read with a byte cap. Used for sites whose SSR response is
+    // huge (e.g. Vinted's ~8 MB catalog) — we only need the top-of-page
+    // listings and parsing the full body OOMs the 512 MB Render free tier.
+    const reader = res.body.getReader();
+    const decoder = new TextDecoder("utf-8");
+    let buf = "";
+    let received = 0;
+    while (received < maxBytes) {
+      const { done, value } = await reader.read();
+      if (done) break;
+      received += value.byteLength;
+      buf += decoder.decode(value, { stream: true });
+    }
+    buf += decoder.decode();
+    try { await reader.cancel(); } catch { /* ignore */ }
+    return buf;
   } catch {
     return null;
   }

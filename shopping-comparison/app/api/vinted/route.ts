@@ -3,9 +3,10 @@ import * as cheerio from "cheerio";
 import { fetchHtml, parseMoney, truncate } from "@/lib/scrapeUtils";
 import type { RawOffer, ScrapeRequest } from "@/lib/types";
 
-// Vinted's catalog page is ~8 MB SSR HTML; on Render free tier (US region) the
-// transit + parse can take 5-10 s, so raise both the upstream fetch timeout
-// and the route's max duration well above the local 8 s default.
+// Vinted's catalog page is ~8 MB SSR HTML. The first 3 listings appear within
+// the first ~100 KB, so cap the streamed read at 250 KB — this avoids the OOM
+// crash on Render free tier (512 MB RAM) that took the whole Node process down
+// when cheerio tried to parse the full 8 MB body.
 export const maxDuration = 25;
 
 export async function POST(req: NextRequest) {
@@ -20,7 +21,8 @@ export async function POST(req: NextRequest) {
       Referer: "https://www.vinted.de/",
       Cookie: "anon_id=1",
     },
-    20000,
+    15000,
+    250_000,
   );
   if (!html) {
     return NextResponse.json({ site: "vinted.de", offers: [], error: "Nicht erreichbar" });
