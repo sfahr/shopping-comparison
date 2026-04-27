@@ -41,7 +41,13 @@
       "Bash(git commit *)",
       "Bash(curl -s 'https://www.guenstiger.de/?q=laptop&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' -H 'Accept-Language: de-DE,de;q=0.9')",
       "Bash(curl -s 'https://geizhals.de/?q=laptop&sort=price' -H 'User-Agent: Mozilla/5.0 \\(Windows NT 10.0; Win64; x64\\) AppleWebKit/537.36' -H 'Accept-Language: de-DE,de;q=0.9')",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('eBay - Offers:', json.offers.length, json.error ? '\\(Error: ' + json.error + '\\)' : ''\\); json.offers.slice\\(0,2\\).forEach\\(o => console.log\\('-', o.title.substring\\(0, 60\\), '€' + o.price\\)\\)\")",
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\(JSON.stringify\\(json, null, 2\\)\\)\")",
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('Vinted - Offers:', json.offers.length, json.error ? '\\(Error: ' + json.error + '\\)' : ''\\); json.offers.slice\\(0,2\\).forEach\\(o => console.log\\('-', o.title.substring\\(0, 60\\), '€' + o.price\\)\\)\")",
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('Kleinanzeigen - Offers:', json.offers.length, json.error ? '\\(Error: ' + json.error + '\\)' : ''\\); json.offers.slice\\(0,2\\).forEach\\(o => console.log\\('-', o.title.substring\\(0, 60\\), '€' + o.price\\)\\)\")",
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('eBay - Offers:', json.offers.length\\); json.offers.slice\\(0,2\\).forEach\\(o => console.log\\('-', o.title.substring\\(0, 70\\), '€' + o.price\\)\\)\")",
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('eBay - Offers:', json.offers.length\\); json.offers.slice\\(0,3\\).forEach\\(o => console.log\\('-', o.title.substring\\(0, 70\\), '€' + o.price\\)\\)\")"
     ]
   }
 }

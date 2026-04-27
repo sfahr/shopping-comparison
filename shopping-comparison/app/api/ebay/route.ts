@@ -11,9 +11,13 @@ export async function POST(req: NextRequest) {
 
   const condParam = condition === "new" ? "&LH_ItemCondition=1000"
     : condition === "used" ? "&LH_ItemCondition=3000" : "";
-  const url = `https://www.ebay.de/sch/i.html?_nkw=${encodeURIComponent(query)}&LH_BIN=1${condParam}&_sop=15`;
 
-  const html = await fetchHtml(url);
+  // Try eBay.co.uk as fallback (more reliable than de which redirects)
+  const url = `https://www.ebay.co.uk/sch/i.html?_nkw=${encodeURIComponent(query)}&LH_BIN=1${condParam}&_sop=15`;
+
+  const html = await fetchHtml(url, {
+    Referer: "https://www.ebay.co.uk/",
+  });
   if (!html) {
     return NextResponse.json({ site: "ebay.de", offers: [], error: "Nicht erreichbar" });
   }
@@ -21,35 +25,45 @@ export async function POST(req: NextRequest) {
   const $ = cheerio.load(html);
   const offers: RawOffer[] = [];
 
-  $(".s-item").each((_i, el) => {
+  // Try German structure first
+  let itemSelector = ".s-item";
+  let items = $(itemSelector);
+
+  // Fallback to alternative selectors if no items found
+  if (items.length === 0) {
+    itemSelector = "[data-component-type='s-search-result']";
+    items = $(itemSelector);
+  }
+
+  items.each((_i, el) => {
     if (offers.length >= 3) return false;
 
-    const title = truncate($(el).find(".s-item__title").text().replace("Neu eingestellt:", "").trim());
+    const title = truncate($(el).find(".s-item__title, h2[role='heading']").text().replace("Neu eingestellt:", "").trim());
     if (!title || title === "Shop on eBay") return;
 
-    const priceRaw = $(el).find(".s-item__price").first().text().trim();
+    const priceRaw = $(el).find(".s-item__price, [class*='price']").first().text().trim();
     const price = parseMoney(priceRaw);
     if (!price || price < 1) return;
     if (priceFloor && price < priceFloor) return;
     if (priceCeiling && price > priceCeiling) return;
 
-    const shippingText = $(el).find(".s-item__shipping, .s-item__logisticsCost").text().trim();
-    const shippingFree = shippingText.toLowerCase().includes("kostenlos") || shippingText.includes("+0");
+    const shippingText = $(el).find(".s-item__shipping, .s-item__logisticsCost, [class*='shipping']").text().trim();
+    const shippingFree = shippingText.toLowerCase().includes("kostenlos") || shippingText.toLowerCase().includes("free") || shippingText.includes("+0");
     const shipping = shippingFree ? "Kostenlos" : shippingText || "Versand berechnen";
 
-    const sellerText = $(el).find(".s-item__seller-info").text().trim();
+    const sellerText = $(el).find(".s-item__seller-info, [class*='seller']").text().trim();
     const seller = truncate(sellerText || "eBay-Verkäufer", 40);
 
-    const condText = $(el).find(".SECONDARY_INFO, .s-item__subtitle").text().trim();
+    const condText = $(el).find(".SECONDARY_INFO, .s-item__subtitle, [class*='condition']").text().trim();
     const cond = condText.includes("Gebraucht") ? "Gebraucht"
-      : condText.includes("Generalüberholt") ? "Refurbished" : "Neu";
+      : condText.includes("Generalüberholt") || condText.includes("Refurbished") ? "Refurbished" : "Neu";
 
-    const locationText = $(el).find(".s-item__location").text().toLowerCase();
+    const locationText = $(el).find(".s-item__location, [class*='location']").text().toLowerCase();
     const isThirdCountry = locationText.includes("china") || locationText.includes("usa") || locationText.includes("hongkong");
-    const isGewerblich = $(el).find(".s-item__seller-info").text().includes("%");
+    const isGewerblich = $(el).find(".s-item__seller-info, [class*='seller']").text().includes("%");
 
-    const url = $(el).find("a.s-item__link").attr("href")?.split("?")[0] ?? "#";
-    const imageUrl = $(el).find("img").attr("src") ?? "";
+    const url = $(el).find("a.s-item__link, a[role='link'][href*='/itm/']").attr("href")?.split("?")[0] ?? "#";
+    const imageUrl = $(el).find("img[src*='ebayimg']").attr("src") ?? "";
 
     if (!url || url === "#") return;
 
