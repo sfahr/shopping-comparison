@@ -3,18 +3,29 @@ import * as cheerio from "cheerio";
 import { fetchHtml, parseMoney, truncate } from "@/lib/scrapeUtils";
 import type { RawOffer, ScrapeRequest } from "@/lib/types";
 
-export const maxDuration = 15;
+export const maxDuration = 26;
 
 // Geizhals.de fronts a Cloudflare managed challenge that blocks server-side
 // fetches; geizhals.at is the same backend but reachable directly. We pass
 // hloc=de so the listed "ab" price reflects merchants that ship to Germany.
+//
+// The SSR response is ~330 KB and the first article tag doesn't appear until
+// byte ~220 KB (everything before is head, scripts, filter sidebar). Cap the
+// streamed read at 280 KB — that captures all 5 results plus closing tags,
+// while skipping the page footer and recommended-products tail that would
+// otherwise stretch cheerio parse time past Netlify's 10 s function wall.
 export async function POST(req: NextRequest) {
   const body: ScrapeRequest = await req.json();
   const { query, priceFloor, priceCeiling } = body;
 
   const url = `https://geizhals.at/?fs=${encodeURIComponent(query)}&hloc=de`;
 
-  const html = await fetchHtml(url, { Referer: "https://geizhals.at/" });
+  const html = await fetchHtml(
+    url,
+    { Referer: "https://geizhals.at/" },
+    12000,
+    280_000,
+  );
   if (!html) {
     return NextResponse.json({ site: "geizhals.de", offers: [], error: "Nicht erreichbar" });
   }

@@ -3,7 +3,13 @@ import * as cheerio from "cheerio";
 import { fetchHtml, parseMoney, truncate } from "@/lib/scrapeUtils";
 import type { RawOffer, ScrapeRequest } from "@/lib/types";
 
-export const maxDuration = 10;
+// eBay's search SSR response is ~1.5 MB decoded; the first listing markup
+// appears at byte ~335 KB, the 5th at byte ~372 KB. Cap the streamed read
+// at 450 KB so we capture all 5 listings but skip the ~1 MB long tail of
+// recommended-products and footer markup. Without this cap, cheerio parses
+// the full 1.5 MB and the function exceeds Netlify free tier's 10 s wall on
+// a cold start.
+export const maxDuration = 26;
 
 const TAB_NOTICE = /Wird in neuem Fenster oder Tab geöffnet/g;
 
@@ -15,11 +21,16 @@ export async function POST(req: NextRequest) {
     : condition === "used" ? "&LH_ItemCondition=3000" : "";
   const url = `https://www.ebay.de/sch/i.html?_nkw=${encodeURIComponent(query)}&LH_BIN=1${condParam}&_sop=15`;
 
-  const html = await fetchHtml(url, {
-    "Accept-Language": "de-DE,de;q=0.9,en;q=0.8",
-    "Referer": "https://www.ebay.de/",
-    "Cookie": "ebay_locale=de",
-  });
+  const html = await fetchHtml(
+    url,
+    {
+      "Accept-Language": "de-DE,de;q=0.9,en;q=0.8",
+      "Referer": "https://www.ebay.de/",
+      "Cookie": "ebay_locale=de",
+    },
+    12000,
+    450_000,
+  );
   if (!html) {
     return NextResponse.json({ site: "ebay.de", offers: [], error: "Nicht erreichbar" });
   }
