@@ -53,6 +53,8 @@ export async function POST(req: NextRequest) {
     const badgeText = $(el).find(".simpletag").text().toLowerCase();
     const isGewerblich = badgeText.includes("gewerblich");
 
+    const imageUrl = $(el).find("img").first().attr("src") ?? "";
+
     const idx = items.length;
     items.push({
       title,
@@ -64,6 +66,7 @@ export async function POST(req: NextRequest) {
       delivery: hasShipping ? "Versand möglich" : `Abholung (PLZ ${itemPlz})`,
       distance: `PLZ ${itemPlz}`,
       url: itemUrl,
+      imageUrl,
       isOnline: false,
       sellerType: isGewerblich ? "gewerblich" : "privat",
       lat: null,
