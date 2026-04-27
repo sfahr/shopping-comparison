@@ -51,7 +51,8 @@
       "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('Vinted - Offers:', json.offers.length\\); json.offers.slice\\(0,3\\).forEach\\(o => console.log\\('-', o.title.substring\\(0, 70\\), '€' + o.price\\)\\)\")",
       "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); try { const json = JSON.parse\\(data\\); console.log\\('API Response:', json.items ? 'items found: ' + json.items.length : 'no items field'\\); if \\(json.items\\) { json.items.slice\\(0,2\\).forEach\\(i => console.log\\('-', i.title, '€' + i.price\\)\\); } } catch\\(e\\) { console.log\\('Parse error:', e.message, 'Response length:', data.length\\); }\")",
       "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('Keys:', Object.keys\\(json\\)\\); console.log\\('Full response \\(first 500 chars\\):', JSON.stringify\\(json\\).substring\\(0, 500\\)\\)\")",
-      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('Amazon - Offers:', json.offers.length\\)\")"
+      "Bash(node -e \"const data = require\\('fs'\\).readFileSync\\(0, 'utf-8'\\); const json = JSON.parse\\(data\\); console.log\\('Amazon - Offers:', json.offers.length\\)\")",
+      "Bash(node *)"
     ]
   }
 }
