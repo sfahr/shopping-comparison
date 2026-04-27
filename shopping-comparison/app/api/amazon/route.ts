@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
   const offers: RawOffer[] = [];
 
   $('[data-asin]').each((_i, el) => {
-    if (offers.length >= 3) return false;
+    if (offers.length >= 5) return false;
     const asin = $(el).attr("data-asin");
     if (!asin || asin.length < 5) return;
 

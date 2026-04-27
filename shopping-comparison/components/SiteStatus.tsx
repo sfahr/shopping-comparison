@@ -5,12 +5,14 @@ interface Props {
   errors?: Record<string, string>;
 }
 
-const SITES = ["amazon.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
+const SITES = ["amazon.de", "ebay.de", "kleinanzeigen.de", "vinted.de", "geizhals.de", "billiger.de"];
 const NAMES: Record<string, string> = {
   "amazon.de": "Amazon",
   "ebay.de": "eBay",
   "kleinanzeigen.de": "K.-Anzeigen",
   "vinted.de": "Vinted",
+  "geizhals.de": "Geizhals",
+  "billiger.de": "billiger",
 };
 
 export default function SiteStatus({ status, errors = {} }: Props) {

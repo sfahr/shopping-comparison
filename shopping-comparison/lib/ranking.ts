@@ -5,6 +5,8 @@ export const SITE_COLORS: Record<SiteName, string> = {
   "ebay.de": "#0064d2",
   "kleinanzeigen.de": "#1b7a1b",
   "vinted.de": "#09b1ba",
+  "geizhals.de": "#b8860b",
+  "billiger.de": "#ff6900",
 };
 
 function trustPenalty(raw: RawOffer): number {
@@ -33,6 +35,12 @@ function trustPenalty(raw: RawOffer): number {
     const country = sellerCountry?.toUpperCase() ?? "DE";
     if (country === "DE") return 10;
     return 20; // other EU
+  }
+
+  if (site === "geizhals.de" || site === "billiger.de") {
+    // Aggregator sites that link out to third-party shops; treat like a
+    // gewerblich marketplace listing.
+    return 5;
   }
 
   return 5;

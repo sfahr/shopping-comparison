@@ -9,7 +9,7 @@ import type { Offer, ScrapeResult, RawOffer, ScrapeRequest } from "@/lib/types";
 
 const OfferMap = dynamic(() => import("@/components/OfferMap"), { ssr: false, loading: () => <div className="w-full h-96 bg-gray-100 rounded-xl animate-pulse" /> });
 
-const SITES = ["amazon.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
+const SITES = ["amazon.de", "ebay.de", "kleinanzeigen.de", "vinted.de", "geizhals.de", "billiger.de"];
 
 export default function Home() {
   const [offers, setOffers] = useState<Offer[]>([]);
@@ -60,7 +60,7 @@ export default function Home() {
       const target = condition === "new" ? "Neu" : "Gebraucht";
       ranked = ranked.filter(o => o.condition === target);
     }
-    setOffers(ranked);
+    setOffers(ranked.slice(0, 12));
     setLoading(false);
   }
 
@@ -70,7 +70,7 @@ export default function Home() {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-900 mb-2">🛍️ Preisvergleich</h1>
-          <p className="text-gray-600 text-lg">Durchsuche 4 deutsche Shops gleichzeitig</p>
+          <p className="text-gray-600 text-lg">Durchsuche 6 deutsche Shops gleichzeitig</p>
         </div>
 
         {/* Search */}

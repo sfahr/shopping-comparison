@@ -2,7 +2,9 @@ export type SiteName =
   | "amazon.de"
   | "ebay.de"
   | "kleinanzeigen.de"
-  | "vinted.de";
+  | "vinted.de"
+  | "geizhals.de"
+  | "billiger.de";
 
 export type Condition = "Neu" | "Gebraucht" | "Refurbished";
 export type Risk = "Niedrig" | "Mittel" | "Hoch";

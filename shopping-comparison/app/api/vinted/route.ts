@@ -36,7 +36,7 @@ export async function POST(req: NextRequest) {
   const offers: RawOffer[] = [];
 
   $(".feed-grid__item").each((_i, el) => {
-    if (offers.length >= 3) return false;
+    if (offers.length >= 5) return false;
 
     const overlayHref = $(el).find("[data-testid$='--overlay-link']").first().attr("href") ?? "";
     const itemUrl = overlayHref.startsWith("http")

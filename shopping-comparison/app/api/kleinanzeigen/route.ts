@@ -27,7 +27,7 @@ export async function POST(req: NextRequest) {
   const geocodePromises: Promise<void>[] = [];
 
   $(".ad-listitem article").each((_i, el) => {
-    if (items.length >= 3) return false;
+    if (items.length >= 5) return false;
 
     const title = truncate($(el).find(".ellipsis, h2").first().text().trim());
     if (!title) return;

@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
   const offers: RawOffer[] = [];
 
   $("li.s-card").each((_i, el) => {
-    if (offers.length >= 3) return false;
+    if (offers.length >= 5) return false;
 
     const href = $(el).find("a").first().attr("href") ?? "";
     if (!href.includes("ebay.de/itm/")) return;
