@@ -3,7 +3,10 @@ import * as cheerio from "cheerio";
 import { fetchHtml, parseMoney, truncate } from "@/lib/scrapeUtils";
 import type { RawOffer, ScrapeRequest } from "@/lib/types";
 
-export const maxDuration = 10;
+// Vinted's catalog page is ~8 MB SSR HTML; on Render free tier (US region) the
+// transit + parse can take 5-10 s, so raise both the upstream fetch timeout
+// and the route's max duration well above the local 8 s default.
+export const maxDuration = 25;
 
 export async function POST(req: NextRequest) {
   const body: ScrapeRequest = await req.json();
@@ -11,10 +14,14 @@ export async function POST(req: NextRequest) {
 
   const url = `https://www.vinted.de/catalog?search_text=${encodeURIComponent(query)}&order=relevance`;
 
-  const html = await fetchHtml(url, {
-    Referer: "https://www.vinted.de/",
-    Cookie: "anon_id=1",
-  });
+  const html = await fetchHtml(
+    url,
+    {
+      Referer: "https://www.vinted.de/",
+      Cookie: "anon_id=1",
+    },
+    20000,
+  );
   if (!html) {
     return NextResponse.json({ site: "vinted.de", offers: [], error: "Nicht erreichbar" });
   }

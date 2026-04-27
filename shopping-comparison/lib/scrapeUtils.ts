@@ -6,11 +6,15 @@ export const DE_HEADERS = {
   "Cache-Control": "no-cache",
 };
 
-export async function fetchHtml(url: string, extraHeaders?: Record<string, string>): Promise<string | null> {
+export async function fetchHtml(
+  url: string,
+  extraHeaders?: Record<string, string>,
+  timeoutMs: number = 8000,
+): Promise<string | null> {
   try {
     const res = await fetch(url, {
       headers: { ...DE_HEADERS, ...extraHeaders },
-      signal: AbortSignal.timeout(8000),
+      signal: AbortSignal.timeout(timeoutMs),
     });
     if (!res.ok) return null;
     return await res.text();
