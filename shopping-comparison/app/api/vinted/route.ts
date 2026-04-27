@@ -19,76 +19,63 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ site: "vinted.de", offers: [], error: "Nicht erreichbar" });
   }
 
-  if (html.includes("captcha") || html.includes("Access Denied")) {
+  if (html.includes("Access Denied") || /<title>[^<]*captcha/i.test(html)) {
     return NextResponse.json({ site: "vinted.de", offers: [], error: "Blockiert" });
   }
 
   const $ = cheerio.load(html);
   const offers: RawOffer[] = [];
 
-  // Vinted embeds item data in JSON-LD or __NEXT_DATA__
-  let parsed = false;
-  $("script[type='application/json'], script#__NEXT_DATA__").each((_i, el) => {
-    if (parsed || offers.length >= 3) return;
-    try {
-      const data = JSON.parse($(el).html() ?? "{}");
-      const items = data?.props?.pageProps?.items ?? data?.items ?? [];
-      if (!Array.isArray(items)) return;
-      for (const item of items) {
-        if (offers.length >= 3) break;
-        const price = parseFloat(item.price?.amount ?? item.price ?? 0);
-        if (!price || price < 1) continue;
-        if (priceFloor && price < priceFloor) continue;
-        if (priceCeiling && price > priceCeiling) continue;
-        const title = truncate(item.title ?? item.name ?? "");
-        if (!title) continue;
-        offers.push({
-          title,
-          site: "vinted.de",
-          seller: truncate(item.user?.login ?? "Vinted-Verkäufer", 40),
-          condition: "Gebraucht",
-          price,
-          shipping: "inkl. Versand + Käuferschutz",
-          delivery: "Versand möglich",
-          url: item.url ?? `https://www.vinted.de/items/${item.id}`,
-          imageUrl: item.photo?.url ?? item.photos?.[0]?.url ?? "",
-          isOnline: true,
-          sellerType: "privat",
-          sellerCountry: item.user?.country_iso_code ?? "DE",
-        });
-      }
-      if (offers.length > 0) parsed = true;
-    } catch { /* ignore */ }
-  });
+  $(".feed-grid__item").each((_i, el) => {
+    if (offers.length >= 3) return false;
 
-  // Fallback: try HTML grid selectors
-  if (!parsed) {
-    $(".feed-grid__item, [data-testid='grid-item']").each((_i, el) => {
-      if (offers.length >= 3) return false;
-      const title = truncate($(el).find("[class*='title'], img").first().attr("alt") ?? "");
-      if (!title) return;
-      const priceRaw = $(el).find("[class*='price']").first().text().trim();
-      const price = parseMoney(priceRaw);
-      if (!price || price < 1) return;
-      if (priceFloor && price < priceFloor) return;
-      if (priceCeiling && price > priceCeiling) return;
-      const href = $(el).find("a[href]").first().attr("href") ?? "";
-      const itemUrl = href.startsWith("http") ? href : `https://www.vinted.de${href}`;
-      offers.push({
-        title,
-        site: "vinted.de",
-        seller: "Vinted-Verkäufer",
-        condition: "Gebraucht",
-        price,
-        shipping: "inkl. Versand + Käuferschutz",
-        delivery: "Versand möglich",
-        url: itemUrl,
-        isOnline: true,
-        sellerType: "privat",
-        sellerCountry: "DE",
-      });
+    const overlayHref = $(el).find("[data-testid$='--overlay-link']").first().attr("href") ?? "";
+    const itemUrl = overlayHref.startsWith("http")
+      ? overlayHref
+      : overlayHref ? `https://www.vinted.de${overlayHref}` : "";
+    if (!itemUrl) return;
+
+    const title = truncate(
+      $(el).find("[data-testid$='--description-title']").first().text().trim()
+    );
+    if (!title) return;
+
+    // Two prices live next to each other: base (".title-content" / caption) and total inkl. Käuferschutz (subtitle).
+    // Use the higher one as the offer price since that's what the buyer actually pays.
+    const priceTexts = $(el)
+      .find(".web_ui__Text__caption, .web_ui__Text__subtitle, .title-content")
+      .map((_, n) => $(n).text().trim())
+      .get()
+      .filter((s) => s.includes("€"));
+    const prices = priceTexts.map(parseMoney).filter((p): p is number => !!p && p > 0);
+    const price = prices.length ? Math.max(...prices) : null;
+    if (!price || price < 1) return;
+    if (priceFloor && price < priceFloor) return;
+    if (priceCeiling && price > priceCeiling) return;
+
+    const subtitle = $(el).find("[data-testid$='--description-subtitle']").first().text().trim();
+    const cond = subtitle.toLowerCase().includes("neu") ? "Neu" : "Gebraucht";
+
+    const imageUrl =
+      $(el).find("[data-testid$='--image--img']").first().attr("src") ??
+      $(el).find("img").first().attr("src") ??
+      "";
+
+    offers.push({
+      title,
+      site: "vinted.de",
+      seller: "Vinted-Verkäufer",
+      condition: cond,
+      price,
+      shipping: "inkl. Versand + Käuferschutz",
+      delivery: "Versand möglich",
+      url: itemUrl,
+      imageUrl,
+      isOnline: true,
+      sellerType: "privat",
+      sellerCountry: "DE",
     });
-  }
+  });
 
   return NextResponse.json({ site: "vinted.de", offers });
 }

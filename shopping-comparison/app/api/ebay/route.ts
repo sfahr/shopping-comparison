@@ -5,6 +5,8 @@ import type { RawOffer, ScrapeRequest } from "@/lib/types";
 
 export const maxDuration = 10;
 
+const TAB_NOTICE = /Wird in neuem Fenster oder Tab geöffnet/g;
+
 export async function POST(req: NextRequest) {
   const body: ScrapeRequest = await req.json();
   const { query, condition, priceFloor, priceCeiling } = body;
@@ -25,37 +27,49 @@ export async function POST(req: NextRequest) {
   const $ = cheerio.load(html);
   const offers: RawOffer[] = [];
 
-  $(".s-item").each((_i, el) => {
+  $("li.s-card").each((_i, el) => {
     if (offers.length >= 3) return false;
 
-    const title = truncate($(el).find(".s-item__title").text().replace("Neu eingestellt:", "").trim());
+    const href = $(el).find("a").first().attr("href") ?? "";
+    if (!href.includes("ebay.de/itm/")) return;
+    const itemUrl = href.split("?")[0];
+
+    const title = truncate(
+      $(el).find(".s-card__title").first().text().replace(TAB_NOTICE, "").trim()
+    );
     if (!title || title === "Shop on eBay") return;
 
-    const priceRaw = $(el).find(".s-item__price").first().text().trim();
+    const priceRaw = $(el).find(".s-card__price").first().text().trim();
     const price = parseMoney(priceRaw);
     if (!price || price < 1) return;
     if (priceFloor && price < priceFloor) return;
     if (priceCeiling && price > priceCeiling) return;
 
-    const shippingText = $(el).find(".s-item__shipping, .s-item__logisticsCost").text().trim();
-    const shippingFree = shippingText.toLowerCase().includes("kostenlos") || shippingText.includes("+0");
-    const shipping = shippingFree ? "Kostenlos" : shippingText || "Versand berechnen";
+    const cardText = $(el).text();
+    const subtitle = $(el).find(".s-card__subtitle").first().text().trim();
+    const cond = subtitle.includes("Gebraucht") ? "Gebraucht"
+      : subtitle.includes("Generalüberholt") || subtitle.includes("Refurbished") ? "Refurbished"
+      : "Neu";
 
-    const sellerText = $(el).find(".s-item__seller-info").text().trim();
-    const seller = truncate(sellerText || "eBay-Verkäufer", 40);
+    const isPrivat = subtitle.includes("Privat");
+    const isGewerblich = subtitle.includes("Gewerblich") || (!isPrivat && subtitle.includes("|"));
 
-    const condText = $(el).find(".SECONDARY_INFO, .s-item__subtitle").text().trim();
-    const cond = condText.includes("Gebraucht") ? "Gebraucht"
-      : condText.includes("Generalüberholt") ? "Refurbished" : "Neu";
+    let shipping = "Versand berechnen";
+    if (/Kostenlose[rn]?\s+(Lieferung|Versand|Abholung)/i.test(cardText)) {
+      shipping = "Kostenlos";
+    } else {
+      const m = cardText.match(/\+\s*EUR\s*([\d.,]+)\s*Lieferung/i);
+      if (m) shipping = `+EUR ${m[1]} Versand`;
+    }
 
-    const locationText = $(el).find(".s-item__location").text().toLowerCase();
-    const isThirdCountry = locationText.includes("china") || locationText.includes("usa") || locationText.includes("hongkong");
-    const isGewerblich = $(el).find(".s-item__seller-info").text().includes("%");
+    let seller = "eBay-Verkäufer";
+    $(el).find(".su-card-container__attributes__secondary").each((_, row) => {
+      const rowText = $(row).text().trim();
+      const m = rowText.match(/^(\S+)\s+\d{1,3}(?:[.,]\d)?\s*%\s*positiv/);
+      if (m) { seller = truncate(m[1], 40); return false; }
+    });
 
-    const url = $(el).find("a.s-item__link").attr("href")?.split("?")[0] ?? "#";
-    const imageUrl = $(el).find("img").attr("src") ?? "";
-
-    if (!url || url === "#") return;
+    const imageUrl = $(el).find("img").first().attr("src") ?? "";
 
     offers.push({
       title,
@@ -65,11 +79,10 @@ export async function POST(req: NextRequest) {
       price,
       shipping,
       delivery: "Versand möglich",
-      url,
+      url: itemUrl,
       imageUrl,
       isOnline: true,
       sellerType: isGewerblich ? "gewerblich" : "privat",
-      isThirdCountry,
     });
   });
 
