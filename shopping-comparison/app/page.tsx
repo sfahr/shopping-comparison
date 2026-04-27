@@ -15,6 +15,7 @@ export default function Home() {
   const [offers, setOffers] = useState<Offer[]>([]);
   const [loading, setLoading] = useState(false);
   const [status, setStatus] = useState<Record<string, "loading" | "done" | "error" | "idle">>({});
+  const [errors, setErrors] = useState<Record<string, string>>({});
   const [query, setQuery] = useState("");
 
   async function handleSearch(q: string, condition: string, floor?: number, ceiling?: number) {
@@ -37,12 +38,19 @@ export default function Home() {
         if (result.offers && result.offers.length > 0) {
           allOffers.push(...result.offers);
           setStatus((prev) => ({ ...prev, [site]: "done" }));
+          if (result.error) {
+            setErrors((prev) => ({ ...prev, [site]: result.error! }));
+          }
         } else {
           setStatus((prev) => ({ ...prev, [site]: result.error ? "error" : "done" }));
+          if (result.error) {
+            setErrors((prev) => ({ ...prev, [site]: result.error! }));
+          }
         }
       } catch (e) {
         console.error(`Error scraping ${site}:`, e);
         setStatus((prev) => ({ ...prev, [site]: "error" }));
+        setErrors((prev) => ({ ...prev, [site]: "Verbindungsfehler" }));
       }
     });
 
@@ -73,7 +81,7 @@ export default function Home() {
         {/* Site Status */}
         {loading || Object.values(status).some((s) => s !== "idle") ? (
           <div className="mb-8">
-            <SiteStatus status={status} />
+            <SiteStatus status={status} errors={errors} />
           </div>
         ) : null}
 

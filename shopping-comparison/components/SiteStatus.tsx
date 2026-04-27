@@ -2,6 +2,7 @@
 
 interface Props {
   status: Record<string, "loading" | "done" | "error" | "idle">;
+  errors?: Record<string, string>;
 }
 
 const SITES = ["amazon.de", "ebay.de", "kleinanzeigen.de", "vinted.de"];
@@ -12,7 +13,7 @@ const NAMES: Record<string, string> = {
   "vinted.de": "Vinted",
 };
 
-export default function SiteStatus({ status }: Props) {
+export default function SiteStatus({ status, errors = {} }: Props) {
   return (
     <div className="flex gap-2 flex-wrap justify-center">
       {SITES.map((site) => {
@@ -27,10 +28,12 @@ export default function SiteStatus({ status }: Props) {
               : s === "loading"
                 ? "bg-blue-100 text-blue-800"
                 : "bg-gray-100 text-gray-600";
+        const errorMsg = errors?.[site];
         return (
           <div
             key={site}
-            className={`px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1 ${color} transition-colors`}
+            className={`px-3 py-1.5 rounded-full text-xs font-semibold flex items-center gap-1 ${color} transition-colors ${errorMsg ? 'cursor-help' : ''}`}
+            title={errorMsg || ''}
           >
             <span>{icon}</span>
             <span>{name}</span>
